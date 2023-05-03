@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.my.MyFragment">
+
+    <androidx.constraintlayout.helper.widget.Layer
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp"
+        android:background="#FF03DAC5"
+        app:constraint_referenced_ids="avatar,username,userType,mySpace,placeHolder" />
+
+    <androidx.constraintlayout.widget.Placeholder
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/placeHolder" />
+
+    <androidx.constraintlayout.utils.widget.ImageFilterView
+        android:id="@+id/avatar"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/default_avatar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/username"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/avatar" />
+
+    <TextView
+        android:id="@+id/username"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:gravity="start"
+        app:layout_constraintLeft_toRightOf="@+id/avatar"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="jiuxia211"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="50dp"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/userType"
+        android:layout_width="50dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="20dp"
+        android:gravity="center"
+        app:layout_constraintLeft_toRightOf="@+id/avatar"
+        app:layout_constraintTop_toBottomOf="@id/username"
+        android:text="正式会员"
+        android:textSize="11sp"
+        android:background="@drawable/border" />
+
+    <TextView
+        android:id="@+id/money"
+        android:layout_width="70dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="20dp"
+        android:gravity="start"
+        app:layout_constraintLeft_toRightOf="@+id/avatar"
+        app:layout_constraintTop_toBottomOf="@id/userType"
+        android:text="余额:0.0"
+        android:textSize="11sp" />
+
+    <TextView
+        android:id="@+id/email"
+        android:layout_width="200dp"
+        android:layout_height="20dp"
+        app:layout_constraintStart_toEndOf="@+id/avatar"
+        app:layout_constraintTop_toBottomOf="@+id/money"
+        android:layout_marginStart="20dp"
+        android:text="2064166368@qq.com" />
+
+    <Button
+        android:id="@+id/mySpace"
+        android:layout_width="70dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginRight="20dp"
+        android:gravity="center"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+
+        android:text="空间->"
+        android:textSize="11sp"
+        android:background="#00000000" />
+
+    <TextView
+        android:id="@+id/myPost"
+        android:layout_width="60dp"
+        android:layout_height="20dp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="180dp"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="10dp"
+        android:text="我的帖子" />
+
+    <Button
+        android:id="@+id/purchased"
+        android:layout_width="70dp"
+        android:layout_height="50dp"
+        android:text="购买"
+        android:layout_marginTop="200dp"
+        android:layout_marginStart="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="#00000000"
+        android:textSize="11sp" />
+
+    <Button
+        android:id="@+id/collected"
+        android:layout_width="70dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="200dp"
+        android:layout_marginStart="20dp"
+        android:text="收藏"
+        app:layout_constraintStart_toEndOf="@id/purchased"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="#00000000"
+        android:textSize="11sp" />
+
+    <Button
+        android:id="@+id/published"
+        android:layout_width="70dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="200dp"
+        android:layout_marginStart="20dp"
+        android:text="发布"
+        app:layout_constraintStart_toEndOf="@id/collected"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="#00000000"
+        android:textSize="11sp" />
+
+    <Button
+        android:id="@+id/sell"
+        android:layout_width="70dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="200dp"
+        android:layout_marginStart="20dp"
+        android:text="卖出"
+        app:layout_constraintStart_toEndOf="@id/published"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="#00000000"
+        android:textSize="11sp" />
+
+    <Button
+        android:id="@+id/upload"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/btn_circle"
+        android:text="发帖" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
