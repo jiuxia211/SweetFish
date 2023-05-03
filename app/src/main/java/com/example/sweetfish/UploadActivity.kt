@@ -96,7 +96,7 @@ class UploadActivity : AppCompatActivity() {
                 val part = MultipartBody.Part.createFormData("file$cnt1", i.name, requestBody)
                 parts.add(part)
                 cnt1++
-            }
+            }//测试
             val title =
                 binding.editTitle.text.toString().toRequestBody("text/plain".toMediaTypeOrNull())
             val content =
