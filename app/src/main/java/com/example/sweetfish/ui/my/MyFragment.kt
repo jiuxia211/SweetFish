@@ -9,7 +9,9 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.bumptech.glide.Glide
+import com.example.sweetfish.ManagementActivity
 import com.example.sweetfish.PurchasedActivity
+import com.example.sweetfish.R
 import com.example.sweetfish.UploadActivity
 import com.example.sweetfish.databinding.FragmentMyBinding
 
@@ -44,7 +46,10 @@ class MyFragment : Fragment() {
                     binding.userType.text = "正式会员"
                 }
                 binding.money.text = "余额: ${it.data.balance}"
-                Glide.with(this).load("http://${it.data.avatar}").into(binding.avatar)
+                Glide.with(this).load("${it.data.avatar}")
+                    .placeholder(R.drawable.loading)
+                    .circleCrop()
+                    .into(binding.avatar)
             }
         }
         binding.upload.setOnClickListener {
@@ -54,6 +59,11 @@ class MyFragment : Fragment() {
         }
         binding.purchased.setOnClickListener {
             val intent = Intent(activity, PurchasedActivity::class.java)
+            intent.putExtra("token", token)
+            startActivity(intent)
+        }
+        binding.management.setOnClickListener {
+            val intent = Intent(activity, ManagementActivity::class.java)
             intent.putExtra("token", token)
             startActivity(intent)
         }

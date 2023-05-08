@@ -20,10 +20,10 @@ import java.io.File
 
 
 class UploadActivity : AppCompatActivity() {
-    var cnt = 1//计算传入的图片数
-    var pathList = ArrayList<String>()
-    var fileList = ArrayList<File>()
-    var parts = ArrayList<MultipartBody.Part>()
+    private var cnt = 1//计算传入的图片数
+    private var pathList = ArrayList<String>()//先将path加入pathList
+    private var fileList = ArrayList<File>()//再将path转成文件
+    private var parts = ArrayList<MultipartBody.Part>()//再转成part
     val pickMultipleMedia =
         registerForActivityResult(ActivityResultContracts.PickMultipleVisualMedia(5)) { uris ->
             if (uris.isNotEmpty()) {
@@ -32,6 +32,7 @@ class UploadActivity : AppCompatActivity() {
                     val helper = URIPathHelper()
                     val path = helper.getPath(this, i)
                     pathList.add(path.toString())
+                    //将图片载入控件
                     when (cnt) {
                         1 -> {
                             val picture: ImageView = findViewById(R.id.image1)
@@ -80,7 +81,7 @@ class UploadActivity : AppCompatActivity() {
 
         val token = intent.getStringExtra("token").toString()
         binding.choosePicture.setOnClickListener {
-            pickMultipleMedia.launch(PickVisualMediaRequest(ActivityResultContracts.PickVisualMedia.ImageAndVideo))
+            pickMultipleMedia.launch(PickVisualMediaRequest(ActivityResultContracts.PickVisualMedia.ImageOnly))
         }
         binding.upload.setOnClickListener {
             for (i in pathList) {
@@ -96,7 +97,7 @@ class UploadActivity : AppCompatActivity() {
                 val part = MultipartBody.Part.createFormData("file$cnt1", i.name, requestBody)
                 parts.add(part)
                 cnt1++
-            }//测试
+            }
             val title =
                 binding.editTitle.text.toString().toRequestBody("text/plain".toMediaTypeOrNull())
             val content =

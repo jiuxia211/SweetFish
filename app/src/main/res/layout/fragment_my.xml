@@ -10,8 +10,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:padding="10dp"
-        android:background="#FF03DAC5"
-        app:constraint_referenced_ids="avatar,username,userType,mySpace,placeHolder" />
+        android:background="@drawable/back1"
+        app:constraint_referenced_ids="avatar,username,userType,mySpace,placeHolder,myPost,purchased" />
 
     <androidx.constraintlayout.widget.Placeholder
         android:layout_width="match_parent"
@@ -29,8 +29,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintRight_toLeftOf="@+id/username"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="50dp"
-        android:background="@drawable/avatar" />
+        android:layout_marginTop="50dp" />
 
     <TextView
         android:id="@+id/username"
@@ -42,7 +41,8 @@
         android:text="jiuxia211"
         android:layout_marginStart="20dp"
         android:layout_marginTop="50dp"
-        android:textSize="20sp" />
+        android:textSize="20sp"
+        android:textColor="@color/black" />
 
     <TextView
         android:id="@+id/userType"
@@ -54,7 +54,8 @@
         app:layout_constraintTop_toBottomOf="@id/username"
         android:text="正式会员"
         android:textSize="11sp"
-        android:background="@drawable/border" />
+        android:background="@drawable/border"
+        android:textColor="@color/black" />
 
     <TextView
         android:id="@+id/money"
@@ -65,7 +66,8 @@
         app:layout_constraintLeft_toRightOf="@+id/avatar"
         app:layout_constraintTop_toBottomOf="@id/userType"
         android:text="余额:0.0"
-        android:textSize="11sp" />
+        android:textSize="11sp"
+        android:textColor="@color/black" />
 
     <TextView
         android:id="@+id/email"
@@ -74,7 +76,8 @@
         app:layout_constraintStart_toEndOf="@+id/avatar"
         app:layout_constraintTop_toBottomOf="@+id/money"
         android:layout_marginStart="20dp"
-        android:text="2064166368@qq.com" />
+        android:text="2064166368@qq.com"
+        android:textColor="@color/black" />
 
     <Button
         android:id="@+id/mySpace"
@@ -99,7 +102,8 @@
         android:layout_marginTop="180dp"
         app:layout_constraintStart_toStartOf="parent"
         android:layout_marginStart="10dp"
-        android:text="我的帖子" />
+        android:text="我的商品"
+        android:textColor="@color/white" />
 
     <Button
         android:id="@+id/purchased"
@@ -111,7 +115,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         android:background="#00000000"
-        android:textSize="11sp" />
+        android:textSize="11sp"
+        android:textColor="@color/white" />
 
     <Button
         android:id="@+id/collected"
@@ -123,7 +128,8 @@
         app:layout_constraintStart_toEndOf="@id/purchased"
         app:layout_constraintTop_toTopOf="parent"
         android:background="#00000000"
-        android:textSize="11sp" />
+        android:textSize="11sp"
+        android:textColor="@color/white" />
 
     <Button
         android:id="@+id/published"
@@ -135,7 +141,8 @@
         app:layout_constraintStart_toEndOf="@id/collected"
         app:layout_constraintTop_toTopOf="parent"
         android:background="#00000000"
-        android:textSize="11sp" />
+        android:textSize="11sp"
+        android:textColor="@color/white" />
 
     <Button
         android:id="@+id/sell"
@@ -147,7 +154,8 @@
         app:layout_constraintStart_toEndOf="@id/published"
         app:layout_constraintTop_toTopOf="parent"
         android:background="#00000000"
-        android:textSize="11sp" />
+        android:textSize="11sp"
+        android:textColor="@color/white" />
 
     <Button
         android:id="@+id/upload"
@@ -163,7 +171,25 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         android:background="@drawable/btn_circle"
-        android:text="发帖" />
+        android:text="发帖"
+        android:textColor="@color/white" />
+
+    <Button
+        android:id="@+id/management"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/upload"
+        android:background="@drawable/btn_circle"
+        android:text="管理"
+        android:textColor="@color/white" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

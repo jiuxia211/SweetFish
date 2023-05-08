@@ -11,10 +11,12 @@ data class Data(
 )
 
 data class PostsLists(
+    val avatar: String,
     val buy_price: Double,
     val content: String,
+    val cover: String,
     val id: Int,
-    val is_approved: Int,
     val price: Double,
-    val title: String
+    val title: String,
+    val username: String
 )

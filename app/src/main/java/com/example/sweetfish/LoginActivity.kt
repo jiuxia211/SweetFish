@@ -49,12 +49,12 @@ class LoginActivity : AppCompatActivity() {
             } else {
                 editor.clear()
             }
-//            loginViewModel.login(
-//                binding.editAccount.text.toString(),
-//                binding.editPassword.text.toString()
-//            )
-            val intent = Intent(this, MainActivity::class.java)
-            startActivity(intent)
+            loginViewModel.login(
+                binding.editAccount.text.toString(),
+                binding.editPassword.text.toString()
+            )
+//            val intent = Intent(this, MainActivity::class.java)
+//            startActivity(intent)
         }
         //进入注册界面
         binding.register.setOnClickListener {

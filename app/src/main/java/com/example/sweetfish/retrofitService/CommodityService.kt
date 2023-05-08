@@ -1,5 +1,6 @@
 package com.example.sweetfish.retrofitService
 
+import com.example.sweetfish.ui.purchased.PurchasedJsonData
 import com.example.sweetfish.ui.upload.UploadJsonData
 import okhttp3.MultipartBody
 import okhttp3.RequestBody
@@ -16,4 +17,8 @@ interface CommodityService {
         @Part("price") price: RequestBody,
         @Part files: List<MultipartBody.Part>,
     ): Call<UploadJsonData>
+
+    @GET("buyer/bought")
+    fun getPurchased(@Header("Authorization") token: String): Call<PurchasedJsonData>
+
 }
