@@ -10,7 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:padding="10dp"
-        android:background="@drawable/back1"
+        android:background="@drawable/default_back"
         app:constraint_referenced_ids="avatar,username,userType,mySpace,placeHolder,myPost,purchased" />
 
     <androidx.constraintlayout.widget.Placeholder
@@ -42,7 +42,7 @@
         android:layout_marginStart="20dp"
         android:layout_marginTop="50dp"
         android:textSize="20sp"
-        android:textColor="@color/black" />
+        android:textColor="@color/white" />
 
     <TextView
         android:id="@+id/userType"
@@ -55,7 +55,7 @@
         android:text="正式会员"
         android:textSize="11sp"
         android:background="@drawable/border"
-        android:textColor="@color/black" />
+        android:textColor="@color/white" />
 
     <TextView
         android:id="@+id/money"
@@ -67,7 +67,7 @@
         app:layout_constraintTop_toBottomOf="@id/userType"
         android:text="余额:0.0"
         android:textSize="11sp"
-        android:textColor="@color/black" />
+        android:textColor="@color/white" />
 
     <TextView
         android:id="@+id/email"
@@ -77,7 +77,7 @@
         app:layout_constraintTop_toBottomOf="@+id/money"
         android:layout_marginStart="20dp"
         android:text="2064166368@qq.com"
-        android:textColor="@color/black" />
+        android:textColor="@color/white" />
 
     <Button
         android:id="@+id/mySpace"
@@ -92,7 +92,8 @@
 
         android:text="空间->"
         android:textSize="11sp"
-        android:background="#00000000" />
+        android:background="#00000000"
+        android:textColor="@color/white" />
 
     <TextView
         android:id="@+id/myPost"
@@ -181,14 +182,31 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
+        android:background="@drawable/btn_circle"
+        android:text="管理"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/logOut"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/upload" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/logOut"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="8dp"
         android:textAlignment="center"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/upload"
+        app:layout_constraintTop_toBottomOf="@+id/management"
         android:background="@drawable/btn_circle"
-        android:text="管理"
+        android:text="退出登录"
         android:textColor="@color/white" />
 
 

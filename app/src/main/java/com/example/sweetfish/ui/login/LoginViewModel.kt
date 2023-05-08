@@ -45,20 +45,35 @@ class LoginViewModel : ViewModel() {
 
     }
 
-    fun saveInfo(editor: SharedPreferences.Editor, account: String, password: String) {
-        editor.putBoolean("remember_password", true)
+    fun saveInfo(
+        editor: SharedPreferences.Editor,
+        account: String,
+        password: String,
+        checked: Boolean,
+        checked1: Boolean
+    ) {
+        editor.putBoolean("remember_password", checked)
+        editor.putBoolean("auto_login", checked)
         editor.putString("account", account)
         editor.putString("password", password)
         editor.apply()
     }
 
-    fun initInfo(prefs: SharedPreferences): Boolean {
+    fun initRePassword(prefs: SharedPreferences): Boolean {
         val isRePassword = prefs.getBoolean("remember_password", false)
         if (isRePassword) {
             val account = prefs.getString("account", "")
             val password = prefs.getString("password", "")
             _username.value = account
             _password.value = password
+            return true
+        }
+        return false
+    }
+
+    fun initAutoLogin(prefs: SharedPreferences): Boolean {
+        val isAutoLogin = prefs.getBoolean("auto_login", false);
+        if (isAutoLogin) {
             return true
         }
         return false

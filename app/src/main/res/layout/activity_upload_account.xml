@@ -23,19 +23,22 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="在这里输入标题"
-                android:id="@+id/editTitle" />
+                android:id="@+id/editTitle"
+                android:layout_marginTop="20dp" />
 
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="在这里输入商品描述"
-                android:id="@+id/editContent" />
+                android:id="@+id/editContent"
+                android:layout_marginTop="20dp" />
 
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="在这里输入参考定价"
-                android:id="@+id/editPrice" />
+                android:id="@+id/editPrice"
+                android:layout_marginTop="20dp" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -91,7 +94,7 @@
                 android:id="@+id/upload"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:text="上传项目"
+                android:text="上架商品"
                 android:layout_margin="20dp"
                 android:layout_gravity="center"
                 android:background="@drawable/btn_circle" />

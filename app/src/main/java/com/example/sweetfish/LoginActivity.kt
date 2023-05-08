@@ -33,9 +33,19 @@ class LoginActivity : AppCompatActivity() {
         }
         //若勾选记住密码，加载存储的账号密码
         val prefs = getPreferences(Context.MODE_PRIVATE)
-        val isRePassword = loginViewModel.initInfo(prefs)
+        val isRePassword = loginViewModel.initRePassword(prefs)
         if (isRePassword) {
             binding.rememberPassword.isChecked = true
+        }
+        val isAutoLogin = loginViewModel.initAutoLogin(prefs)
+        if (isAutoLogin) {
+            binding.autoLogin.isChecked = true
+            //            loginViewModel.login(
+//                binding.editAccount.text.toString(),
+//                binding.editPassword.text.toString()
+//            )
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
         }
         //登录操作
         binding.login.setOnClickListener {
@@ -44,17 +54,19 @@ class LoginActivity : AppCompatActivity() {
                 loginViewModel.saveInfo(
                     editor,
                     binding.editAccount.text.toString(),
-                    binding.editPassword.text.toString()
+                    binding.editPassword.text.toString(),
+                    binding.rememberPassword.isChecked,
+                    binding.autoLogin.isChecked
                 )
             } else {
                 editor.clear()
             }
-            loginViewModel.login(
-                binding.editAccount.text.toString(),
-                binding.editPassword.text.toString()
-            )
-//            val intent = Intent(this, MainActivity::class.java)
-//            startActivity(intent)
+//            loginViewModel.login(
+//                binding.editAccount.text.toString(),
+//                binding.editPassword.text.toString()
+//            )
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
         }
         //进入注册界面
         binding.register.setOnClickListener {

@@ -67,7 +67,9 @@ class MyFragment : Fragment() {
             intent.putExtra("token", token)
             startActivity(intent)
         }
-
+        binding.logOut.setOnClickListener {
+            activity?.finish()
+        }
         return root
     }
 
