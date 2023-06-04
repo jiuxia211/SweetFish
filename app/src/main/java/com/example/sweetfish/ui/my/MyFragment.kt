@@ -9,10 +9,7 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.bumptech.glide.Glide
-import com.example.sweetfish.ManagementActivity
-import com.example.sweetfish.PurchasedActivity
-import com.example.sweetfish.R
-import com.example.sweetfish.UploadActivity
+import com.example.sweetfish.*
 import com.example.sweetfish.databinding.FragmentMyBinding
 
 class MyFragment : Fragment() {
@@ -64,6 +61,11 @@ class MyFragment : Fragment() {
         }
         binding.management.setOnClickListener {
             val intent = Intent(activity, ManagementActivity::class.java)
+            intent.putExtra("token", token)
+            startActivity(intent)
+        }
+        binding.space.setOnClickListener {
+            val intent = Intent(activity, SpaceActivity::class.java)
             intent.putExtra("token", token)
             startActivity(intent)
         }

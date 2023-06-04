@@ -12,6 +12,7 @@ import com.example.sweetfish.ui.login.LoginViewModel
 class LoginActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        supportActionBar?.hide()
         val binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
         val loginViewModel =
@@ -25,42 +26,51 @@ class LoginActivity : AppCompatActivity() {
                 startActivity(intent)
             }
         }
-        loginViewModel.username.observe(this) {
-            binding.editAccount.setText(it)
+        loginViewModel.userInfo.observe(this) {
+            if (it.isRePassword) {
+                binding.rememberPassword.isChecked = true
+                binding.editAccount.setText(it.account)
+                binding.editPassword.setText(it.password)
+            }
+            if (it.isAutoLogin) {
+
+                val editor = getPreferences(Context.MODE_PRIVATE).edit()
+                if (binding.rememberPassword.isChecked) {
+                    binding.autoLogin.isChecked = true
+                    loginViewModel.saveInfo(
+                        editor,
+                        binding.editAccount.text.toString(),
+                        binding.editPassword.text.toString(),
+                        binding.rememberPassword.isChecked,
+                        binding.autoLogin.isChecked
+                    )
+                } else {
+                    binding.autoLogin.isChecked = false
+                    editor.clear()
+                }
+                loginViewModel.login(
+                    binding.editAccount.text.toString(),
+                    binding.editPassword.text.toString()
+                )
+            }
         }
-        loginViewModel.password.observe(this) {
-            binding.editPassword.setText(it)
-        }
-        //若勾选记住密码，加载存储的账号密码
+        //加载用户信息,用于记住密码和自动登录
         val prefs = getPreferences(Context.MODE_PRIVATE)
-        val isRePassword = loginViewModel.initRePassword(prefs)
-        if (isRePassword) {
-            binding.rememberPassword.isChecked = true
-        }
-        val isAutoLogin = loginViewModel.initAutoLogin(prefs)
-        if (isAutoLogin) {
-            binding.autoLogin.isChecked = true
-            //            loginViewModel.login(
-//                binding.editAccount.text.toString(),
-//                binding.editPassword.text.toString()
-//            )
-            val intent = Intent(this, MainActivity::class.java)
-            startActivity(intent)
-        }
+        loginViewModel.initUserInfo(prefs)
         //登录操作
         binding.login.setOnClickListener {
-            val editor = getPreferences(Context.MODE_PRIVATE).edit()
-            if (binding.rememberPassword.isChecked) {
-                loginViewModel.saveInfo(
-                    editor,
-                    binding.editAccount.text.toString(),
-                    binding.editPassword.text.toString(),
-                    binding.rememberPassword.isChecked,
-                    binding.autoLogin.isChecked
-                )
-            } else {
-                editor.clear()
-            }
+//            val editor = getPreferences(Context.MODE_PRIVATE).edit()
+//            if (binding.rememberPassword.isChecked) {
+//                loginViewModel.saveInfo(
+//                    editor,
+//                    binding.editAccount.text.toString(),
+//                    binding.editPassword.text.toString(),
+//                    binding.rememberPassword.isChecked,
+//                    binding.autoLogin.isChecked
+//                )
+//            } else {
+//                editor.clear()
+//            }
 //            loginViewModel.login(
 //                binding.editAccount.text.toString(),
 //                binding.editPassword.text.toString()

@@ -1,6 +1,9 @@
 package com.example.sweetfish.retrofitService
 
+import com.example.sweetfish.ui.collected.CollectedJsonData
+import com.example.sweetfish.ui.published.PublishedJsonData
 import com.example.sweetfish.ui.purchased.PurchasedJsonData
+import com.example.sweetfish.ui.sold.SoldJsonData
 import com.example.sweetfish.ui.upload.UploadJsonData
 import okhttp3.MultipartBody
 import okhttp3.RequestBody
@@ -20,5 +23,14 @@ interface CommodityService {
 
     @GET("buyer/bought")
     fun getPurchased(@Header("Authorization") token: String): Call<PurchasedJsonData>
+
+    @GET("buyer/favposts")
+    fun getCollected(@Header("Authorization") token: String): Call<CollectedJsonData>
+
+    @GET("seller/posted_posts")
+    fun getPublished(@Header("Authorization") token: String): Call<PublishedJsonData>
+
+    @GET("seller/sold_posts")
+    fun getSold(@Header("Authorization") token: String): Call<SoldJsonData>
 
 }

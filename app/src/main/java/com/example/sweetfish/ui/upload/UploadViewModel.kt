@@ -13,9 +13,8 @@ import retrofit2.Callback
 import retrofit2.Response
 
 class UploadViewModel : ViewModel() {
-    private val _uploadResponseData = MutableLiveData<UploadJsonData>().apply {
-        value = UploadJsonData(0, "0")
-    }
+    private val _uploadResponseData = MutableLiveData<UploadJsonData>()
+
     val uploadResponseData: LiveData<UploadJsonData> = _uploadResponseData
 
     fun upload(

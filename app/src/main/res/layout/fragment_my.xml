@@ -6,13 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".ui.my.MyFragment">
 
-    <androidx.constraintlayout.helper.widget.Layer
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:padding="10dp"
-        android:background="@drawable/default_back"
-        app:constraint_referenced_ids="avatar,username,userType,mySpace,placeHolder,myPost,purchased" />
-
     <androidx.constraintlayout.widget.Placeholder
         android:layout_width="match_parent"
         android:layout_height="50dp"
@@ -29,7 +22,8 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintRight_toLeftOf="@+id/username"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="50dp" />
+        android:layout_marginTop="50dp"
+        app:roundPercent="1" />
 
     <TextView
         android:id="@+id/username"
@@ -42,7 +36,7 @@
         android:layout_marginStart="20dp"
         android:layout_marginTop="50dp"
         android:textSize="20sp"
-        android:textColor="@color/white" />
+        android:textColor="@color/black" />
 
     <TextView
         android:id="@+id/userType"
@@ -55,7 +49,7 @@
         android:text="正式会员"
         android:textSize="11sp"
         android:background="@drawable/border"
-        android:textColor="@color/white" />
+        android:textColor="@color/black" />
 
     <TextView
         android:id="@+id/money"
@@ -67,7 +61,7 @@
         app:layout_constraintTop_toBottomOf="@id/userType"
         android:text="余额:0.0"
         android:textSize="11sp"
-        android:textColor="@color/white" />
+        android:textColor="@color/black" />
 
     <TextView
         android:id="@+id/email"
@@ -77,10 +71,10 @@
         app:layout_constraintTop_toBottomOf="@+id/money"
         android:layout_marginStart="20dp"
         android:text="2064166368@qq.com"
-        android:textColor="@color/white" />
+        android:textColor="@color/black" />
 
     <Button
-        android:id="@+id/mySpace"
+        android:id="@+id/space"
         android:layout_width="70dp"
         android:layout_height="50dp"
         android:layout_marginLeft="20dp"
@@ -93,7 +87,7 @@
         android:text="空间->"
         android:textSize="11sp"
         android:background="#00000000"
-        android:textColor="@color/white" />
+        android:textColor="@color/black" />
 
     <TextView
         android:id="@+id/myPost"
@@ -109,54 +103,108 @@
     <Button
         android:id="@+id/purchased"
         android:layout_width="70dp"
-        android:layout_height="50dp"
-        android:text="购买"
-        android:layout_marginTop="200dp"
+        android:layout_height="20dp"
         android:layout_marginStart="20dp"
+        android:layout_marginTop="200dp"
+        android:background="#00000000"
+        android:text="购买"
+        android:textColor="@color/black"
+        android:textSize="11sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:background="#00000000"
-        android:textSize="11sp"
-        android:textColor="@color/white" />
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <ImageButton
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:id="@+id/purchasedImg"
+        app:srcCompat="@drawable/purchased"
+        app:layout_constraintTop_toBottomOf="@+id/purchased"
+        android:layout_marginStart="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        android:scaleType="centerCrop"
+        android:background="@null"
+        android:contentDescription="购买的图片按钮" />
+
 
     <Button
         android:id="@+id/collected"
         android:layout_width="70dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="200dp"
+        android:layout_height="20dp"
         android:layout_marginStart="20dp"
+        android:layout_marginTop="200dp"
+        android:background="#00000000"
         android:text="收藏"
+        android:textColor="@color/black"
+        android:textSize="11sp"
         app:layout_constraintStart_toEndOf="@id/purchased"
         app:layout_constraintTop_toTopOf="parent"
-        android:background="#00000000"
-        android:textSize="11sp"
-        android:textColor="@color/white" />
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <ImageButton
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:id="@+id/collectedImg"
+        app:srcCompat="@drawable/collected"
+        app:layout_constraintTop_toBottomOf="@+id/collected"
+        android:layout_marginStart="20dp"
+        app:layout_constraintStart_toEndOf="@id/purchasedImg"
+        android:scaleType="centerCrop"
+        android:background="@null"
+        android:contentDescription="收藏的图片按钮" />
+
 
     <Button
         android:id="@+id/published"
         android:layout_width="70dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="200dp"
+        android:layout_height="20dp"
         android:layout_marginStart="20dp"
+        android:layout_marginTop="200dp"
+        android:background="#00000000"
         android:text="发布"
+        android:textColor="@color/black"
+        android:textSize="11sp"
         app:layout_constraintStart_toEndOf="@id/collected"
         app:layout_constraintTop_toTopOf="parent"
-        android:background="#00000000"
-        android:textSize="11sp"
-        android:textColor="@color/white" />
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <ImageButton
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:id="@+id/publishedImg"
+        app:srcCompat="@drawable/published"
+        app:layout_constraintTop_toBottomOf="@+id/published"
+        android:layout_marginStart="20dp"
+        app:layout_constraintStart_toEndOf="@id/collectedImg"
+        android:scaleType="centerCrop"
+        android:background="@null"
+        android:contentDescription="发布的图片按钮" />
 
     <Button
-        android:id="@+id/sell"
+        android:id="@+id/sold"
         android:layout_width="70dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="200dp"
+        android:layout_height="20dp"
         android:layout_marginStart="20dp"
+        android:layout_marginTop="200dp"
+        android:background="#00000000"
         android:text="卖出"
+        android:textColor="@color/black"
+        android:textSize="11sp"
         app:layout_constraintStart_toEndOf="@id/published"
         app:layout_constraintTop_toTopOf="parent"
-        android:background="#00000000"
-        android:textSize="11sp"
-        android:textColor="@color/white" />
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <ImageButton
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:id="@+id/sellImg"
+        app:srcCompat="@drawable/sell"
+        app:layout_constraintTop_toBottomOf="@+id/sold"
+        android:layout_marginStart="20dp"
+        app:layout_constraintStart_toEndOf="@id/publishedImg"
+        android:scaleType="centerCrop"
+        android:background="@null"
+        android:contentDescription="卖出的图片按钮" />
 
     <Button
         android:id="@+id/upload"
@@ -165,15 +213,17 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
+        android:background="@drawable/btn_circle"
+        android:text="发帖"
         android:textAlignment="center"
+        android:textColor="@color/white"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:background="@drawable/btn_circle"
-        android:text="发帖"
-        android:textColor="@color/white" />
+        app:layout_constraintVertical_bias="0.583" />
 
     <Button
         android:id="@+id/management"

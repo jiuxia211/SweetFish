@@ -1,4 +1,4 @@
-package com.example.sweetfish.ui.purchased
+package com.example.sweetfish.utils.commodity
 
 data class Commodity(
     val id: Int,

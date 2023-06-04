@@ -12,10 +12,7 @@ import retrofit2.Response
 
 class MyViewModel : ViewModel() {
 
-    private val _userResponseData = MutableLiveData<UserJsonData>().apply {
-        value = UserJsonData(0, Data("null", 0, 0, "null", 0, "null"), "null")
-
-    }
+    private val _userResponseData = MutableLiveData<UserJsonData>()
     val userResponseData: LiveData<UserJsonData> = _userResponseData
     fun initUserInfo(username: String, token: String) {
         val userService = ServiceCreator.create(UserService::class.java)

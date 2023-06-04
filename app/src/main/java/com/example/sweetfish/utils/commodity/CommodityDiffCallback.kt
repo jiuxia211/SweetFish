@@ -1,4 +1,4 @@
-package com.example.sweetfish.ui.purchased
+package com.example.sweetfish.utils.commodity
 
 import androidx.recyclerview.widget.DiffUtil
 

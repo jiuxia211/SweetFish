@@ -10,6 +10,7 @@ import com.example.sweetfish.ui.register.RegisterViewModel
 class RegisterActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        supportActionBar?.hide()
         val binding = ActivityRegisterBinding.inflate(layoutInflater)
         setContentView(binding.root)
         val registerViewModel = ViewModelProvider(this)[RegisterViewModel::class.java]

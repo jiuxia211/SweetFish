@@ -6,18 +6,15 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.example.sweetfish.retrofitService.CommodityService
 import com.example.sweetfish.retrofitService.ServiceCreator
+import com.example.sweetfish.utils.commodity.Commodity
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
 class PurchasedViewModel : ViewModel() {
-    private val _commodityList = MutableLiveData<ArrayList<Commodity>>().apply {
-        value = ArrayList<Commodity>()
-    }
+    private val _commodityList = MutableLiveData<ArrayList<Commodity>>()
     val commodityList: LiveData<ArrayList<Commodity>> = _commodityList
-    private val _purchasedResponseData = MutableLiveData<PurchasedJsonData>().apply {
-        value = PurchasedJsonData(0, Data(posts_lists = ArrayList<PostsLists>()), "ZZ")
-    }
+    private val _purchasedResponseData = MutableLiveData<PurchasedJsonData>()
     val purchasedResponseData: LiveData<PurchasedJsonData> = _purchasedResponseData
     fun initPurchasedCommodity(token: String) {
         val commodityService = ServiceCreator.create(CommodityService::class.java)

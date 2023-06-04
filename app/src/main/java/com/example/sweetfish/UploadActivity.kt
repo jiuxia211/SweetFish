@@ -69,6 +69,7 @@ class UploadActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        supportActionBar?.hide()
         val binding = ActivityUploadAccountBinding.inflate(layoutInflater)
         setContentView(binding.root)
         val uploadViewModel = ViewModelProvider(this)[UploadViewModel::class.java]

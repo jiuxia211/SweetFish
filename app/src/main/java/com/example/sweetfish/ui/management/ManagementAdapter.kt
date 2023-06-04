@@ -7,24 +7,20 @@ import android.widget.BaseExpandableListAdapter
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
+import com.bumptech.glide.Glide
 import com.example.sweetfish.R
+import com.example.sweetfish.utils.commodity.Commodity
 
 
-class ManagementAdapter :
-    BaseExpandableListAdapter {
-    var groups: MutableList<ManagementFirstList> = mutableListOf()
-    var childs: MutableList<MutableList<Commodity>> =
-        mutableListOf()
+class ManagementAdapter(
+    var groups: MutableList<ManagementFirstList> = mutableListOf(),
+    var childs: MutableList<MutableList<Commodity>>,
+    var activity: AppCompatActivity
+) :
+    BaseExpandableListAdapter() {
     lateinit var groupViewHolder: GroupViewHolder
     lateinit var childViewHolder: ChildViewHolder
-
-    constructor(
-        groups: MutableList<ManagementFirstList> = mutableListOf(),
-        childs: MutableList<MutableList<Commodity>>
-    ) : super() {
-        this.groups = groups
-        this.childs = childs
-    }
 
     inner class GroupViewHolder(view: View) {
         var parentText: TextView? = null
@@ -101,7 +97,7 @@ class ManagementAdapter :
             groupViewHolder = mconvertView?.tag as GroupViewHolder
         }
         groupViewHolder.parentText?.text =
-            groups[groupPosition].parentText.toString()
+            groups[groupPosition].parentText
         if (isExpanded) {
             groupViewHolder.parentImage?.setImageResource(R.drawable.eatwatermelon)
         } else {
@@ -130,8 +126,14 @@ class ManagementAdapter :
         childViewHolder.childTitle?.text =
             childs[groupPosition][childPosition].title
         childViewHolder.childUsername?.text = childs[groupPosition][childPosition].username
-        childViewHolder.childCover?.setImageResource(childs[groupPosition][childPosition].imageId)
-        childViewHolder.childAvatar?.setImageResource(childs[groupPosition][childPosition].avatarId)
+        childViewHolder.childCover?.let {
+            Glide.with(activity).load(childs[groupPosition][childPosition].coverPath)
+                .into(it)
+        }
+        childViewHolder.childAvatar?.let {
+            Glide.with(activity).load(childs[groupPosition][childPosition].avatarPath).circleCrop()
+                .into(it)
+        }
 
         return mconvertView!!
     }

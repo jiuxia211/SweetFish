@@ -8,6 +8,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.sweetfish.databinding.PurchasedItemsBinding
+import com.example.sweetfish.utils.commodity.Commodity
 
 class PurchasedAdapter(var commodityList: List<Commodity>, val activity: AppCompatActivity) :
     RecyclerView.Adapter<PurchasedAdapter.ViewHolder>() {

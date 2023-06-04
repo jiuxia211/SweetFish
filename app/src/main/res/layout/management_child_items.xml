@@ -36,7 +36,9 @@
                 android:layout_height="match_parent"
                 android:layout_weight="2"
                 android:layout_margin="10dp"
-                android:id="@+id/child_avatar" />
+                android:id="@+id/child_avatar"
+                app:roundPercent="1"
+                android:src="@drawable/default_avatar" />
 
             <TextView
                 android:layout_width="0dp"

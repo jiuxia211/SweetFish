@@ -12,15 +12,8 @@ import retrofit2.Callback
 import retrofit2.Response
 
 class LoginViewModel : ViewModel() {
-    private val _username = MutableLiveData<String>().apply {
-        value = ""
-    }
-    val username: LiveData<String> = _username
-
-    private val _password = MutableLiveData<String>().apply {
-        value = ""
-    }
-    val password: LiveData<String> = _password
+    private val _userInfo = MutableLiveData<UserInfo>()
+    val userInfo: LiveData<UserInfo> = _userInfo
     private val _loginResponseData = MutableLiveData<LoginJsonData>().apply {
         value = LoginJsonData(0, Data(0, 0, "token", "username"), "欢迎来到甜鱼")
     }
@@ -53,30 +46,20 @@ class LoginViewModel : ViewModel() {
         checked1: Boolean
     ) {
         editor.putBoolean("remember_password", checked)
-        editor.putBoolean("auto_login", checked)
+        editor.putBoolean("auto_login", checked1)
         editor.putString("account", account)
         editor.putString("password", password)
         editor.apply()
     }
 
-    fun initRePassword(prefs: SharedPreferences): Boolean {
+    fun initUserInfo(prefs: SharedPreferences) {
+        val account = prefs.getString("account", "").toString()
+        val password = prefs.getString("password", "").toString()
         val isRePassword = prefs.getBoolean("remember_password", false)
-        if (isRePassword) {
-            val account = prefs.getString("account", "")
-            val password = prefs.getString("password", "")
-            _username.value = account
-            _password.value = password
-            return true
-        }
-        return false
+        val isAutoLogin = prefs.getBoolean("auto_login", false)
+        _userInfo.value = UserInfo(account, password, isRePassword, isAutoLogin)
+
     }
 
-    fun initAutoLogin(prefs: SharedPreferences): Boolean {
-        val isAutoLogin = prefs.getBoolean("auto_login", false);
-        if (isAutoLogin) {
-            return true
-        }
-        return false
-    }
 
 }

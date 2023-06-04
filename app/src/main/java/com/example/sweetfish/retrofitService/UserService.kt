@@ -4,6 +4,8 @@ import com.example.sweetfish.ui.login.LoginJsonData
 import com.example.sweetfish.ui.my.UserJsonData
 import com.example.sweetfish.ui.register.RegisterJsonData
 import com.example.sweetfish.ui.register.SendCodeJsonData
+import com.example.sweetfish.ui.space.SetAvatarJsonData
+import okhttp3.MultipartBody
 import retrofit2.Call
 import retrofit2.http.*
 
@@ -35,4 +37,11 @@ interface UserService {
         @Field("username") username: String,
         @Header("Authorization") token: String
     ): Call<UserJsonData>
+
+    @Multipart
+    @POST("user/set_avatar")
+    fun setAvatar(
+        @Header("Authorization") token: String,
+        @Part file: MultipartBody.Part
+    ): Call<SetAvatarJsonData>
 }
