@@ -1,5 +1,6 @@
 package com.example.sweetfish.ui.space.purchased
 
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.widget.ImageView
@@ -7,10 +8,15 @@ import android.widget.TextView
 import androidx.fragment.app.FragmentActivity
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.example.sweetfish.DetailActivity
 import com.example.sweetfish.databinding.PublishedItemsBinding
 import com.example.sweetfish.utils.commodity.Commodity
 
-class PurchasedAdapter(var commodityList: List<Commodity>, val activity: FragmentActivity) :
+class PurchasedAdapter(
+    var commodityList: List<Commodity>,
+    val activity: FragmentActivity,
+    val token: String
+) :
     RecyclerView.Adapter<PurchasedAdapter.ViewHolder>() {
     inner class ViewHolder(binding: PublishedItemsBinding) : RecyclerView.ViewHolder(binding.root) {
         val commodityTitle: TextView = binding.title
@@ -24,7 +30,13 @@ class PurchasedAdapter(var commodityList: List<Commodity>, val activity: Fragmen
             PublishedItemsBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         val viewHolder = ViewHolder(binding)
         viewHolder.itemView.setOnClickListener {
-            //TODO 点击事件
+            val position = viewHolder.adapterPosition
+            val commodity = commodityList[position]
+            val intent = Intent(parent.context, DetailActivity::class.java).apply {
+                putExtra("pid", commodity.id.toString())
+                putExtra("token", token)
+            }
+            parent.context.startActivity(intent)
         }
         return viewHolder
     }

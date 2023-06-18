@@ -1,4 +1,4 @@
-package com.example.sweetfish.ui.space.published
+package com.example.sweetfish.ui.main
 
 import android.content.Intent
 import android.view.LayoutInflater
@@ -12,12 +12,11 @@ import com.example.sweetfish.DetailActivity
 import com.example.sweetfish.databinding.PurchasedItemsBinding
 import com.example.sweetfish.utils.commodity.Commodity
 
-class PublishedAdapter(
+class RecommendAdapter(
     var commodityList: List<Commodity>,
     val activity: FragmentActivity,
     val token: String
-) :
-    RecyclerView.Adapter<PublishedAdapter.ViewHolder>() {
+) : RecyclerView.Adapter<RecommendAdapter.ViewHolder>() {
     inner class ViewHolder(binding: PurchasedItemsBinding) : RecyclerView.ViewHolder(binding.root) {
         val commodityTitle: TextView = binding.title
         val commodityCover: ImageView = binding.cover

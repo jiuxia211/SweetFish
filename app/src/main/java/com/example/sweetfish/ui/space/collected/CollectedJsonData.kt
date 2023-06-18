@@ -1,4 +1,4 @@
-package com.example.sweetfish.ui.collected
+package com.example.sweetfish.ui.space.collected
 
 data class CollectedJsonData(
     val code: Int,

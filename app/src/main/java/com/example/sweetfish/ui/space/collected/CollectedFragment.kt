@@ -29,13 +29,13 @@ class CollectedFragment : Fragment() {
         val groups = ArrayList<CollectedFirstList>()
         groups.add(CollectedFirstList("已收藏"))
         var childs: ArrayList<ArrayList<Commodity>>
-        var adapter: CollectedAdpater
+        var adapter: CollectedAdapter
         collectedViewModel.collectedResponseData.observe(this) {
             Toast.makeText(activity, it.message, Toast.LENGTH_SHORT).show()
         }
         collectedViewModel.commodityList.observe(this) {
             childs = it
-            adapter = CollectedAdpater(groups, childs, activity!!)
+            adapter = CollectedAdapter(groups, childs, activity!!, token)
             binding.expandList.setAdapter(adapter)
             binding.expandList.expandGroup(0)
         }

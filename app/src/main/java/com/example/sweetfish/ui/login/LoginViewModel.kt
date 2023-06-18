@@ -27,7 +27,7 @@ class LoginViewModel : ViewModel() {
                     Log.d("zz", response.body().toString())
                     _loginResponseData.postValue(response.body())
                 } else {
-                    Log.e("im", "返回了空的json数据")
+                    Log.e("zz", "返回了空的json数据")
                 }
             }
 

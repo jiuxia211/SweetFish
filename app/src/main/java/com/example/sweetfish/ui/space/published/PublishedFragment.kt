@@ -10,7 +10,6 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.GridLayoutManager
 import com.example.sweetfish.databinding.FragmentPublishedBinding
-import com.example.sweetfish.ui.space.purchased.PurchasedAdapter
 import com.example.sweetfish.utils.commodity.Commodity
 import com.example.sweetfish.utils.commodity.CommodityDiffCallback
 
@@ -31,7 +30,7 @@ class PublishedFragment : Fragment() {
         //初始化RecyclerView
         val layoutManager = GridLayoutManager(activity, 2)
         binding.commodities.layoutManager = layoutManager
-        var adapter = PurchasedAdapter(ArrayList<Commodity>(), activity!!)
+        var adapter = PublishedAdapter(ArrayList<Commodity>(), activity!!, token)
         binding.commodities.adapter = adapter
         publishedViewModel.purchasedResponseData.observe(this) {
             Toast.makeText(activity, it.message, Toast.LENGTH_SHORT).show()

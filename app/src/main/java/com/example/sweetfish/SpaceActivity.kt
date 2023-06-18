@@ -5,12 +5,16 @@ import android.graphics.Bitmap
 import android.net.Uri
 import android.os.Bundle
 import android.util.Log
-import android.widget.Toast
+import android.view.Gravity
+import android.view.WindowManager
+import android.widget.PopupWindow
 import androidx.activity.result.PickVisualMediaRequest
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
+import com.bumptech.glide.Glide
 import com.example.sweetfish.databinding.ActivitySpaceBinding
+import com.example.sweetfish.databinding.AvatarMenuBinding
 import com.example.sweetfish.ui.space.SpaceViewModel
 import com.example.sweetfish.ui.space.TabAdapter
 import com.example.sweetfish.utils.URIPathHelper
@@ -22,7 +26,49 @@ import okhttp3.RequestBody.Companion.asRequestBody
 import java.io.File
 
 class SpaceActivity : AppCompatActivity() {
-    lateinit var part: MultipartBody.Part
+    private lateinit var part: MultipartBody.Part
+    private lateinit var popupWindow: PopupWindow
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        supportActionBar?.hide()
+        val binding = ActivitySpaceBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+        val token = intent.getStringExtra("token").toString()
+        val username = intent.getStringExtra("username").toString()
+        initPopupWindow()
+        binding.vp.adapter = TabAdapter(this)
+        TabLayoutMediator(binding.tb, binding.vp) { tab, position ->
+            when (position) {
+                0 -> tab.text = "购买"
+                1 -> tab.text = "收藏"
+                2 -> tab.text = "发布"
+                else -> tab.text = "卖出"
+            }
+        }.attach()
+        //点击头像的显示popupWindow菜单
+        binding.avatar.setOnClickListener {
+            popupWindow.showAtLocation(binding.avatar, Gravity.BOTTOM, 0, 0)
+        }
+        val spaceViewModel = ViewModelProvider(this)[SpaceViewModel::class.java]
+        spaceViewModel.initUserInfo(username, token)
+        spaceViewModel.userResponseData.observe(this) {
+            if (it.code == 200) {
+                Glide.with(this).load(it.data.avatar)
+                    .placeholder(R.drawable.loading)
+                    .circleCrop()
+                    .into(binding.avatar)
+            }
+        }
+        spaceViewModel.setAvatarResponseData.observe(this) {
+            if (it.code == 200) {
+                finish()
+            }
+        }
+
+
+    }
+
     val pickMedia = registerForActivityResult(ActivityResultContracts.PickVisualMedia()) { uri ->
         if (uri != null) {
             Log.d("PhotoPicker", "Selected URI: $uri")
@@ -80,29 +126,15 @@ class SpaceActivity : AppCompatActivity() {
         }
     }
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        supportActionBar?.hide()
-        val binding = ActivitySpaceBinding.inflate(layoutInflater)
-        setContentView(binding.root)
-        val token = intent.getStringExtra("token").toString()
-        binding.vp.adapter = TabAdapter(this)
-        TabLayoutMediator(binding.tb, binding.vp) { tab, position ->
-            when (position) {
-                0 -> tab.text = "购买"
-                1 -> tab.text = "收藏"
-                2 -> tab.text = "发布"
-                else -> tab.text = "卖出"
-            }
-        }.attach()
-        val spaceViewModel = ViewModelProvider(this)[SpaceViewModel::class.java]
-        spaceViewModel.setAvatarResponseData.observe(this) {
-            Toast.makeText(this, it.message, Toast.LENGTH_SHORT).show()
-            if (it.code == 200) {
-                finish()
-            }
-        }
-        binding.avatar.setOnClickListener {
+    private fun initPopupWindow() {
+        popupWindow = PopupWindow(this)
+        val menuLayout = AvatarMenuBinding.inflate(layoutInflater)
+        popupWindow.contentView = menuLayout.root
+        popupWindow.width = WindowManager.LayoutParams.MATCH_PARENT
+        popupWindow.height = WindowManager.LayoutParams.WRAP_CONTENT
+        popupWindow.animationStyle = R.style.PopupAnimation
+        popupWindow.isOutsideTouchable = true
+        menuLayout.setAvatar.setOnClickListener {
             pickMedia.launch(PickVisualMediaRequest(ActivityResultContracts.PickVisualMedia.ImageOnly))
         }
     }

@@ -1,7 +1,6 @@
 package com.example.sweetfish
 
 import android.os.Bundle
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.DiffUtil
@@ -25,10 +24,9 @@ class PurchasedActivity : AppCompatActivity() {
         //初始化RecyclerView
         val layoutManager = GridLayoutManager(this, 2)
         binding.commodities.layoutManager = layoutManager
-        var adapter = PurchasedAdapter(ArrayList<Commodity>(), this)
+        val adapter = PurchasedAdapter(ArrayList<Commodity>(), this)
         binding.commodities.adapter = adapter
         purchasedViewModel.purchasedResponseData.observe(this) {
-            Toast.makeText(this, it.message, Toast.LENGTH_SHORT).show()
         }
         //观察商品列表是否改变，改变则用DiffUtil刷新recycleview
         purchasedViewModel.commodityList.observe(this) {

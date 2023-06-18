@@ -6,7 +6,6 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.example.sweetfish.retrofitService.CommodityService
 import com.example.sweetfish.retrofitService.ServiceCreator
-import com.example.sweetfish.ui.collected.CollectedJsonData
 import com.example.sweetfish.utils.commodity.Commodity
 import retrofit2.Call
 import retrofit2.Callback

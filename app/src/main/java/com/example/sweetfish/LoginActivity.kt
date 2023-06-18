@@ -59,24 +59,24 @@ class LoginActivity : AppCompatActivity() {
         loginViewModel.initUserInfo(prefs)
         //登录操作
         binding.login.setOnClickListener {
-//            val editor = getPreferences(Context.MODE_PRIVATE).edit()
-//            if (binding.rememberPassword.isChecked) {
-//                loginViewModel.saveInfo(
-//                    editor,
-//                    binding.editAccount.text.toString(),
-//                    binding.editPassword.text.toString(),
-//                    binding.rememberPassword.isChecked,
-//                    binding.autoLogin.isChecked
-//                )
-//            } else {
-//                editor.clear()
-//            }
-//            loginViewModel.login(
-//                binding.editAccount.text.toString(),
-//                binding.editPassword.text.toString()
-//            )
-            val intent = Intent(this, MainActivity::class.java)
-            startActivity(intent)
+            val editor = getPreferences(Context.MODE_PRIVATE).edit()
+            if (binding.rememberPassword.isChecked) {
+                loginViewModel.saveInfo(
+                    editor,
+                    binding.editAccount.text.toString(),
+                    binding.editPassword.text.toString(),
+                    binding.rememberPassword.isChecked,
+                    binding.autoLogin.isChecked
+                )
+            } else {
+                editor.clear()
+            }
+            loginViewModel.login(
+                binding.editAccount.text.toString(),
+                binding.editPassword.text.toString()
+            )
+//            val intent = Intent(this, MainActivity::class.java)
+//            startActivity(intent)
         }
         //进入注册界面
         binding.register.setOnClickListener {

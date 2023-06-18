@@ -46,7 +46,6 @@
                 android:gravity="start"
                 android:padding="10dp"
                 android:paddingStart="20dp"
-                android:paddingEnd="10dp"
                 android:textSize="11sp"
                 android:textColor="@color/black" />
 

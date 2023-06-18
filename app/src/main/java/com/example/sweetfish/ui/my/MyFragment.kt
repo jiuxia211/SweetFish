@@ -43,7 +43,7 @@ class MyFragment : Fragment() {
                     binding.userType.text = "正式会员"
                 }
                 binding.money.text = "余额: ${it.data.balance}"
-                Glide.with(this).load("${it.data.avatar}")
+                Glide.with(this).load(it.data.avatar)
                     .placeholder(R.drawable.loading)
                     .circleCrop()
                     .into(binding.avatar)
@@ -67,6 +67,7 @@ class MyFragment : Fragment() {
         binding.space.setOnClickListener {
             val intent = Intent(activity, SpaceActivity::class.java)
             intent.putExtra("token", token)
+            intent.putExtra("username", username)
             startActivity(intent)
         }
         binding.logOut.setOnClickListener {

@@ -40,6 +40,25 @@
                 android:id="@+id/editPrice"
                 android:layout_marginTop="20dp" />
 
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="在这里输入账号"
+                android:id="@+id/editAccount"
+                android:layout_marginTop="20dp" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="在这里输入密码"
+                android:id="@+id/editPassword"
+                android:layout_marginTop="20dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="注：账号密码会在您确认买家出价后发送给买家验号，若游戏账号需要手机验证码等额外信息，请您在确认买家出价后与其联系" />
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="120dp"

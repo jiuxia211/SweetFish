@@ -1,5 +1,6 @@
 package com.example.sweetfish.ui.space.collected
 
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -9,13 +10,15 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.fragment.app.FragmentActivity
 import com.bumptech.glide.Glide
+import com.example.sweetfish.DetailActivity
 import com.example.sweetfish.R
 import com.example.sweetfish.utils.commodity.Commodity
 
-class CollectedAdpater(
+class CollectedAdapter(
     var groups: List<CollectedFirstList>,
     var childs: List<List<Commodity>>,
-    val activity: FragmentActivity
+    val activity: FragmentActivity,
+    val token: String
 ) :
     BaseExpandableListAdapter() {
     lateinit var groupViewHolder: GroupViewHolder
@@ -89,7 +92,7 @@ class CollectedAdpater(
         var mconvertView = convertView
         if (convertView == null) {
             mconvertView = LayoutInflater.from(parent?.context)
-                .inflate(R.layout.management_parent_items, parent, false)
+                .inflate(R.layout.collected_parent_items, parent, false)
             groupViewHolder = GroupViewHolder(mconvertView)
             mconvertView?.tag = groupViewHolder
         } else {
@@ -115,7 +118,7 @@ class CollectedAdpater(
         var mconvertView = convertView
         if (convertView == null) {
             mconvertView = LayoutInflater.from(parent?.context)
-                .inflate(R.layout.management_child_items, parent, false)
+                .inflate(R.layout.collected_child_items, parent, false)
             childViewHolder = ChildViewHolder(mconvertView)
             // 用mconvertView代替convertView，不然会有空指针异常
             mconvertView?.tag = childViewHolder
@@ -133,7 +136,14 @@ class CollectedAdpater(
             Glide.with(activity).load(childs[groupPosition][childPosition].avatarPath).circleCrop()
                 .into(it)
         }
-
+        mconvertView?.setOnClickListener {
+            val commodity = childs[groupPosition][childPosition]
+            val intent = Intent(parent?.context, DetailActivity::class.java).apply {
+                putExtra("pid", commodity.id.toString())
+                putExtra("token", token)
+            }
+            parent?.context?.startActivity(intent)
+        }
         return mconvertView!!
     }
 

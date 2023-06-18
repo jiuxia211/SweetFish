@@ -33,7 +33,7 @@ class SoldFragment : Fragment() {
         //初始化RecyclerView
         val layoutManager = GridLayoutManager(activity, 2)
         binding.commodities.layoutManager = layoutManager
-        var adapter = SoldAdapter(ArrayList<Commodity>(), activity!!)
+        var adapter = SoldAdapter(ArrayList<Commodity>(), activity!!, token)
         binding.commodities.adapter = adapter
         soldViewModel.soldResponseData.observe(this) {
             Toast.makeText(activity, it.message, Toast.LENGTH_SHORT).show()

@@ -11,8 +11,12 @@ data class Data(
 )
 
 data class Post(
+    val avatar: String,
+    val buy_price: Int,
     val content: String,
+    val cover: String,
     val id: Int,
+    val price: Double,
     val title: String,
-    val user_id: Int
+    val username: String
 )
