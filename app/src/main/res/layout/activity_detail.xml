@@ -96,19 +96,17 @@
 
             <com.smarteist.autoimageslider.SliderView
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/sliderView" />
+                android:layout_height="200dp"
+                android:id="@+id/sliderView"
+                app:sliderIndicatorSelectedColor="#5A5A5A"
+                app:sliderIndicatorUnselectedColor="#FFF" />
 
-            <androidx.viewpager2.widget.ViewPager2
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/images" />
         </LinearLayout>
 
     </ScrollView>
 
 
-    <LinearLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="50dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -116,27 +114,33 @@
         android:orientation="horizontal">
 
         <Button
-            android:layout_width="0dp"
+            android:layout_width="100dp"
             android:layout_height="match_parent"
-            android:layout_weight="5"
             android:text="出价"
-            android:id="@+id/give_price" />
+            android:id="@+id/give_price"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <Button
-            android:layout_width="0dp"
+            android:layout_width="100dp"
             android:layout_height="match_parent"
             android:text="联系卖家"
-            android:layout_weight="5" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/give_price" />
 
 
         <ImageButton
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
             android:src="@drawable/collected"
             android:layout_weight="2"
             android:scaleType="centerCrop"
             android:background="@android:color/transparent"
-            android:contentDescription="收藏按钮" />
-    </LinearLayout>
+            android:contentDescription="收藏按钮"
+            android:id="@+id/collect"
+            android:layout_margin="5dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

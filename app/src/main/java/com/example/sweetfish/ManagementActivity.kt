@@ -1,13 +1,13 @@
 package com.example.sweetfish
 
 import android.os.Bundle
-import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import com.example.sweetfish.databinding.ActivityManagementBinding
 import com.example.sweetfish.ui.management.ManagementAdapter
 import com.example.sweetfish.ui.management.ManagementViewModel
 import com.example.sweetfish.utils.commodity.CommodityDetail
+import com.google.android.material.tabs.TabLayoutMediator
 
 class ManagementActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -17,27 +17,14 @@ class ManagementActivity : AppCompatActivity() {
         setContentView(binding.root)
         val token = intent.getStringExtra("token").toString()
         val commodityDetailList: MutableList<CommodityDetail> = mutableListOf()
-        commodityDetailList.add(
-            CommodityDetail(
-                0,
-                "title",
-                "content",
-                "26",
-                "https://c-ssl.duitang.com/uploads/blog/202103/08/20210308233851_9365f.jpg",
-                "https://c-ssl.duitang.com/uploads/blog/202103/08/20210308233851_9365f.jpg",
-                "jiuxia",
-                ArrayList<String>()
-            )
-        )
-        val adapter = ManagementAdapter(commodityDetailList, this)
         val managementViewModel = ViewModelProvider(this)[ManagementViewModel::class.java]
         managementViewModel.getAuditCommodity(token)
         managementViewModel.commodityList.observe(this) {
             for (i in it) {
                 managementViewModel.getDetail(token, i)
-                Log.d("zz", "获取")
             }
         }
+        val adapter = ManagementAdapter(commodityDetailList, this, managementViewModel, token)
         managementViewModel.detailJsonData.observe(this) {
             commodityDetailList.add(
                 CommodityDetail(
@@ -51,10 +38,12 @@ class ManagementActivity : AppCompatActivity() {
                     it.data.detail.pic_urls,
                 )
             )
-            adapter.notifyDataSetChanged()
+            adapter.updateData(commodityDetailList)
         }
-
-        binding.recyclerView.adapter = adapter
         binding.viewPager.adapter = adapter
+//        binding.viewPager.isUserInputEnabled = false
+        TabLayoutMediator(binding.tabLayout, binding.viewPager) { tab, position ->
+            tab.text = "Commodity ${position + 1}"
+        }.attach()
     }
 }

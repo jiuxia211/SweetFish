@@ -1,11 +1,11 @@
 package com.example.sweetfish.ui.main
 
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.DiffUtil
@@ -39,21 +39,33 @@ class MainFragment : Fragment() {
         //初始化RecyclerView
         val layoutManager = GridLayoutManager(activity, 2)
         binding.commodities.layoutManager = layoutManager
-        var adapter = RecommendAdapter(ArrayList<Commodity>(), activity!!, token)
+        val adapter = RecommendAdapter(ArrayList<Commodity>(), activity!!, token)
         binding.commodities.adapter = adapter
         mainViewModel.initUserInfo(username, token)
         mainViewModel.initRecommendInfo(token)
         mainViewModel.userResponseData.observe(this) {
-            Toast.makeText(activity, it.message, Toast.LENGTH_SHORT).show()
             if (it.code == 200) {
                 Glide.with(this).load(it.data.avatar)
                     .placeholder(R.drawable.loading)
                     .circleCrop()
                     .into(binding.avatar)
+                //缓存用户数据
+                val editor = activity?.getSharedPreferences("user", Context.MODE_PRIVATE)?.edit()
+                editor?.apply {
+                    putString("avatar", it.data.avatar)
+                    putString("background", it.data.background)
+                    putString("mail", it.data.mail)
+                    putString("username", it.data.username)
+                    putFloat("balance", it.data.balance)
+                    putInt("turnover", it.data.turnover)
+                    putInt("follow", it.data.follow)
+                    putInt("followed", it.data.followed)
+                    putInt("id", it.data.id)
+                    putInt("real", it.data.real)
+                    putInt("permission", it.data.permission)
+                    apply()
+                }
             }
-        }
-        mainViewModel.recommendResponseData.observe(this) {
-            Toast.makeText(activity, it.message, Toast.LENGTH_SHORT).show()
         }
         mainViewModel.commodityList.observe(this) {
             val result =

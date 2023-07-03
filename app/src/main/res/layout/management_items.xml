@@ -43,16 +43,6 @@
                     android:id="@+id/username"
                     android:textColor="@color/black" />
 
-                <Button
-                    android:layout_width="70dp"
-                    android:layout_height="30dp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    android:layout_marginTop="25dp"
-                    android:layout_marginEnd="20dp"
-                    android:text="关注"
-                    android:textColor="@color/white"
-                    android:background="@color/teal_200" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -92,30 +82,39 @@
                     android:id="@+id/price" />
             </LinearLayout>
 
-            <androidx.viewpager2.widget.ViewPager2
+            <com.example.sweetfish.utils.BannerSliderView
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/images" />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="通过"
-                    android:background="@drawable/btn_circle"
-                    android:id="@+id/pass" />
-
-                <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="驳回"
-                    android:background="@drawable/btn_circle_red"
-                    android:id="@+id/reject" />
-            </LinearLayout>
+                android:layout_height="200dp"
+                android:id="@+id/imageSlider"
+                app:sliderIndicatorSelectedColor="#5A5A5A"
+                app:sliderIndicatorUnselectedColor="#FFF" />
         </LinearLayout>
     </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="通过"
+            android:background="@drawable/btn_circle"
+            android:id="@+id/pass" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="驳回"
+            android:background="@drawable/btn_circle_red"
+            android:id="@+id/reject" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="在此输入驳回理由"
+            android:id="@+id/rejectInfo" />
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

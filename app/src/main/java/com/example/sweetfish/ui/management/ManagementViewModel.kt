@@ -59,7 +59,6 @@ class ManagementViewModel : ViewModel() {
                             commodityList.add(
                                 i.id.toString()
                             )
-                            Log.d("zz", "add")
                         }
                         _commodityList.postValue(commodityList)
                     } else {
@@ -68,6 +67,29 @@ class ManagementViewModel : ViewModel() {
                 }
 
                 override fun onFailure(call: Call<GetAuditJsonData>, t: Throwable) {
+                    t.printStackTrace()
+                }
+            })
+    }
+
+    fun Audit(token: String, pid: String, msg: String, state: String) {
+        val managementService = ServiceCreator.create(ManagementService::class.java)
+        managementService.audit(token, pid, msg, state)
+            .enqueue(object : Callback<AuditJsonData> {
+                override fun onResponse(
+                    call: Call<AuditJsonData>,
+                    response: Response<AuditJsonData>
+                ) {
+                    val responseData = response.body()
+                    if (responseData != null) {
+                        Log.d("zz", response.body().toString())
+
+                    } else {
+                        Log.e("im", "返回了空的json数据")
+                    }
+                }
+
+                override fun onFailure(call: Call<AuditJsonData>, t: Throwable) {
                     t.printStackTrace()
                 }
             })

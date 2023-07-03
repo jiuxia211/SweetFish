@@ -14,7 +14,8 @@ class MyViewModel : ViewModel() {
 
     private val _userResponseData = MutableLiveData<UserJsonData>()
     val userResponseData: LiveData<UserJsonData> = _userResponseData
-    fun initUserInfo(username: String, token: String) {
+
+    fun getUserInfo(username: String, token: String) {
         val userService = ServiceCreator.create(UserService::class.java)
         userService.getUserInfo(username, token).enqueue(object : Callback<UserJsonData> {
             override fun onResponse(call: Call<UserJsonData>, response: Response<UserJsonData>) {

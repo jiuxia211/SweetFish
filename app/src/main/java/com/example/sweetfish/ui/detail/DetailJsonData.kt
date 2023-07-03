@@ -16,6 +16,7 @@ data class Detail(
     val content: String,
     val cover: String,
     val fav: Int,
+    val isFav: Int,
     val now_buyer: Int,
     val pic_urls: List<String>,
     val post_id: Int,

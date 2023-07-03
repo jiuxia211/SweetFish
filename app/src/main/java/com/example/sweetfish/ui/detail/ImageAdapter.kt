@@ -1,38 +1,57 @@
 package com.example.sweetfish.ui.detail
 
-import android.content.Context
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.widget.ImageView
-import androidx.recyclerview.widget.RecyclerView
+import androidx.appcompat.app.AppCompatActivity
 import com.bumptech.glide.Glide
-import com.example.sweetfish.databinding.ImageItemBinding
+import com.example.sweetfish.PhotoActivity
+import com.example.sweetfish.databinding.ImageItemsBinding
+import com.smarteist.autoimageslider.SliderViewAdapter
 
-class ImageAdapter(private var imageUrls: MutableList<String>, private val context: Context) :
-    RecyclerView.Adapter<ImageAdapter.ImageViewHolder>() {
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ImageViewHolder {
-        val binding = ImageItemBinding.inflate(LayoutInflater.from(parent.context), parent, false)
-        return ImageViewHolder(binding)
+class ImageAdapter(
+    private val imageUrls: MutableList<String>,
+    private val activity: AppCompatActivity,
+) :
+    SliderViewAdapter<ImageAdapter.SliderViewHolder>() {
+
+    fun updateData(newUrls: List<String>) {
+        imageUrls.clear()
+        imageUrls.addAll(newUrls)
+        notifyDataSetChanged()
     }
 
-    override fun onBindViewHolder(holder: ImageViewHolder, position: Int) {
+
+    override fun onCreateViewHolder(parent: ViewGroup?): SliderViewHolder {
+        val binding =
+            ImageItemsBinding.inflate(LayoutInflater.from(parent?.context), parent, false)
+        return SliderViewHolder(binding)
+    }
+
+    override fun onBindViewHolder(viewHolder: SliderViewHolder?, position: Int) {
         val imageUrl = imageUrls[position]
-        Glide.with(context)
-            .load(imageUrl)
-            .into(holder.imageView)
+        viewHolder?.imageView?.let { Glide.with(activity).load(imageUrl).into(it) }
+        viewHolder?.itemView?.setOnClickListener {
+            val intent = Intent(activity, PhotoActivity::class.java).apply {
+                putExtra("url", imageUrl)
+            }
+            activity.startActivity(intent)
+        }
     }
 
-    override fun getItemCount(): Int {
+    override fun getCount(): Int {
         return imageUrls.size
     }
 
-    inner class ImageViewHolder(binding: ImageItemBinding) : RecyclerView.ViewHolder(binding.root) {
+    inner class SliderViewHolder(binding: ImageItemsBinding) :
+        ViewHolder(binding.root) {
         val imageView: ImageView = binding.image
     }
-
-    fun updateData(newImageUrls: List<String>) {
-        imageUrls.clear()
-        imageUrls.addAll(newImageUrls)
-        notifyItemRangeChanged(0, itemCount)
-    }
 }
+
+
+
+
+
+

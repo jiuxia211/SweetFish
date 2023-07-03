@@ -3,7 +3,6 @@ package com.example.sweetfish
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import com.example.sweetfish.databinding.ActivityLoginBinding
@@ -18,11 +17,11 @@ class LoginActivity : AppCompatActivity() {
         val loginViewModel =
             ViewModelProvider(this)[LoginViewModel::class.java]
         loginViewModel.loginResponseData.observe(this) {
-            Toast.makeText(this, it.message, Toast.LENGTH_SHORT).show()
             if (it.code == 200) {
                 val intent = Intent(this, MainActivity::class.java)
                 intent.putExtra("token", it.data.token)
                 intent.putExtra("username", it.data.username)
+                intent.putExtra("uid", it.data.id)
                 startActivity(intent)
             }
         }
@@ -33,7 +32,6 @@ class LoginActivity : AppCompatActivity() {
                 binding.editPassword.setText(it.password)
             }
             if (it.isAutoLogin) {
-
                 val editor = getPreferences(Context.MODE_PRIVATE).edit()
                 if (binding.rememberPassword.isChecked) {
                     binding.autoLogin.isChecked = true

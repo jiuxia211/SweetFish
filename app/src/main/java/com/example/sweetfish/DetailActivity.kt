@@ -1,5 +1,6 @@
 package com.example.sweetfish
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
@@ -9,6 +10,7 @@ import com.example.sweetfish.databinding.ActivityDetailBinding
 import com.example.sweetfish.databinding.InputPriceBinding
 import com.example.sweetfish.ui.detail.DetailViewModel
 import com.example.sweetfish.ui.detail.ImageAdapter
+import com.smarteist.autoimageslider.IndicatorView.animation.type.IndicatorAnimationType
 
 class DetailActivity : AppCompatActivity() {
     private lateinit var priceInputDialog: AlertDialog
@@ -20,7 +22,18 @@ class DetailActivity : AppCompatActivity() {
         val token = intent.getStringExtra("token").toString()
         val pid = intent.getStringExtra("pid").toString()
         val adapter = ImageAdapter(ArrayList<String>(), this)
-        binding.images.adapter = adapter
+        binding.sliderView.apply {
+            setSliderAdapter(adapter)
+            setIndicatorAnimation(IndicatorAnimationType.WORM)
+            startAutoCycle()
+            scrollTimeInSec = 4
+        }
+        binding.avatar.setOnClickListener {
+            val intent = Intent(this, SpaceActivity::class.java)
+            intent.putExtra("token", token)
+            intent.putExtra("username", binding.username.text)
+            startActivity(intent)
+        }
         val detailViewModel = ViewModelProvider(this)[DetailViewModel::class.java]
         detailViewModel.getDetail(token, pid)
         detailViewModel.detailJsonData.observe(this) {
@@ -28,8 +41,13 @@ class DetailActivity : AppCompatActivity() {
             binding.content.text = it.data.detail.content
             binding.price.text = it.data.detail.price.toString()
             binding.username.text = it.data.detail.username
-            binding.images.adapter = ImageAdapter(it.data.detail.pic_urls.toMutableList(), this)
+            adapter.updateData(it.data.detail.pic_urls)
             detailViewModel.initUserInfo(it.data.detail.username, token)
+            if (it.data.detail.isFav == 1) {
+                binding.collect.setImageResource(R.drawable.collected1)
+            } else {
+                binding.collect.setImageResource(R.drawable.collected)
+            }
         }
         detailViewModel.userResponseData.observe(this) {
             Glide.with(this).load(it.data.avatar)
@@ -38,6 +56,16 @@ class DetailActivity : AppCompatActivity() {
         }
         binding.givePrice.setOnClickListener {
             showPriceInputDialog()
+        }
+        binding.collect.setOnClickListener {
+            detailViewModel.collect(pid, token)
+        }
+        detailViewModel.collectJsonData.observe(this) {
+            if (it.data == "1") {
+                binding.collect.setImageResource(R.drawable.collected1)
+            } else {
+                binding.collect.setImageResource(R.drawable.collected)
+            }
         }
     }
 

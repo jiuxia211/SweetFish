@@ -102,10 +102,22 @@
         android:layout_height="30dp"
         app:layout_constraintStart_toEndOf="@+id/sellNum"
         app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="110dp"
+        android:layout_marginTop="90dp"
         android:layout_marginStart="20dp"
         android:text="关注"
-        android:background="@color/teal_200" />
+        android:background="@color/teal_200"
+        android:id="@+id/follow" />
+
+    <Button
+        android:layout_width="70dp"
+        android:layout_height="30dp"
+        app:layout_constraintStart_toEndOf="@+id/sellNum"
+        app:layout_constraintTop_toBottomOf="@+id/follow"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="20dp"
+        android:text="发消息"
+        android:background="@color/teal_200"
+        android:id="@+id/sendMsg" />
 
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/tb"

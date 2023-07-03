@@ -19,8 +19,6 @@ class MainViewModel : ViewModel() {
     val userResponseData: LiveData<UserJsonData> = _userResponseData
     private val _commodityList = MutableLiveData<ArrayList<Commodity>>()
     val commodityList: LiveData<ArrayList<Commodity>> = _commodityList
-    private val _recommendResponseData = MutableLiveData<RecommendJsonData>()
-    val recommendResponseData = _recommendResponseData
     fun initUserInfo(username: String, token: String) {
         val userService = ServiceCreator.create(UserService::class.java)
         userService.getUserInfo(username, token).enqueue(object : Callback<UserJsonData> {

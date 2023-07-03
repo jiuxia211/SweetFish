@@ -28,6 +28,7 @@ class UploadActivity : AppCompatActivity() {
         registerForActivityResult(ActivityResultContracts.PickMultipleVisualMedia(5)) { uris ->
             if (uris.isNotEmpty()) {
                 Log.d("PhotoPicker", "Number of items selected: ${uris.size}")
+                pathList.clear()
                 for (i in uris) {
                     val helper = URIPathHelper()
                     val path = helper.getPath(this, i)
@@ -105,8 +106,12 @@ class UploadActivity : AppCompatActivity() {
                 binding.editContent.text.toString().toRequestBody("text/plain".toMediaTypeOrNull())
             val price =
                 binding.editPrice.text.toString().toRequestBody("text/plain".toMediaTypeOrNull())
+            val account =
+                binding.editAccount.text.toString().toRequestBody("text/plain".toMediaTypeOrNull())
+            val password =
+                binding.editPassword.text.toString().toRequestBody("text/plain".toMediaTypeOrNull())
             uploadViewModel.upload(
-                token, title, content, price, parts
+                token, title, content, price, account, password, parts
             )
 
         }

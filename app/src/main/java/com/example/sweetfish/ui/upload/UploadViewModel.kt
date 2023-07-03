@@ -22,10 +22,12 @@ class UploadViewModel : ViewModel() {
         title: RequestBody,
         content: RequestBody,
         price: RequestBody,
+        account: RequestBody,
+        password: RequestBody,
         parts: ArrayList<MultipartBody.Part>
     ) {
         val commodityService = ServiceCreator.create(CommodityService::class.java)
-        commodityService.upload(token, title, content, price, parts)
+        commodityService.upload(token, title, content, price, account, password, parts)
             .enqueue(object : Callback<UploadJsonData> {
                 override fun onResponse(
                     call: Call<UploadJsonData>,

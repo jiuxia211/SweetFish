@@ -1,6 +1,6 @@
 package com.example.sweetfish.ui.my
 
-data class UserJsonData(
+class UserJsonData(
     val code: Int,
     val `data`: Data,
     val message: String
@@ -8,9 +8,15 @@ data class UserJsonData(
 
 data class Data(
     val avatar: String,
-    val balance: Int,
+    val background: String,
+    val balance: Float,
+    val follow: Int,
+    val followed: Int,
     val id: Int,
     val mail: String,
     val permission: Int,
-    val username: String
+    val real: Int,
+    val turnover: Int,
+    val username: String,
+    val isFollowed: Int
 )

@@ -57,4 +57,28 @@ class DetailViewModel : ViewModel() {
             }
         })
     }
+
+    private val _collectResponseData = MutableLiveData<CollectJsonData>()
+    val collectJsonData: LiveData<CollectJsonData> = _collectResponseData
+    fun collect(pid: String, token: String) {
+        val commodityService = ServiceCreator.create(CommodityService::class.java)
+        commodityService.collect(token, pid).enqueue(object : Callback<CollectJsonData> {
+            override fun onResponse(
+                call: Call<CollectJsonData>,
+                response: Response<CollectJsonData>
+            ) {
+                val responseData = response.body()
+                if (responseData != null) {
+                    Log.d("zz", response.body().toString())
+                    _collectResponseData.postValue(response.body())
+                } else {
+                    Log.e("zz", "返回了空的json数据")
+                }
+            }
+
+            override fun onFailure(call: Call<CollectJsonData>, t: Throwable) {
+                t.printStackTrace()
+            }
+        })
+    }
 }

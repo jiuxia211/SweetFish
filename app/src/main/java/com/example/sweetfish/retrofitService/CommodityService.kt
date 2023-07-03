@@ -1,5 +1,6 @@
 package com.example.sweetfish.retrofitService
 
+import com.example.sweetfish.ui.detail.CollectJsonData
 import com.example.sweetfish.ui.detail.DetailJsonData
 import com.example.sweetfish.ui.main.RecommendJsonData
 import com.example.sweetfish.ui.published.PublishedJsonData
@@ -20,6 +21,8 @@ interface CommodityService {
         @Part("title") title: RequestBody,
         @Part("content") content: RequestBody,
         @Part("price") price: RequestBody,
+        @Part("account") account: RequestBody,
+        @Part("psw") psw: RequestBody,
         @Part files: List<MultipartBody.Part>,
     ): Call<UploadJsonData>
 
@@ -44,4 +47,11 @@ interface CommodityService {
 
     @GET("buyer/posts")
     fun getRecommend(@Header("Authorization") token: String): Call<RecommendJsonData>
+
+    @FormUrlEncoded
+    @POST("buyer/fav")
+    fun collect(
+        @Header("Authorization") token: String,
+        @Field("post_id") pid: String
+    ): Call<CollectJsonData>
 }
