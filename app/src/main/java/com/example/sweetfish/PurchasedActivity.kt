@@ -24,24 +24,16 @@ class PurchasedActivity : AppCompatActivity() {
         //初始化RecyclerView
         val layoutManager = GridLayoutManager(this, 2)
         binding.commodities.layoutManager = layoutManager
-        val adapter = PurchasedAdapter(ArrayList<Commodity>(), this)
+        val adapter = PurchasedAdapter(ArrayList<Commodity>(), this, token)
         binding.commodities.adapter = adapter
         purchasedViewModel.purchasedResponseData.observe(this) {
         }
-        //观察商品列表是否改变，改变则用DiffUtil刷新recycleview
+        //观察商品列表是否改变，改变则用DiffUtil刷新RecycleView
         purchasedViewModel.commodityList.observe(this) {
             val result =
                 DiffUtil.calculateDiff(CommodityDiffCallback(adapter.commodityList, it), true)
             adapter.commodityList = it
             result.dispatchUpdatesTo(adapter)
         }
-        //下拉刷新
-        binding.swipeRefresh.setColorSchemeResources(R.color.teal_200)
-        binding.swipeRefresh.setOnRefreshListener {
-            purchasedViewModel.initPurchasedCommodity(token)
-            binding.swipeRefresh.isRefreshing = false
-        }
-
-
     }
 }

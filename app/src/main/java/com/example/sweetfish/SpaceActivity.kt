@@ -13,14 +13,16 @@ import android.widget.Toast
 import androidx.activity.result.PickVisualMediaRequest
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat
 import androidx.lifecycle.ViewModelProvider
 import com.bumptech.glide.Glide
 import com.example.sweetfish.databinding.ActivitySpaceBinding
-import com.example.sweetfish.databinding.AvatarMenuBinding
+import com.example.sweetfish.databinding.SpaceMenuBinding
 import com.example.sweetfish.ui.space.SpaceTabAdapter
 import com.example.sweetfish.ui.space.SpaceViewModel
 import com.google.android.material.tabs.TabLayoutMediator
 import com.yalantis.ucrop.UCrop
+import com.yalantis.ucrop.UCropActivity
 import okhttp3.MediaType.Companion.toMediaTypeOrNull
 import okhttp3.MultipartBody
 import okhttp3.RequestBody.Companion.asRequestBody
@@ -31,6 +33,7 @@ class SpaceActivity : AppCompatActivity() {
     private lateinit var popupWindow: PopupWindow
     private var uid = 0
     private var isFollow = -1
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         supportActionBar?.hide()
@@ -52,6 +55,9 @@ class SpaceActivity : AppCompatActivity() {
         binding.avatar.setOnClickListener {
             popupWindow.showAtLocation(binding.avatar, Gravity.BOTTOM, 0, 0)
         }
+        binding.individuation.setOnClickListener {
+            popupWindow.showAtLocation(binding.individuation, Gravity.BOTTOM, 0, 0)
+        }
         val spaceViewModel = ViewModelProvider(this)[SpaceViewModel::class.java]
         spaceViewModel.initUserInfo(username, token)
         spaceViewModel.userResponseData.observe(this) {
@@ -69,9 +75,17 @@ class SpaceActivity : AppCompatActivity() {
                     binding.follow.text = "关注"
                 }
                 uid = it.data.id
+                isFollow = it.data.isFollowed
+                binding.username.text = it.data.username
+                Glide.with(this).load(it.data.background).into(binding.wallpaperImageView)
             }
         }
         spaceViewModel.setAvatarResponseData.observe(this) {
+            Toast.makeText(this, it.message, Toast.LENGTH_SHORT).show()
+            spaceViewModel.initUserInfo(username, token)
+        }
+        spaceViewModel.setBackgroundResponseData.observe(this) {
+            Toast.makeText(this, it.message, Toast.LENGTH_SHORT).show()
             spaceViewModel.initUserInfo(username, token)
         }
         binding.follow.setOnClickListener {
@@ -90,6 +104,7 @@ class SpaceActivity : AppCompatActivity() {
         }
         spaceViewModel.followResponseData.observe(this) {
             spaceViewModel.initUserInfo(username, token)
+            Toast.makeText(this, it.message, Toast.LENGTH_SHORT).show()
         }
         binding.sendMsg.setOnClickListener {
             spaceViewModel.addChat(uid.toString(), token)
@@ -103,11 +118,11 @@ class SpaceActivity : AppCompatActivity() {
                 intent.putExtra("token", token)
                 startActivity(intent)
             }
-
         }
 
     }
 
+    //用于修改头像
     private val pickMedia =
         registerForActivityResult(ActivityResultContracts.PickVisualMedia()) { uri ->
             if (uri != null) {
@@ -118,13 +133,47 @@ class SpaceActivity : AppCompatActivity() {
             }
         }
 
+    //用于修改背景
+    private val pickMedia1 =
+        registerForActivityResult(ActivityResultContracts.PickVisualMedia()) { uri ->
+            if (uri != null) {
+                Log.d("PhotoPicker", "Selected URI: $uri")
+                startCropActivity1(uri)
+            } else {
+                Log.d("PhotoPicker", "No media selected")
+            }
+        }
+
     private fun startCropActivity(imageUri: Uri) {
         val options = UCrop.Options().apply {
             setCompressionFormat(Bitmap.CompressFormat.JPEG)
             setCompressionQuality(90)
+            setToolbarColor(ContextCompat.getColor(this@SpaceActivity, R.color.teal_200))
+            setStatusBarColor(ContextCompat.getColor(this@SpaceActivity, R.color.teal_200))
             withAspectRatio(1f, 1f) // 设置裁剪比例为 1:1
             withMaxResultSize(800, 800) // 设置裁剪后的图片最大尺寸
             setCircleDimmedLayer(true)
+            setToolbarTitle("Crop Avatar")
+        }
+
+        clearCropCache()
+        //必须有不同的命名，否则图片永远会是同一张
+        val croppedImageUri =
+            Uri.fromFile(File(cacheDir, "cropped_image" + System.currentTimeMillis() + ".jpg"))
+        UCrop.of(imageUri, croppedImageUri)
+            .withOptions(options)
+            .start(this, avatarCropRequestCode)
+    }
+
+    private fun startCropActivity1(imageUri: Uri) {
+        val options = UCrop.Options().apply {
+            setCompressionFormat(Bitmap.CompressFormat.JPEG)
+            setAllowedGestures(UCropActivity.SCALE, UCropActivity.ROTATE, UCropActivity.ALL)
+            setToolbarColor(ContextCompat.getColor(this@SpaceActivity, R.color.teal_200))
+            setStatusBarColor(ContextCompat.getColor(this@SpaceActivity, R.color.teal_200))
+            setCompressionQuality(90)
+            withAspectRatio(1F, 16F / 9F)
+            setToolbarTitle("Crop Background")
         }
         clearCropCache()
         //必须有不同的命名，否则图片永远会是同一张
@@ -132,21 +181,27 @@ class SpaceActivity : AppCompatActivity() {
             Uri.fromFile(File(cacheDir, "cropped_image" + System.currentTimeMillis() + ".jpg"))
         UCrop.of(imageUri, croppedImageUri)
             .withOptions(options)
-            .start(this)
+            .start(this, wallpaperCropRequestCode)
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
-        if (requestCode == UCrop.REQUEST_CROP && resultCode == RESULT_OK) {
+        if (requestCode == avatarCropRequestCode && resultCode == RESULT_OK) {
             val croppedImageUri = UCrop.getOutput(data!!)
-//            val helper = URIPathHelper()
-//            val path = croppedImageUri?.let { helper.getPath(this, it) }
-            val avatar = File(croppedImageUri?.path)
+            val avatar = File(croppedImageUri?.path.toString())
             val requestBody = avatar.asRequestBody("image/jp".toMediaTypeOrNull())
             part = MultipartBody.Part.createFormData("files", avatar.name, requestBody)
             val token = intent.getStringExtra("token").toString()
             val spaceViewModel = ViewModelProvider(this)[SpaceViewModel::class.java]
             spaceViewModel.setAvatar(token, part)
+        } else if (requestCode == wallpaperCropRequestCode && resultCode == RESULT_OK) {
+            val croppedImageUri = UCrop.getOutput(data!!)
+            val background = File(croppedImageUri?.path.toString())
+            val requestBody = background.asRequestBody("image/jp".toMediaTypeOrNull())
+            part = MultipartBody.Part.createFormData("cover", background.name, requestBody)
+            val token = intent.getStringExtra("token").toString()
+            val spaceViewModel = ViewModelProvider(this)[SpaceViewModel::class.java]
+            spaceViewModel.setBackground(token, part)
         }
     }
 
@@ -167,7 +222,7 @@ class SpaceActivity : AppCompatActivity() {
 
     private fun initPopupWindow() {
         popupWindow = PopupWindow(this)
-        val menuLayout = AvatarMenuBinding.inflate(layoutInflater)
+        val menuLayout = SpaceMenuBinding.inflate(layoutInflater)
         popupWindow.contentView = menuLayout.root
         popupWindow.width = WindowManager.LayoutParams.MATCH_PARENT
         popupWindow.height = WindowManager.LayoutParams.WRAP_CONTENT
@@ -175,6 +230,16 @@ class SpaceActivity : AppCompatActivity() {
         popupWindow.isOutsideTouchable = true
         menuLayout.setAvatar.setOnClickListener {
             pickMedia.launch(PickVisualMediaRequest(ActivityResultContracts.PickVisualMedia.ImageOnly))
+            popupWindow.dismiss()
         }
+        menuLayout.setBackground.setOnClickListener {
+            pickMedia1.launch(PickVisualMediaRequest(ActivityResultContracts.PickVisualMedia.ImageOnly))
+            popupWindow.dismiss()
+        }
+    }
+
+    companion object {
+        const val wallpaperCropRequestCode = 20
+        const val avatarCropRequestCode = 19
     }
 }

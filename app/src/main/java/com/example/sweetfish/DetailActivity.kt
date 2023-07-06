@@ -1,7 +1,9 @@
 package com.example.sweetfish
 
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
+import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
@@ -14,6 +16,8 @@ import com.smarteist.autoimageslider.IndicatorView.animation.type.IndicatorAnima
 
 class DetailActivity : AppCompatActivity() {
     private lateinit var priceInputDialog: AlertDialog
+    private var uid = 0
+    private var isFollow = -1
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         val binding = ActivityDetailBinding.inflate(layoutInflater)
@@ -40,7 +44,6 @@ class DetailActivity : AppCompatActivity() {
             binding.title.text = it.data.detail.title
             binding.content.text = it.data.detail.content
             binding.price.text = it.data.detail.price.toString()
-            binding.username.text = it.data.detail.username
             adapter.updateData(it.data.detail.pic_urls)
             detailViewModel.initUserInfo(it.data.detail.username, token)
             if (it.data.detail.isFav == 1) {
@@ -53,6 +56,16 @@ class DetailActivity : AppCompatActivity() {
             Glide.with(this).load(it.data.avatar)
                 .circleCrop()
                 .into(binding.avatar)
+            binding.username.text = it.data.username
+            if (it.data.isFollowed == 1) {
+                binding.follow.setBackgroundResource(R.color.gray)
+                binding.follow.text = "已关注"
+            } else {
+                binding.follow.setBackgroundResource(R.color.teal_200)
+                binding.follow.text = "关注"
+            }
+            uid = it.data.id
+            isFollow = it.data.isFollowed
         }
         binding.givePrice.setOnClickListener {
             showPriceInputDialog()
@@ -65,6 +78,37 @@ class DetailActivity : AppCompatActivity() {
                 binding.collect.setImageResource(R.drawable.collected1)
             } else {
                 binding.collect.setImageResource(R.drawable.collected)
+            }
+            Toast.makeText(this, it.message, Toast.LENGTH_SHORT).show()
+        }
+        binding.follow.setOnClickListener {
+            val prefs = getSharedPreferences("user", Context.MODE_PRIVATE)
+            val mUid = prefs.getInt("id", -1)
+            if (uid == mUid) {
+                Toast.makeText(this, "不能关注自己", Toast.LENGTH_SHORT).show()
+            } else {
+                if (isFollow == 1) {
+                    detailViewModel.follow(uid.toString(), "0", token)
+                } else {
+                    detailViewModel.follow(uid.toString(), "1", token)
+                }
+            }
+        }
+        detailViewModel.followResponseData.observe(this) {
+            detailViewModel.initUserInfo(binding.username.text.toString(), token)
+            Toast.makeText(this, it.message, Toast.LENGTH_SHORT).show()
+        }
+        binding.contact.setOnClickListener {
+            detailViewModel.addChat(uid.toString(), token)
+        }
+        detailViewModel.addChatResponseData.observe(this) {
+            if (it.code == 400) {
+                Toast.makeText(this, "不能对自己发起对话", Toast.LENGTH_SHORT).show()
+            } else {
+                val intent = Intent(this, ChatActivity::class.java)
+                intent.putExtra("uid", uid)
+                intent.putExtra("token", token)
+                startActivity(intent)
             }
         }
     }

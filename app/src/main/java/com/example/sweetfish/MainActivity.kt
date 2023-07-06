@@ -12,6 +12,7 @@ import com.example.sweetfish.databinding.ActivityMainBinding
 import com.example.sweetfish.utils.socketEvent.Join
 import com.example.sweetfish.utils.socketEvent.Message
 import com.example.sweetfish.utils.socketEvent.MessageReceipt
+import com.example.sweetfish.utils.socketEvent.Revocation
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.gson.Gson
 import io.socket.client.IO
@@ -19,7 +20,7 @@ import io.socket.client.Socket
 import okhttp3.OkHttpClient
 import org.greenrobot.eventbus.EventBus
 import org.greenrobot.eventbus.Subscribe
-import org.json.JSONObject
+import java.util.concurrent.TimeUnit
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
@@ -53,6 +54,22 @@ class MainActivity : AppCompatActivity() {
         super.onDestroy()
     }
 
+    private fun connectSocketIO() {
+        // 创建 OkHttp 实例
+        val okHttpClient = OkHttpClient.Builder()
+            .connectTimeout(10, TimeUnit.SECONDS)
+            .readTimeout(10, TimeUnit.MINUTES)
+            .writeTimeout(10, TimeUnit.MINUTES)
+            .build()
+        val options = IO.Options()
+        options.callFactory = okHttpClient
+        // 创建 Socket.IO 连接实例
+        val mSocket: Socket = IO.socket("http://xiiaoxiongmc.e2.luyouxia.net:24947", options)
+        socket = mSocket
+        // 连接到服务器
+        socket.connect()
+    }
+
     private fun listenSocketIO() {
         val gson = Gson()
         // 连接成功的监听器
@@ -62,6 +79,10 @@ class MainActivity : AppCompatActivity() {
         // 添加连接断开的监听器
         socket.on(Socket.EVENT_DISCONNECT) {
             Log.d("socket", "Disconnected from server")
+            val jsonMsg = it.joinToString {
+                it?.toString() ?: "null"
+            }
+            Log.d("zz", jsonMsg)
         }
         //连接错误的监听器
         socket.on(Socket.EVENT_CONNECT_ERROR) { args ->
@@ -75,30 +96,17 @@ class MainActivity : AppCompatActivity() {
                 it?.toString() ?: "null"
             }
             Log.d("zz", jsonMsg)
-            val jsonObject = JSONObject(jsonMsg)
-            val type = jsonObject.getString("type")
             val message = gson.fromJson(jsonMsg, MessageReceipt::class.java)
-            Log.d("zz", message.toString())
             EventBus.getDefault().post(message)
         }
+
+        
         val prefs = getSharedPreferences("user", Context.MODE_PRIVATE)
         val mUid = prefs.getInt("id", 0)
         //先加入房间
         socket.emit("join", gson.toJson(Join(mUid)))
-        Log.d("zz", "加入房间事件已发送")
     }
 
-    private fun connectSocketIO() {
-        // 创建 OkHttp 实例
-        val okHttpClient = OkHttpClient()
-        val options = IO.Options()
-        options.callFactory = okHttpClient
-        // 创建 Socket.IO 连接实例
-        val mSocket: Socket = IO.socket("http://xiiaoxiongmc.e2.luyouxia.net:24947", options)
-        socket = mSocket
-        // 连接到服务器
-        socket.connect()
-    }
 
     @Subscribe()
     fun onMessageReceipt(event: MessageReceipt) {
@@ -107,8 +115,16 @@ class MainActivity : AppCompatActivity() {
 
     @Subscribe()
     fun onMessageSend(event: Message) {
+        Log.d("zz", "接收到发送消息事件")
         val gson = Gson()
         socket.emit("message", gson.toJson(event))
+    }
+
+    @Subscribe()
+    fun onRevocation(event: Revocation) {
+        Log.d("zz", "接收到撤回事件")
+        val gson = Gson()
+        socket.emit("revocation", gson.toJson(event))
     }
 }
 

@@ -20,6 +20,15 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
+            android:name=".PublishedActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SoldActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CollectActivity"
+            android:exported="false" />
+        <activity
             android:name=".RealNameAuthenticationActivity"
             android:exported="false" />
         <activity

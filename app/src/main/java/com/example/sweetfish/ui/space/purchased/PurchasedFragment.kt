@@ -10,6 +10,8 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.GridLayoutManager
 import com.example.sweetfish.databinding.FragmentPurchasedBinding
+import com.example.sweetfish.ui.purchased.PurchasedAdapter
+import com.example.sweetfish.ui.purchased.PurchasedViewModel
 import com.example.sweetfish.utils.commodity.Commodity
 import com.example.sweetfish.utils.commodity.CommodityDiffCallback
 
@@ -23,7 +25,7 @@ class PurchasedFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         _binding = FragmentPurchasedBinding.inflate(inflater, container, false)
         val root: View = binding.root
         val purchasedViewModel = ViewModelProvider(this)[PurchasedViewModel::class.java]
@@ -33,7 +35,7 @@ class PurchasedFragment : Fragment() {
         //初始化RecyclerView
         val layoutManager = GridLayoutManager(activity, 2)
         binding.commodities.layoutManager = layoutManager
-        var adapter = PurchasedAdapter(ArrayList<Commodity>(), activity!!, token)
+        val adapter = PurchasedAdapter(ArrayList<Commodity>(), activity!!, token)
         binding.commodities.adapter = adapter
         purchasedViewModel.purchasedResponseData.observe(this) {
             Toast.makeText(activity, it.message, Toast.LENGTH_SHORT).show()
@@ -44,6 +46,11 @@ class PurchasedFragment : Fragment() {
                 DiffUtil.calculateDiff(CommodityDiffCallback(adapter.commodityList, it), true)
             adapter.commodityList = it
             result.dispatchUpdatesTo(adapter)
+            if (it.size == 0) {
+                binding.nullText.visibility = View.VISIBLE
+            } else {
+                binding.nullText.visibility = View.GONE
+            }
         }
 
         return root

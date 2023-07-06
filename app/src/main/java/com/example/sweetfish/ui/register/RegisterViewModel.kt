@@ -15,9 +15,7 @@ class RegisterViewModel : ViewModel() {
         value = RegisterJsonData(0, Data(0, "username"), "开始注册吧！")
     }
     val registerResponseData: LiveData<RegisterJsonData> = _registerResponseData
-    private val _sendCodeResponseData = MutableLiveData<SendCodeJsonData>().apply {
-        value = SendCodeJsonData(0, "欢迎来到甜鱼")
-    }
+    private val _sendCodeResponseData = MutableLiveData<SendCodeJsonData>()
     val sendCodeResponseData: LiveData<SendCodeJsonData> = _sendCodeResponseData
 
     fun sendCode(mail: String) {
@@ -33,7 +31,7 @@ class RegisterViewModel : ViewModel() {
                         Log.d("zz", response.body().toString())
                         _sendCodeResponseData.postValue(response.body())
                     } else {
-                        Log.e("im", "返回了空的json数据")
+                        Log.e("error", "返回了空的json数据")
                     }
                 }
 

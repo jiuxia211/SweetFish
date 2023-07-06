@@ -8,6 +8,7 @@ data class ChatHistoryJsonData(
 
 data class Data(
     val from: Int,
+    val id: Int,
     val message: String,
     val time: String,
     val to: Int

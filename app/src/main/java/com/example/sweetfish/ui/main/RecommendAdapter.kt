@@ -9,7 +9,7 @@ import androidx.fragment.app.FragmentActivity
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.sweetfish.DetailActivity
-import com.example.sweetfish.databinding.PurchasedItemsBinding
+import com.example.sweetfish.databinding.RecommendItemsBinding
 import com.example.sweetfish.utils.commodity.Commodity
 
 class RecommendAdapter(
@@ -17,16 +17,17 @@ class RecommendAdapter(
     val activity: FragmentActivity,
     val token: String
 ) : RecyclerView.Adapter<RecommendAdapter.ViewHolder>() {
-    inner class ViewHolder(binding: PurchasedItemsBinding) : RecyclerView.ViewHolder(binding.root) {
+    inner class ViewHolder(binding: RecommendItemsBinding) : RecyclerView.ViewHolder(binding.root) {
         val commodityTitle: TextView = binding.title
         val commodityCover: ImageView = binding.cover
         val avatar: ImageView = binding.avatar
         val username: TextView = binding.username
+        val price: TextView = binding.price
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val binding =
-            PurchasedItemsBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+            RecommendItemsBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         val viewHolder = ViewHolder(binding)
         viewHolder.itemView.setOnClickListener {
             val position = viewHolder.adapterPosition
@@ -44,6 +45,7 @@ class RecommendAdapter(
         val commodity = commodityList[position]
         holder.commodityTitle.text = commodity.title
         holder.username.text = commodity.username
+        holder.price.text = "${commodity.price} 元"
         Glide.with(activity).load(commodity.coverPath).into(holder.commodityCover)
         Glide.with(activity).load(commodity.avatarPath).circleCrop().into(holder.avatar)
     }

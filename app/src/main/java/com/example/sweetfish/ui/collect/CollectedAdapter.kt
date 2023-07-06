@@ -1,11 +1,10 @@
-package com.example.sweetfish.ui.space.collected
+package com.example.sweetfish.ui.collect
 
 import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.BaseExpandableListAdapter
-import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.fragment.app.FragmentActivity
@@ -39,16 +38,12 @@ class CollectedAdapter(
         var childTitle: TextView? = null
         var childAvatar: ImageView? = null
         var childUsername: TextView? = null
-        var childPass: Button? = null
-        var childFail: Button? = null
 
         init {
             childCover = view.findViewById(R.id.child_cover)
             childTitle = view.findViewById(R.id.child_title)
             childAvatar = view.findViewById(R.id.child_avatar)
             childUsername = view.findViewById(R.id.child_username)
-            childPass = view.findViewById(R.id.child_pass)
-            childFail = view.findViewById(R.id.child_fail)
         }
     }
 

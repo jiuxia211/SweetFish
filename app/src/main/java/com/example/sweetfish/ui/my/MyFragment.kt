@@ -57,6 +57,41 @@ class MyFragment : Fragment() {
             intent.putExtra("token", token)
             startActivity(intent)
         }
+        binding.purchasedImg.setOnClickListener {
+            val intent = Intent(activity, PurchasedActivity::class.java)
+            intent.putExtra("token", token)
+            startActivity(intent)
+        }
+        binding.collected.setOnClickListener {
+            val intent = Intent(activity, CollectActivity::class.java)
+            intent.putExtra("token", token)
+            startActivity(intent)
+        }
+        binding.collectedImg.setOnClickListener {
+            val intent = Intent(activity, CollectActivity::class.java)
+            intent.putExtra("token", token)
+            startActivity(intent)
+        }
+        binding.publishedImg.setOnClickListener {
+            val intent = Intent(activity, PublishedActivity::class.java)
+            intent.putExtra("token", token)
+            startActivity(intent)
+        }
+        binding.published.setOnClickListener {
+            val intent = Intent(activity, PublishedActivity::class.java)
+            intent.putExtra("token", token)
+            startActivity(intent)
+        }
+        binding.sold.setOnClickListener {
+            val intent = Intent(activity, SoldActivity::class.java)
+            intent.putExtra("token", token)
+            startActivity(intent)
+        }
+        binding.sellImg.setOnClickListener {
+            val intent = Intent(activity, SoldActivity::class.java)
+            intent.putExtra("token", token)
+            startActivity(intent)
+        }
         binding.management.setOnClickListener {
             val intent = Intent(activity, ManagementActivity::class.java)
             intent.putExtra("token", token)
@@ -98,7 +133,9 @@ class MyFragment : Fragment() {
             Glide.with(this@MyFragment).load(getString("avatar", ""))
                 .circleCrop()
                 .into(binding.avatar)
-
+            if (getInt("permission", 0) != 1) {
+                binding.management.visibility = View.INVISIBLE
+            }
         }
     }
 }

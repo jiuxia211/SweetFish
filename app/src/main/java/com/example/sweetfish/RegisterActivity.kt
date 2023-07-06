@@ -34,7 +34,7 @@ class RegisterActivity : AppCompatActivity() {
                     registerViewModel.sendCode(binding.editMail.text.toString())
                 }
                 isButtonClickable = false
-                startCountdown(binding, 10)
+                startCountdown(binding, 60)
             }
         }
         binding.register.setOnClickListener {

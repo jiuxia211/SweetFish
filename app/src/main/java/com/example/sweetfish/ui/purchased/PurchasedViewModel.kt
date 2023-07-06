@@ -35,7 +35,8 @@ class PurchasedViewModel : ViewModel() {
                                     i.title,
                                     i.cover,
                                     i.avatar,
-                                    i.username
+                                    i.username,
+                                    i.price
                                 )
                             )
                         }
@@ -49,32 +50,5 @@ class PurchasedViewModel : ViewModel() {
                     t.printStackTrace()
                 }
             })
-//        val commodityList = ArrayList<Commodity>()
-//        commodityList.apply {
-//            add(Commodity(1, "生气", R.drawable.angry, R.drawable.default_avatar, "jiuxia211"))
-//            add(Commodity(2, "困困", R.drawable.sleepy, R.drawable.default_avatar, "jiuxia211"))
-//            add(Commodity(3, "哭哭", R.drawable.cry, R.drawable.default_avatar, "jiuxia211"))
-//            add(Commodity(4, "抱抱", R.drawable.hug, R.drawable.default_avatar, "jiuxia211"))
-//            add(Commodity(5, "期待", R.drawable.expect, R.drawable.default_avatar, "jiuxia211"))
-//            add(
-//                Commodity(
-//                    6,
-//                    "吃瓜",
-//                    R.drawable.eatwatermelon,
-//                    R.drawable.default_avatar,
-//                    "jiuxia211"
-//                )
-//            )
-//            add(Commodity(7, "点赞", R.drawable.like, R.drawable.default_avatar, "jiuxia211"))
-//            add(Commodity(8, "捏脸", R.drawable.pinchface, R.drawable.default_avatar, "jiuxia211"))
-//            add(Commodity(9, "乖巧", R.drawable.lovely, R.drawable.default_avatar, "jiuxia211"))
-//            add(Commodity(10, "宁静", R.drawable.quiet, R.drawable.default_avatar, "jiuxia211"))
-//            add(Commodity(11, "沉思", R.drawable.ruminate, R.drawable.default_avatar, "jiuxia211"))
-//            add(Commodity(12, "大佬喝茶", R.drawable.tea, R.drawable.default_avatar, "jiuxia211"))
-//            add(Commodity(13, "不高兴", R.drawable.unhappy, R.drawable.default_avatar, "jiuxia211"))
-//            add(Commodity(14, "惊讶", R.drawable.surprise, R.drawable.default_avatar, "jiuxia211"))
-//            add(Commodity(15, "空洞", R.drawable.voidx, R.drawable.default_avatar, "jiuxia211"))
-//            _commodityList.value = commodityList
-//        }
     }
 }

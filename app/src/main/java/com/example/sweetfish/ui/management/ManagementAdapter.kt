@@ -2,10 +2,7 @@ package com.example.sweetfish.ui.management
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import android.widget.Button
-import android.widget.EditText
-import android.widget.ImageView
-import android.widget.TextView
+import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
@@ -28,9 +25,6 @@ class ManagementAdapter(
         val binding =
             ManagementItemsBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         val viewHolder = GroupViewHolder(binding)
-        viewHolder.itemView.setOnClickListener {
-            //TODO 点击事件
-        }
         return viewHolder
     }
 
@@ -51,13 +45,18 @@ class ManagementAdapter(
             managementViewModel.Audit(token, commodity.id.toString(), "审核通过", "1")
         }
         holder.reject.setOnClickListener {
-            managementViewModel.Audit(
-                token,
-                commodity.id.toString(),
-                holder.rejectInfo.text.toString(),
-                "0"
-            )
+            if (holder.rejectInfo.text.toString() == "") {
+                Toast.makeText(activity, "请输入驳回的理由", Toast.LENGTH_SHORT).show()
+            } else {
+                managementViewModel.Audit(
+                    token,
+                    commodity.id.toString(),
+                    holder.rejectInfo.text.toString(),
+                    "0"
+                )
+            }
         }
+
     }
 
     override fun getItemCount(): Int {

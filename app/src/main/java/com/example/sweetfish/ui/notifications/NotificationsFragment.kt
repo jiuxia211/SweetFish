@@ -42,6 +42,11 @@ class NotificationsFragment : Fragment() {
             val result = DiffUtil.calculateDiff(ChatListUserDiffCallback(adapter.chatList, it))
             adapter.chatList = it
             result.dispatchUpdatesTo(adapter)
+            if (it.size == 0) {
+                binding.nullText.visibility = View.VISIBLE
+            } else {
+                binding.nullText.visibility = View.GONE
+            }
         }
         val prefs = activity?.getSharedPreferences("user", Context.MODE_PRIVATE)
         initUserInfo(prefs)
@@ -58,7 +63,7 @@ class NotificationsFragment : Fragment() {
             Glide.with(this@NotificationsFragment).load(getString("avatar", ""))
                 .circleCrop()
                 .into(binding.avatar)
-
+            binding.username.text = getString("username", "error")
         }
     }
 }

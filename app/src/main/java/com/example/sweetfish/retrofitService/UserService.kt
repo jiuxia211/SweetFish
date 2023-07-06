@@ -12,6 +12,7 @@ import com.example.sweetfish.ui.register.SendCodeJsonData
 import com.example.sweetfish.ui.space.AddChatJsonData
 import com.example.sweetfish.ui.space.FollowJsonData
 import com.example.sweetfish.ui.space.SetAvatarJsonData
+import com.example.sweetfish.ui.space.SetBackgroundJsonData
 import okhttp3.MultipartBody
 import retrofit2.Call
 import retrofit2.http.*
@@ -98,4 +99,11 @@ interface UserService {
         @Field("aim_id") uid: String,
         @Field("type") type: String
     ): Call<FollowJsonData>
+
+    @Multipart
+    @POST("background")
+    fun setBackground(
+        @Header("Authorization") token: String,
+        @Part file: MultipartBody.Part
+    ): Call<SetBackgroundJsonData>
 }

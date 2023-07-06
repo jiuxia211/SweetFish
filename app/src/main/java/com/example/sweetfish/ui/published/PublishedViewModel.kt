@@ -1,4 +1,4 @@
-package com.example.sweetfish.ui.space.purchased
+package com.example.sweetfish.ui.published
 
 import android.util.Log
 import androidx.lifecycle.LiveData
@@ -6,24 +6,23 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.example.sweetfish.retrofitService.CommodityService
 import com.example.sweetfish.retrofitService.ServiceCreator
-import com.example.sweetfish.ui.purchased.PurchasedJsonData
 import com.example.sweetfish.utils.commodity.Commodity
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
-class PurchasedViewModel : ViewModel() {
+class PublishedViewModel : ViewModel() {
     private val _commodityList = MutableLiveData<ArrayList<Commodity>>()
     val commodityList: LiveData<ArrayList<Commodity>> = _commodityList
-    private val _purchasedResponseData = MutableLiveData<PurchasedJsonData>()
-    val purchasedResponseData: LiveData<PurchasedJsonData> = _purchasedResponseData
-    fun initPurchasedCommodity(token: String) {
+    private val _publishedResponseData = MutableLiveData<PublishedJsonData>()
+    val purchasedResponseData: LiveData<PublishedJsonData> = _publishedResponseData
+    fun initPublishedCommodity(token: String) {
         val commodityService = ServiceCreator.create(CommodityService::class.java)
-        commodityService.getPurchased(token)
-            .enqueue(object : Callback<PurchasedJsonData> {
+        commodityService.getPublished(token)
+            .enqueue(object : Callback<PublishedJsonData> {
                 override fun onResponse(
-                    call: Call<PurchasedJsonData>,
-                    response: Response<PurchasedJsonData>
+                    call: Call<PublishedJsonData>,
+                    response: Response<PublishedJsonData>
                 ) {
                     val responseData = response.body()
                     if (responseData != null) {
@@ -36,7 +35,8 @@ class PurchasedViewModel : ViewModel() {
                                     i.title,
                                     i.cover,
                                     i.avatar,
-                                    i.username
+                                    i.username,
+                                    i.price
                                 )
                             )
                         }
@@ -46,11 +46,9 @@ class PurchasedViewModel : ViewModel() {
                     }
                 }
 
-                override fun onFailure(call: Call<PurchasedJsonData>, t: Throwable) {
+                override fun onFailure(call: Call<PublishedJsonData>, t: Throwable) {
                     t.printStackTrace()
                 }
             })
-
     }
-
 }

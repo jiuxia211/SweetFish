@@ -10,6 +10,8 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.GridLayoutManager
 import com.example.sweetfish.databinding.FragmentSoldBinding
+import com.example.sweetfish.ui.sold.SoldAdapter
+import com.example.sweetfish.ui.sold.SoldViewModel
 import com.example.sweetfish.utils.commodity.Commodity
 import com.example.sweetfish.utils.commodity.CommodityDiffCallback
 

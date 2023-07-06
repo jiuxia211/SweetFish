@@ -8,6 +8,8 @@ import com.example.sweetfish.retrofitService.CommodityService
 import com.example.sweetfish.retrofitService.ServiceCreator
 import com.example.sweetfish.retrofitService.UserService
 import com.example.sweetfish.ui.my.UserJsonData
+import com.example.sweetfish.ui.space.AddChatJsonData
+import com.example.sweetfish.ui.space.FollowJsonData
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -77,6 +79,54 @@ class DetailViewModel : ViewModel() {
             }
 
             override fun onFailure(call: Call<CollectJsonData>, t: Throwable) {
+                t.printStackTrace()
+            }
+        })
+    }
+
+    private val _followResponseData = MutableLiveData<FollowJsonData>()
+    val followResponseData: LiveData<FollowJsonData> = _followResponseData
+    fun follow(uid: String, type: String, token: String) {
+        val userService = ServiceCreator.create(UserService::class.java)
+        userService.follow(token, uid, type).enqueue(object : Callback<FollowJsonData> {
+            override fun onResponse(
+                call: Call<FollowJsonData>,
+                response: Response<FollowJsonData>
+            ) {
+                val responseData = response.body()
+                if (responseData != null) {
+                    Log.d("zz", response.body().toString())
+                    _followResponseData.postValue(response.body())
+                } else {
+                    Log.e("zz", "返回了空的json数据")
+                }
+            }
+
+            override fun onFailure(call: Call<FollowJsonData>, t: Throwable) {
+                t.printStackTrace()
+            }
+        })
+    }
+
+    private val _addChatResponseData = MutableLiveData<AddChatJsonData>()
+    val addChatResponseData: LiveData<AddChatJsonData> = _addChatResponseData
+    fun addChat(to: String, token: String) {
+        val userService = ServiceCreator.create(UserService::class.java)
+        userService.addChat(token, to).enqueue(object : Callback<AddChatJsonData> {
+            override fun onResponse(
+                call: Call<AddChatJsonData>,
+                response: Response<AddChatJsonData>
+            ) {
+                val responseData = response.body()
+                if (responseData != null) {
+                    Log.d("zz", response.body().toString())
+                    _addChatResponseData.postValue(response.body())
+                } else {
+                    Log.e("zz", "返回了空的json数据")
+                }
+            }
+
+            override fun onFailure(call: Call<AddChatJsonData>, t: Throwable) {
                 t.printStackTrace()
             }
         })

@@ -19,6 +19,6 @@ class ChatMsgDiffCallback(
     }
 
     override fun areItemsTheSame(oldItemPosition: Int, newItemPosition: Int): Boolean {
-        return oldChatList[oldItemPosition].type == newChatList[newItemPosition].type
+        return oldChatList[oldItemPosition].content == newChatList[newItemPosition].content
     }
 }

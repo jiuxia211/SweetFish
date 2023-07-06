@@ -1,4 +1,4 @@
-package com.example.sweetfish.ui.space.collected
+package com.example.sweetfish.ui.collect
 
 data class CollectedFirstList(
     val parentText: String,

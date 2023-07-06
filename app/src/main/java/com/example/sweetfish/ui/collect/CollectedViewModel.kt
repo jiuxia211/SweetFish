@@ -1,4 +1,4 @@
-package com.example.sweetfish.ui.space.published
+package com.example.sweetfish.ui.collect
 
 import android.util.Log
 import androidx.lifecycle.LiveData
@@ -6,37 +6,38 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.example.sweetfish.retrofitService.CommodityService
 import com.example.sweetfish.retrofitService.ServiceCreator
-import com.example.sweetfish.ui.published.PublishedJsonData
 import com.example.sweetfish.utils.commodity.Commodity
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
-class PublishedViewModel : ViewModel() {
-    private val _commodityList = MutableLiveData<ArrayList<Commodity>>()
-    val commodityList: LiveData<ArrayList<Commodity>> = _commodityList
-    private val _publishedResponseData = MutableLiveData<PublishedJsonData>()
-    val purchasedResponseData: LiveData<PublishedJsonData> = _publishedResponseData
-    fun initPublishedCommodity(token: String) {
+class CollectedViewModel : ViewModel() {
+    private val _commodityList = MutableLiveData<ArrayList<ArrayList<Commodity>>>()
+    val commodityList: LiveData<ArrayList<ArrayList<Commodity>>> = _commodityList
+    private val _collectedResponseData = MutableLiveData<CollectedJsonData>()
+    val collectedResponseData: LiveData<CollectedJsonData> = _collectedResponseData
+    fun initCollectCommodity(token: String) {
         val commodityService = ServiceCreator.create(CommodityService::class.java)
-        commodityService.getPublished(token)
-            .enqueue(object : Callback<PublishedJsonData> {
+        commodityService.getCollected(token)
+            .enqueue(object : Callback<CollectedJsonData> {
                 override fun onResponse(
-                    call: Call<PublishedJsonData>,
-                    response: Response<PublishedJsonData>
+                    call: Call<CollectedJsonData>,
+                    response: Response<CollectedJsonData>
                 ) {
                     val responseData = response.body()
                     if (responseData != null) {
                         Log.d("zz", response.body().toString())
-                        val commodityList = ArrayList<Commodity>()
-                        for (i in responseData.data.posts_lists) {
-                            commodityList.add(
+                        val commodityList = ArrayList<ArrayList<Commodity>>()
+                        commodityList.add(ArrayList<Commodity>())
+                        for (i in responseData.data.fav_list) {
+                            commodityList[0].add(
                                 Commodity(
-                                    i.id,
+                                    i.post_id,
                                     i.title,
                                     i.cover,
                                     i.avatar,
-                                    i.username
+                                    i.username,
+                                    i.price
                                 )
                             )
                         }
@@ -46,7 +47,7 @@ class PublishedViewModel : ViewModel() {
                     }
                 }
 
-                override fun onFailure(call: Call<PublishedJsonData>, t: Throwable) {
+                override fun onFailure(call: Call<CollectedJsonData>, t: Throwable) {
                     t.printStackTrace()
                 }
             })

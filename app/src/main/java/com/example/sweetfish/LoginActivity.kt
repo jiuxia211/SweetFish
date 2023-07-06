@@ -3,6 +3,7 @@ package com.example.sweetfish
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import com.example.sweetfish.databinding.ActivityLoginBinding
@@ -24,6 +25,7 @@ class LoginActivity : AppCompatActivity() {
                 intent.putExtra("uid", it.data.id)
                 startActivity(intent)
             }
+            Toast.makeText(this, it.message, Toast.LENGTH_SHORT).show()
         }
         loginViewModel.userInfo.observe(this) {
             if (it.isRePassword) {

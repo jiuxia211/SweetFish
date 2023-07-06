@@ -11,12 +11,13 @@ class RealNameAuthenticationActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        supportActionBar?.hide()
         val binding = ActivityRealNameAuthenticationBinding.inflate(layoutInflater)
         setContentView(binding.root)
         val realNameAuthenticationViewModel =
             ViewModelProvider(this)[RealNameAuthenticationViewModel::class.java]
         val token = intent.getStringExtra("token").toString()
-        binding.identityNum.setOnClickListener {
+        binding.verify.setOnClickListener {
             realNameAuthenticationViewModel.realNameAuthentication(
                 token,
                 binding.identityNum.text.toString(),

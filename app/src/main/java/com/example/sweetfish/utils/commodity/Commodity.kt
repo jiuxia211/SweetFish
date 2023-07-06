@@ -7,6 +7,6 @@ data class Commodity(
     val avatarPath: String,
 //    val imageId: Int,
 //    val avatarId: Int,
-    val username: String
-    
+    val username: String,
+    val price: Double
 )

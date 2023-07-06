@@ -47,7 +47,6 @@ class SpaceViewModel : ViewModel() {
             override fun onResponse(call: Call<UserJsonData>, response: Response<UserJsonData>) {
                 val responseData = response.body()
                 if (responseData != null) {
-                    Log.d("zz", response.body().toString())
                     _userResponseData.postValue(response.body())
                 } else {
                     Log.e("zz", "返回了空的json数据")
@@ -106,5 +105,30 @@ class SpaceViewModel : ViewModel() {
                 t.printStackTrace()
             }
         })
+    }
+
+    private val _setBackgroundResponseData = MutableLiveData<SetBackgroundJsonData>()
+    val setBackgroundResponseData: LiveData<SetBackgroundJsonData> = _setBackgroundResponseData
+    fun setBackground(token: String, background: MultipartBody.Part) {
+        val userService = ServiceCreator.create(UserService::class.java)
+        userService.setBackground(token, background)
+            .enqueue(object : Callback<SetBackgroundJsonData> {
+                override fun onResponse(
+                    call: Call<SetBackgroundJsonData>,
+                    response: Response<SetBackgroundJsonData>
+                ) {
+                    val responseData = response.body()
+                    if (responseData != null) {
+                        Log.d("zz", response.body().toString())
+                        _setBackgroundResponseData.postValue(response.body())
+                    } else {
+                        Log.e("im", "返回了空的json数据")
+                    }
+                }
+
+                override fun onFailure(call: Call<SetBackgroundJsonData>, t: Throwable) {
+                    t.printStackTrace()
+                }
+            })
     }
 }

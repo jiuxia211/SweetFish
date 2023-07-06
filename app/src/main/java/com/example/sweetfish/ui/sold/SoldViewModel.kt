@@ -1,4 +1,4 @@
-package com.example.sweetfish.ui.space.collected
+package com.example.sweetfish.ui.sold
 
 import android.util.Log
 import androidx.lifecycle.LiveData
@@ -11,32 +11,32 @@ import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
-class CollectedViewModel : ViewModel() {
-    private val _commodityList = MutableLiveData<ArrayList<ArrayList<Commodity>>>()
-    val commodityList: LiveData<ArrayList<ArrayList<Commodity>>> = _commodityList
-    private val _collectedResponseData = MutableLiveData<CollectedJsonData>()
-    val collectedResponseData: LiveData<CollectedJsonData> = _collectedResponseData
-    fun initCollectCommodity(token: String) {
+class SoldViewModel : ViewModel() {
+    private val _commodityList = MutableLiveData<ArrayList<Commodity>>()
+    val commodityList: LiveData<ArrayList<Commodity>> = _commodityList
+    private val _soldResponseData = MutableLiveData<SoldJsonData>()
+    val soldResponseData: LiveData<SoldJsonData> = _soldResponseData
+    fun initSoldCommodity(token: String) {
         val commodityService = ServiceCreator.create(CommodityService::class.java)
-        commodityService.getCollected(token)
-            .enqueue(object : Callback<CollectedJsonData> {
+        commodityService.getSold(token)
+            .enqueue(object : Callback<SoldJsonData> {
                 override fun onResponse(
-                    call: Call<CollectedJsonData>,
-                    response: Response<CollectedJsonData>
+                    call: Call<SoldJsonData>,
+                    response: Response<SoldJsonData>
                 ) {
                     val responseData = response.body()
                     if (responseData != null) {
                         Log.d("zz", response.body().toString())
-                        val commodityList = ArrayList<ArrayList<Commodity>>()
-                        commodityList.add(ArrayList<Commodity>())
-                        for (i in responseData.data.fav_list) {
-                            commodityList[0].add(
+                        val commodityList = ArrayList<Commodity>()
+                        for (i in responseData.data.posts_lists) {
+                            commodityList.add(
                                 Commodity(
-                                    i.post_id,
+                                    i.id,
                                     i.title,
                                     i.cover,
                                     i.avatar,
-                                    i.username
+                                    i.username,
+                                    i.price
                                 )
                             )
                         }
@@ -46,7 +46,7 @@ class CollectedViewModel : ViewModel() {
                     }
                 }
 
-                override fun onFailure(call: Call<CollectedJsonData>, t: Throwable) {
+                override fun onFailure(call: Call<SoldJsonData>, t: Throwable) {
                     t.printStackTrace()
                 }
             })

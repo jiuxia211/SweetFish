@@ -10,6 +10,8 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.GridLayoutManager
 import com.example.sweetfish.databinding.FragmentPublishedBinding
+import com.example.sweetfish.ui.published.PublishedAdapter
+import com.example.sweetfish.ui.published.PublishedViewModel
 import com.example.sweetfish.utils.commodity.Commodity
 import com.example.sweetfish.utils.commodity.CommodityDiffCallback
 
@@ -41,6 +43,11 @@ class PublishedFragment : Fragment() {
                 DiffUtil.calculateDiff(CommodityDiffCallback(adapter.commodityList, it), true)
             adapter.commodityList = it
             result.dispatchUpdatesTo(adapter)
+            if (it.size == 0) {
+                binding.nullText.visibility = View.VISIBLE
+            } else {
+                binding.nullText.visibility = View.GONE
+            }
         }
         return root
     }

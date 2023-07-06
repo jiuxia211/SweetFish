@@ -56,7 +56,8 @@ class MainViewModel : ViewModel() {
                                 i.title,
                                 i.cover,
                                 i.avatar,
-                                i.username
+                                i.username,
+                                i.price
                             )
                         )
 

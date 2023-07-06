@@ -30,11 +30,10 @@ class ChatViewModel : ViewModel() {
                         val msgList = ArrayList<ChatMsg>()
                         for (i in responseData.data) {
                             if (i.from == uid.toInt()) {
-                                msgList.add(ChatMsg(i.message, TYPE_RECEIVED))
+                                msgList.add(ChatMsg(i.message, TYPE_RECEIVED, i.id))
                             } else {
-                                msgList.add(ChatMsg(i.message, TYPE_SENT))
+                                msgList.add(ChatMsg(i.message, TYPE_SENT, i.id))
                             }
-
                         }
                         _msgList.postValue(msgList)
                     } else {

@@ -8,6 +8,9 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.example.sweetfish.databinding.FragmentCollectedBinding
+import com.example.sweetfish.ui.collect.CollectedAdapter
+import com.example.sweetfish.ui.collect.CollectedFirstList
+import com.example.sweetfish.ui.collect.CollectedViewModel
 import com.example.sweetfish.utils.commodity.Commodity
 
 class CollectedFragment : Fragment() {
