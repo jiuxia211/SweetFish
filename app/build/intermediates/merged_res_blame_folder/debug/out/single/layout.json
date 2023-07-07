@@ -1,0 +1,214 @@
+[
+    {
+        "merged": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-mergeDebugResources-52:\\layout\\activity_detail.xml",
+        "source": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-main-55:\\layout\\activity_detail.xml"
+    },
+    {
+        "merged": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-mergeDebugResources-52:\\layout\\activity_space.xml",
+        "source": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-main-55:\\layout\\activity_space.xml"
+    },
+    {
+        "merged": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-mergeDebugResources-52:\\layout\\indicator_container.xml",
+        "source": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-main-55:\\layout\\indicator_container.xml"
+    },
+    {
+        "merged": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-mergeDebugResources-52:\\layout\\activity_main.xml",
+        "source": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-main-55:\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-mergeDebugResources-52:\\layout\\activity_search.xml",
+        "source": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-main-55:\\layout\\activity_search.xml"
+    },
+    {
+        "merged": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-mergeDebugResources-52:\\layout\\activity_my_given.xml",
+        "source": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-main-55:\\layout\\activity_my_given.xml"
+    },
+    {
+        "merged": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-mergeDebugResources-52:\\layout\\msg_menu.xml",
+        "source": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-main-55:\\layout\\msg_menu.xml"
+    },
+    {
+        "merged": "com.example.sweetfish.app-mergeDebugResources-52:/layout/activity_setting.xml",
+        "source": "com.example.sweetfish.app-main-55:/layout/activity_setting.xml"
+    },
+    {
+        "merged": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-mergeDebugResources-52:\\layout\\activity_register.xml",
+        "source": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-main-55:\\layout\\activity_register.xml"
+    },
+    {
+        "merged": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-mergeDebugResources-52:\\layout\\fragment_collected.xml",
+        "source": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-main-55:\\layout\\fragment_collected.xml"
+    },
+    {
+        "merged": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-mergeDebugResources-52:\\layout\\fragment_search_commodity.xml",
+        "source": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-main-55:\\layout\\fragment_search_commodity.xml"
+    },
+    {
+        "merged": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-mergeDebugResources-52:\\layout\\activity_purchased.xml",
+        "source": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-main-55:\\layout\\activity_purchased.xml"
+    },
+    {
+        "merged": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-mergeDebugResources-52:\\layout\\activity_sold.xml",
+        "source": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-main-55:\\layout\\activity_sold.xml"
+    },
+    {
+        "merged": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-mergeDebugResources-52:\\layout\\fragment_main.xml",
+        "source": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-main-55:\\layout\\fragment_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-mergeDebugResources-52:\\layout\\activity_chat.xml",
+        "source": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-main-55:\\layout\\activity_chat.xml"
+    },
+    {
+        "merged": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-mergeDebugResources-52:\\layout\\activity_photo.xml",
+        "source": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-main-55:\\layout\\activity_photo.xml"
+    },
+    {
+        "merged": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-mergeDebugResources-52:\\layout\\input_price.xml",
+        "source": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-main-55:\\layout\\input_price.xml"
+    },
+    {
+        "merged": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-mergeDebugResources-52:\\layout\\activity_top_up.xml",
+        "source": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-main-55:\\layout\\activity_top_up.xml"
+    },
+    {
+        "merged": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-mergeDebugResources-52:\\layout\\msg_right.xml",
+        "source": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-main-55:\\layout\\msg_right.xml"
+    },
+    {
+        "merged": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-mergeDebugResources-52:\\layout\\sold_items.xml",
+        "source": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-main-55:\\layout\\sold_items.xml"
+    },
+    {
+        "merged": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-mergeDebugResources-52:\\layout\\management_parent_items.xml",
+        "source": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-main-55:\\layout\\management_parent_items.xml"
+    },
+    {
+        "merged": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-mergeDebugResources-52:\\layout\\published_items.xml",
+        "source": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-main-55:\\layout\\published_items.xml"
+    },
+    {
+        "merged": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-mergeDebugResources-52:\\layout\\recommend_items.xml",
+        "source": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-main-55:\\layout\\recommend_items.xml"
+    },
+    {
+        "merged": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-mergeDebugResources-52:\\layout\\activity_login.xml",
+        "source": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-main-55:\\layout\\activity_login.xml"
+    },
+    {
+        "merged": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-mergeDebugResources-52:\\layout\\chat_list_items.xml",
+        "source": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-main-55:\\layout\\chat_list_items.xml"
+    },
+    {
+        "merged": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-mergeDebugResources-52:\\layout\\space_menu.xml",
+        "source": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-main-55:\\layout\\space_menu.xml"
+    },
+    {
+        "merged": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-mergeDebugResources-52:\\layout\\purchased_items.xml",
+        "source": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-main-55:\\layout\\purchased_items.xml"
+    },
+    {
+        "merged": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-mergeDebugResources-52:\\layout\\search_commodity_items.xml",
+        "source": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-main-55:\\layout\\search_commodity_items.xml"
+    },
+    {
+        "merged": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-mergeDebugResources-52:\\layout\\activity_setting.xml",
+        "source": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-main-55:\\layout\\activity_setting.xml"
+    },
+    {
+        "merged": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-mergeDebugResources-52:\\layout\\collected_parent_items.xml",
+        "source": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-main-55:\\layout\\collected_parent_items.xml"
+    },
+    {
+        "merged": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-mergeDebugResources-52:\\layout\\search_user_items.xml",
+        "source": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-main-55:\\layout\\search_user_items.xml"
+    },
+    {
+        "merged": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-mergeDebugResources-52:\\layout\\my_given_items.xml",
+        "source": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-main-55:\\layout\\my_given_items.xml"
+    },
+    {
+        "merged": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-mergeDebugResources-52:\\layout\\fragment_my.xml",
+        "source": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-main-55:\\layout\\fragment_my.xml"
+    },
+    {
+        "merged": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-mergeDebugResources-52:\\layout\\fragment_published.xml",
+        "source": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-main-55:\\layout\\fragment_published.xml"
+    },
+    {
+        "merged": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-mergeDebugResources-52:\\layout\\activity_real_name_authentication.xml",
+        "source": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-main-55:\\layout\\activity_real_name_authentication.xml"
+    },
+    {
+        "merged": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-mergeDebugResources-52:\\layout\\activity_change_password.xml",
+        "source": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-main-55:\\layout\\activity_change_password.xml"
+    },
+    {
+        "merged": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-mergeDebugResources-52:\\layout\\fragment_notifications.xml",
+        "source": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-main-55:\\layout\\fragment_notifications.xml"
+    },
+    {
+        "merged": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-mergeDebugResources-52:\\layout\\fragment_search_user.xml",
+        "source": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-main-55:\\layout\\fragment_search_user.xml"
+    },
+    {
+        "merged": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-mergeDebugResources-52:\\layout\\activity_published.xml",
+        "source": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-main-55:\\layout\\activity_published.xml"
+    },
+    {
+        "merged": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-mergeDebugResources-52:\\layout\\notification_items.xml",
+        "source": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-main-55:\\layout\\notification_items.xml"
+    },
+    {
+        "merged": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-mergeDebugResources-52:\\layout\\image_item.xml",
+        "source": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-main-55:\\layout\\image_item.xml"
+    },
+    {
+        "merged": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-mergeDebugResources-52:\\layout\\management_child_items.xml",
+        "source": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-main-55:\\layout\\management_child_items.xml"
+    },
+    {
+        "merged": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-mergeDebugResources-52:\\layout\\fragment_image.xml",
+        "source": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-main-55:\\layout\\fragment_image.xml"
+    },
+    {
+        "merged": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-mergeDebugResources-52:\\layout\\activity_management.xml",
+        "source": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-main-55:\\layout\\activity_management.xml"
+    },
+    {
+        "merged": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-mergeDebugResources-52:\\layout\\fragment_sold.xml",
+        "source": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-main-55:\\layout\\fragment_sold.xml"
+    },
+    {
+        "merged": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-mergeDebugResources-52:\\layout\\avatar_menu.xml",
+        "source": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-main-55:\\layout\\avatar_menu.xml"
+    },
+    {
+        "merged": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-mergeDebugResources-52:\\layout\\activity_collect.xml",
+        "source": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-main-55:\\layout\\activity_collect.xml"
+    },
+    {
+        "merged": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-mergeDebugResources-52:\\layout\\activity_upload_account.xml",
+        "source": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-main-55:\\layout\\activity_upload_account.xml"
+    },
+    {
+        "merged": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-mergeDebugResources-52:\\layout\\msg_left.xml",
+        "source": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-main-55:\\layout\\msg_left.xml"
+    },
+    {
+        "merged": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-mergeDebugResources-52:\\layout\\fragment_purchased.xml",
+        "source": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-main-55:\\layout\\fragment_purchased.xml"
+    },
+    {
+        "merged": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-mergeDebugResources-52:\\layout\\image_items.xml",
+        "source": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-main-55:\\layout\\image_items.xml"
+    },
+    {
+        "merged": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-mergeDebugResources-52:\\layout\\collected_child_items.xml",
+        "source": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-main-55:\\layout\\collected_child_items.xml"
+    },
+    {
+        "merged": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-mergeDebugResources-52:\\layout\\management_items.xml",
+        "source": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-main-55:\\layout\\management_items.xml"
+    }
+]

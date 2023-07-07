@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:id="@+id/cover"
+        android:src="@drawable/sweet_fish"
+        android:layout_gravity="center"
+        android:layout_marginTop="50dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/title"
+        android:text="欢迎来到甜鱼"
+        android:layout_margin="10dp"
+        android:textSize="25sp"
+        android:gravity="center_horizontal"
+        android:textStyle="bold"
+        android:textColor="#ff000000" />
+
+
+    <EditText
+        android:id="@+id/editUsername"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="请输入你的用户名"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:inputType="text" />
+
+    <EditText
+        android:id="@+id/editMail"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="请输入你的邮箱"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:inputType="textEmailAddress" />
+
+
+    <EditText
+        android:id="@+id/editPassword"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="请输入你的密码"
+        android:inputType="textPassword"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <EditText
+            android:id="@+id/editCode"
+            android:layout_width="0dp"
+            android:layout_weight="7"
+            android:layout_height="50dp"
+            android:hint="请输入验证码"
+            android:inputType="number"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:id="@+id/sendCode"
+            android:text="发送验证码"
+            android:background="@drawable/btn_circle"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp" />
+
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/register"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:text="注册"
+        android:background="@drawable/btn_circle" />
+
+
+</LinearLayout>
+

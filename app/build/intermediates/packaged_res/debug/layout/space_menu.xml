@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@android:color/white">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="修改头像"
+        android:padding="16dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:id="@+id/setAvatar" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="修改空间背景"
+        android:padding="16dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:id="@+id/setBackground" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Menu Item 3"
+        android:padding="16dp"
+        android:clickable="true"
+        android:focusable="true" />
+
+</LinearLayout>

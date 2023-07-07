@@ -1,0 +1,56 @@
+com.example.sweetfish.app-lifecycle-viewmodel-savedstate-2.5.1-0 C:\Users\FA\.gradle\caches\transforms-3\08864fe3a2b46af60f35d8ae71a7f126\transformed\lifecycle-viewmodel-savedstate-2.5.1\res
+com.example.sweetfish.app-navigation-runtime-2.5.0-1 C:\Users\FA\.gradle\caches\transforms-3\0a4be71fd62d91ce6547f04380e70488\transformed\navigation-runtime-2.5.0\res
+com.example.sweetfish.app-core-1.10.0-2 C:\Users\FA\.gradle\caches\transforms-3\0aadb17ec05c17549067fdaa5a518b8c\transformed\core-1.10.0\res
+com.example.sweetfish.app-activity-1.6.1-3 C:\Users\FA\.gradle\caches\transforms-3\0fff4609c7f28530e61c978a5920503c\transformed\activity-1.6.1\res
+com.example.sweetfish.app-constraintlayout-2.1.3-4 C:\Users\FA\.gradle\caches\transforms-3\133761862af8556e8c591295f8204c07\transformed\constraintlayout-2.1.3\res
+com.example.sweetfish.app-core-ktx-1.10.0-5 C:\Users\FA\.gradle\caches\transforms-3\151f7979bbec11466576d3baa7718929\transformed\core-ktx-1.10.0\res
+com.example.sweetfish.app-lifecycle-runtime-ktx-2.5.1-6 C:\Users\FA\.gradle\caches\transforms-3\16f198112ca170a1f3880f7d3ce547b1\transformed\lifecycle-runtime-ktx-2.5.1\res
+com.example.sweetfish.app-activity-ktx-1.6.1-7 C:\Users\FA\.gradle\caches\transforms-3\1bce571250769da36785f2974f4cb6e7\transformed\activity-ktx-1.6.1\res
+com.example.sweetfish.app-recyclerview-1.1.0-8 C:\Users\FA\.gradle\caches\transforms-3\20b799ff962d5feba8ce2d9de9abf08a\transformed\recyclerview-1.1.0\res
+com.example.sweetfish.app-glide-4.12.0-9 C:\Users\FA\.gradle\caches\transforms-3\21ca73e9824e4b8681f2221185244157\transformed\glide-4.12.0\res
+com.example.sweetfish.app-emoji2-views-helper-1.0.0-10 C:\Users\FA\.gradle\caches\transforms-3\28ec94b969f35495797373350b6713a8\transformed\emoji2-views-helper-1.0.0\res
+com.example.sweetfish.app-savedstate-ktx-1.2.0-11 C:\Users\FA\.gradle\caches\transforms-3\30fff20c0b93ffd3cc27325e5246f92b\transformed\savedstate-ktx-1.2.0\res
+com.example.sweetfish.app-lifecycle-runtime-2.5.1-12 C:\Users\FA\.gradle\caches\transforms-3\33b0007a762a191793b97289f4516bfd\transformed\lifecycle-runtime-2.5.1\res
+com.example.sweetfish.app-swiperefreshlayout-1.1.0-13 C:\Users\FA\.gradle\caches\transforms-3\41a25450b5ceaa6e45aa848839e0c762\transformed\swiperefreshlayout-1.1.0\res
+com.example.sweetfish.app-navigation-fragment-2.5.0-14 C:\Users\FA\.gradle\caches\transforms-3\44c6443cd8e8226a1b0a1c4aa52baa97\transformed\navigation-fragment-2.5.0\res
+com.example.sweetfish.app-lifecycle-livedata-core-2.5.1-15 C:\Users\FA\.gradle\caches\transforms-3\4cc12fa51a1b3c832ef3214520daf6e3\transformed\lifecycle-livedata-core-2.5.1\res
+com.example.sweetfish.app-ucrop-2.2.6-16 C:\Users\FA\.gradle\caches\transforms-3\5256f87465d1714334c2abda551b4a2d\transformed\ucrop-2.2.6\res
+com.example.sweetfish.app-transition-1.4.1-17 C:\Users\FA\.gradle\caches\transforms-3\640a6c9176f93bb304bc63c5f2ea545b\transformed\transition-1.4.1\res
+com.example.sweetfish.app-lifecycle-livedata-core-ktx-2.5.0-18 C:\Users\FA\.gradle\caches\transforms-3\7030883a4dd9aa6460e8abae8f070d80\transformed\lifecycle-livedata-core-ktx-2.5.0\res
+com.example.sweetfish.app-viewpager2-1.0.0-19 C:\Users\FA\.gradle\caches\transforms-3\72c8120b40343c58adce821e295e4e0d\transformed\viewpager2-1.0.0\res
+com.example.sweetfish.app-slidingpanelayout-1.2.0-20 C:\Users\FA\.gradle\caches\transforms-3\78f042f98631812afe2c365ff39f1a78\transformed\slidingpanelayout-1.2.0\res
+com.example.sweetfish.app-navigation-common-2.5.0-21 C:\Users\FA\.gradle\caches\transforms-3\7f3aeded9337ccfc3890273c7bebc21f\transformed\navigation-common-2.5.0\res
+com.example.sweetfish.app-navigation-ui-ktx-2.5.0-22 C:\Users\FA\.gradle\caches\transforms-3\8fbeb5cc8948a759556148cfb905e45b\transformed\navigation-ui-ktx-2.5.0\res
+com.example.sweetfish.app-media-1.0.0-23 C:\Users\FA\.gradle\caches\transforms-3\91870223a8880ef8d1f5057e44dd4d28\transformed\media-1.0.0\res
+com.example.sweetfish.app-circleimageview-3.1.0-24 C:\Users\FA\.gradle\caches\transforms-3\92b7968a75aa7ef21608bc65fdfed700\transformed\circleimageview-3.1.0\res
+com.example.sweetfish.app-fragment-ktx-1.5.0-25 C:\Users\FA\.gradle\caches\transforms-3\9777c8bace4e9ee1277628ae6cc3656e\transformed\fragment-ktx-1.5.0\res
+com.example.sweetfish.app-lifecycle-livedata-ktx-2.4.1-26 C:\Users\FA\.gradle\caches\transforms-3\99a4d4e9f4accb8dd127826f23e72367\transformed\lifecycle-livedata-ktx-2.4.1\res
+com.example.sweetfish.app-window-1.0.0-27 C:\Users\FA\.gradle\caches\transforms-3\b0cdd1cb77dbecb2a8cf1158b9b29b0f\transformed\window-1.0.0\res
+com.example.sweetfish.app-material-1.5.0-28 C:\Users\FA\.gradle\caches\transforms-3\b0ce1e40e43a4a23f8962e8033b6315a\transformed\material-1.5.0\res
+com.example.sweetfish.app-cardview-1.0.0-29 C:\Users\FA\.gradle\caches\transforms-3\b375e5d9cc51ac02c766ea819eab8aed\transformed\cardview-1.0.0\res
+com.example.sweetfish.app-lifecycle-viewmodel-ktx-2.5.1-30 C:\Users\FA\.gradle\caches\transforms-3\c0e7a361182449d33e2fc147c3ae599f\transformed\lifecycle-viewmodel-ktx-2.5.1\res
+com.example.sweetfish.app-startup-runtime-1.0.0-31 C:\Users\FA\.gradle\caches\transforms-3\c2c90a77c08a4797c4811116f83d1cef\transformed\startup-runtime-1.0.0\res
+com.example.sweetfish.app-lifecycle-viewmodel-2.5.1-32 C:\Users\FA\.gradle\caches\transforms-3\c461a014a5ac99184e25b90c4658316a\transformed\lifecycle-viewmodel-2.5.1\res
+com.example.sweetfish.app-navigation-fragment-ktx-2.5.0-33 C:\Users\FA\.gradle\caches\transforms-3\cc6f294efed26370775120d1388153a9\transformed\navigation-fragment-ktx-2.5.0\res
+com.example.sweetfish.app-appcompat-1.4.1-34 C:\Users\FA\.gradle\caches\transforms-3\cfa7a118b922981dfbde4c9ef3d9dce9\transformed\appcompat-1.4.1\res
+com.example.sweetfish.app-navigation-runtime-ktx-2.5.0-35 C:\Users\FA\.gradle\caches\transforms-3\d6a6cab1f6b5d15d8dbc9537b32433b3\transformed\navigation-runtime-ktx-2.5.0\res
+com.example.sweetfish.app-drawerlayout-1.1.1-36 C:\Users\FA\.gradle\caches\transforms-3\d78a48d8c2b5f6abde33f3a44a9fa3fc\transformed\drawerlayout-1.1.1\res
+com.example.sweetfish.app-autoimageslider-1.4.0-37 C:\Users\FA\.gradle\caches\transforms-3\d8b605d2947fe87b66b18e4469b783b7\transformed\autoimageslider-1.4.0\res
+com.example.sweetfish.app-emoji2-1.0.0-38 C:\Users\FA\.gradle\caches\transforms-3\da2b9c598abdd06dbb3962aa784d13ae\transformed\emoji2-1.0.0\res
+com.example.sweetfish.app-annotation-experimental-1.3.0-39 C:\Users\FA\.gradle\caches\transforms-3\db82163130adbc5b936ed92aba0389c8\transformed\annotation-experimental-1.3.0\res
+com.example.sweetfish.app-lifecycle-process-2.4.0-40 C:\Users\FA\.gradle\caches\transforms-3\dc3a1575086861da29e1543e5dd9eb68\transformed\lifecycle-process-2.4.0\res
+com.example.sweetfish.app-appcompat-resources-1.4.1-41 C:\Users\FA\.gradle\caches\transforms-3\dd93c650bb37b3dd1d75b33917f5a5c8\transformed\appcompat-resources-1.4.1\res
+com.example.sweetfish.app-navigation-common-ktx-2.5.0-42 C:\Users\FA\.gradle\caches\transforms-3\dfcbbd969effba8e6a8924b71cd94aa5\transformed\navigation-common-ktx-2.5.0\res
+com.example.sweetfish.app-savedstate-1.2.0-43 C:\Users\FA\.gradle\caches\transforms-3\e349565ba3e2235c066decc3b63ddf45\transformed\savedstate-1.2.0\res
+com.example.sweetfish.app-fragment-1.5.0-44 C:\Users\FA\.gradle\caches\transforms-3\e78a25aed35ccb3a772663efb0ba4fb7\transformed\fragment-1.5.0\res
+com.example.sweetfish.app-lifecycle-livedata-2.4.1-45 C:\Users\FA\.gradle\caches\transforms-3\f06b6f511dba5d75f798973c3d9509e1\transformed\lifecycle-livedata-2.4.1\res
+com.example.sweetfish.app-coordinatorlayout-1.1.0-46 C:\Users\FA\.gradle\caches\transforms-3\f853014b896699201a49523830463579\transformed\coordinatorlayout-1.1.0\res
+com.example.sweetfish.app-navigation-ui-2.5.0-47 C:\Users\FA\.gradle\caches\transforms-3\ff0de7de9a8f4122e5c7fb48fecc8766\transformed\navigation-ui-2.5.0\res
+com.example.sweetfish.app-pngs-48 E:\Android Project\SweetFish\app\build\generated\res\pngs\debug
+com.example.sweetfish.app-resValues-49 E:\Android Project\SweetFish\app\build\generated\res\resValues\debug
+com.example.sweetfish.app-rs-50 E:\Android Project\SweetFish\app\build\generated\res\rs\debug
+com.example.sweetfish.app-packageDebugResources-51 E:\Android Project\SweetFish\app\build\intermediates\incremental\debug\packageDebugResources\merged.dir
+com.example.sweetfish.app-packageDebugResources-52 E:\Android Project\SweetFish\app\build\intermediates\incremental\debug\packageDebugResources\stripped.dir
+com.example.sweetfish.app-merged_res-53 E:\Android Project\SweetFish\app\build\intermediates\merged_res\debug
+com.example.sweetfish.app-debug-54 E:\Android Project\SweetFish\app\src\debug\res
+com.example.sweetfish.app-main-55 E:\Android Project\SweetFish\app\src\main\res

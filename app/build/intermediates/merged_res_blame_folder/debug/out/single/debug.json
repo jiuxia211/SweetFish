@@ -1,0 +1,470 @@
+[
+    {
+        "merged": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-merged_res-53:\\layout_input_price.xml.flat",
+        "source": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-main-55:\\layout\\input_price.xml"
+    },
+    {
+        "merged": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-merged_res-53:\\layout_activity_sold.xml.flat",
+        "source": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-main-55:\\layout\\activity_sold.xml"
+    },
+    {
+        "merged": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-merged_res-53:\\layout_activity_login.xml.flat",
+        "source": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-main-55:\\layout\\activity_login.xml"
+    },
+    {
+        "merged": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-merged_res-53:\\drawable-xxhdpi_surprise.png.flat",
+        "source": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-main-55:\\drawable-xxhdpi\\surprise.png"
+    },
+    {
+        "merged": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-merged_res-53:\\drawable-xxhdpi_eatwatermelon.png.flat",
+        "source": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-main-55:\\drawable-xxhdpi\\eatwatermelon.png"
+    },
+    {
+        "merged": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-merged_res-53:\\mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-main-55:\\mipmap-xhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-merged_res-53:\\layout_fragment_search_commodity.xml.flat",
+        "source": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-main-55:\\layout\\fragment_search_commodity.xml"
+    },
+    {
+        "merged": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-merged_res-53:\\drawable-xxhdpi_sleepy.png.flat",
+        "source": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-main-55:\\drawable-xxhdpi\\sleepy.png"
+    },
+    {
+        "merged": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-merged_res-53:\\mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-main-55:\\mipmap-xxhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-merged_res-53:\\xml_backup_rules.xml.flat",
+        "source": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-main-55:\\xml\\backup_rules.xml"
+    },
+    {
+        "merged": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-merged_res-53:\\mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-main-55:\\mipmap-hdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-merged_res-53:\\layout_activity_real_name_authentication.xml.flat",
+        "source": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-main-55:\\layout\\activity_real_name_authentication.xml"
+    },
+    {
+        "merged": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-merged_res-53:\\layout_indicator_container.xml.flat",
+        "source": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-main-55:\\layout\\indicator_container.xml"
+    },
+    {
+        "merged": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-merged_res-53:\\layout_notification_items.xml.flat",
+        "source": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-main-55:\\layout\\notification_items.xml"
+    },
+    {
+        "merged": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-merged_res-53:\\xml_data_extraction_rules.xml.flat",
+        "source": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-main-55:\\xml\\data_extraction_rules.xml"
+    },
+    {
+        "merged": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-merged_res-53:\\layout_activity_upload_account.xml.flat",
+        "source": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-main-55:\\layout\\activity_upload_account.xml"
+    },
+    {
+        "merged": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-merged_res-53:\\layout_activity_published.xml.flat",
+        "source": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-main-55:\\layout\\activity_published.xml"
+    },
+    {
+        "merged": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-merged_res-53:\\mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-main-55:\\mipmap-xhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-merged_res-53:\\layout_my_given_items.xml.flat",
+        "source": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-main-55:\\layout\\my_given_items.xml"
+    },
+    {
+        "merged": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-merged_res-53:\\navigation_mobile_navigation.xml.flat",
+        "source": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-main-55:\\navigation\\mobile_navigation.xml"
+    },
+    {
+        "merged": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-merged_res-53:\\drawable-xxhdpi_back.png.flat",
+        "source": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-main-55:\\drawable-xxhdpi\\back.png"
+    },
+    {
+        "merged": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-merged_res-53:\\drawable-xxhdpi_collected1.png.flat",
+        "source": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-main-55:\\drawable-xxhdpi\\collected1.png"
+    },
+    {
+        "merged": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-merged_res-53:\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-main-55:\\mipmap-anydpi-v26\\ic_launcher_round.xml"
+    },
+    {
+        "merged": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-merged_res-53:\\layout_purchased_items.xml.flat",
+        "source": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-main-55:\\layout\\purchased_items.xml"
+    },
+    {
+        "merged": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-merged_res-53:\\drawable-xxhdpi_more.png.flat",
+        "source": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-main-55:\\drawable-xxhdpi\\more.png"
+    },
+    {
+        "merged": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-merged_res-53:\\drawable-xxhdpi_default_back.jpeg.flat",
+        "source": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-main-55:\\drawable-xxhdpi\\default_back.jpeg"
+    },
+    {
+        "merged": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-merged_res-53:\\layout_collected_parent_items.xml.flat",
+        "source": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-main-55:\\layout\\collected_parent_items.xml"
+    },
+    {
+        "merged": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-merged_res-53:\\drawable-xxhdpi_purchased.jpg.flat",
+        "source": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-main-55:\\drawable-xxhdpi\\purchased.jpg"
+    },
+    {
+        "merged": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-merged_res-53:\\mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-main-55:\\mipmap-anydpi-v26\\ic_launcher.xml"
+    },
+    {
+        "merged": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-merged_res-53:\\layout_management_items.xml.flat",
+        "source": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-main-55:\\layout\\management_items.xml"
+    },
+    {
+        "merged": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-merged_res-53:\\drawable-xxhdpi_unhappy.png.flat",
+        "source": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-main-55:\\drawable-xxhdpi\\unhappy.png"
+    },
+    {
+        "merged": "com.example.sweetfish.app-merged_res-53:/layout_activity_setting.xml.flat",
+        "source": "com.example.sweetfish.app-main-55:/layout/activity_setting.xml"
+    },
+    {
+        "merged": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-merged_res-53:\\drawable-xxhdpi_hug.png.flat",
+        "source": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-main-55:\\drawable-xxhdpi\\hug.png"
+    },
+    {
+        "merged": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-merged_res-53:\\layout_fragment_purchased.xml.flat",
+        "source": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-main-55:\\layout\\fragment_purchased.xml"
+    },
+    {
+        "merged": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-merged_res-53:\\drawable-xxhdpi_default_avatar.jpg.flat",
+        "source": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-main-55:\\drawable-xxhdpi\\default_avatar.jpg"
+    },
+    {
+        "merged": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-merged_res-53:\\layout_space_menu.xml.flat",
+        "source": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-main-55:\\layout\\space_menu.xml"
+    },
+    {
+        "merged": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-merged_res-53:\\mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-main-55:\\mipmap-hdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-merged_res-53:\\mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-main-55:\\mipmap-xxxhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-merged_res-53:\\drawable-xxhdpi_sweet_fish.png.flat",
+        "source": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-main-55:\\drawable-xxhdpi\\sweet_fish.png"
+    },
+    {
+        "merged": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-merged_res-53:\\layout_msg_right.xml.flat",
+        "source": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-main-55:\\layout\\msg_right.xml"
+    },
+    {
+        "merged": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-merged_res-53:\\drawable_ic_launcher_background.xml.flat",
+        "source": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-main-55:\\drawable\\ic_launcher_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-merged_res-53:\\layout_fragment_image.xml.flat",
+        "source": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-main-55:\\layout\\fragment_image.xml"
+    },
+    {
+        "merged": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-merged_res-53:\\layout_image_item.xml.flat",
+        "source": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-main-55:\\layout\\image_item.xml"
+    },
+    {
+        "merged": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-merged_res-53:\\layout_activity_chat.xml.flat",
+        "source": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-main-55:\\layout\\activity_chat.xml"
+    },
+    {
+        "merged": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-merged_res-53:\\layout_image_items.xml.flat",
+        "source": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-main-55:\\layout\\image_items.xml"
+    },
+    {
+        "merged": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-merged_res-53:\\drawable_collect.xml.flat",
+        "source": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-main-55:\\drawable\\collect.xml"
+    },
+    {
+        "merged": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-merged_res-53:\\drawable-xxhdpi_pinchface.png.flat",
+        "source": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-main-55:\\drawable-xxhdpi\\pinchface.png"
+    },
+    {
+        "merged": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-merged_res-53:\\layout_fragment_main.xml.flat",
+        "source": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-main-55:\\layout\\fragment_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-merged_res-53:\\drawable-xxhdpi_loading.gif.flat",
+        "source": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-main-55:\\drawable-xxhdpi\\loading.gif"
+    },
+    {
+        "merged": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-merged_res-53:\\mipmap-anydpi-v33_ic_launcher.xml.flat",
+        "source": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-main-55:\\mipmap-anydpi-v33\\ic_launcher.xml"
+    },
+    {
+        "merged": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-merged_res-53:\\layout_chat_list_items.xml.flat",
+        "source": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-main-55:\\layout\\chat_list_items.xml"
+    },
+    {
+        "merged": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-merged_res-53:\\layout_management_parent_items.xml.flat",
+        "source": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-main-55:\\layout\\management_parent_items.xml"
+    },
+    {
+        "merged": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-merged_res-53:\\drawable-xxhdpi_tea.png.flat",
+        "source": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-main-55:\\drawable-xxhdpi\\tea.png"
+    },
+    {
+        "merged": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-merged_res-53:\\drawable_uncollect.xml.flat",
+        "source": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-main-55:\\drawable\\uncollect.xml"
+    },
+    {
+        "merged": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-merged_res-53:\\anim_popup_exit.xml.flat",
+        "source": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-main-55:\\anim\\popup_exit.xml"
+    },
+    {
+        "merged": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-merged_res-53:\\layout_recommend_items.xml.flat",
+        "source": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-main-55:\\layout\\recommend_items.xml"
+    },
+    {
+        "merged": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-merged_res-53:\\drawable-xxhdpi_back1.jpg.flat",
+        "source": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-main-55:\\drawable-xxhdpi\\back1.jpg"
+    },
+    {
+        "merged": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-merged_res-53:\\layout_activity_collect.xml.flat",
+        "source": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-main-55:\\layout\\activity_collect.xml"
+    },
+    {
+        "merged": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-merged_res-53:\\drawable-xxhdpi_search.png.flat",
+        "source": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-main-55:\\drawable-xxhdpi\\search.png"
+    },
+    {
+        "merged": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-merged_res-53:\\drawable_btn_circle_red.xml.flat",
+        "source": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-main-55:\\drawable\\btn_circle_red.xml"
+    },
+    {
+        "merged": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-merged_res-53:\\layout_collected_child_items.xml.flat",
+        "source": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-main-55:\\layout\\collected_child_items.xml"
+    },
+    {
+        "merged": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-merged_res-53:\\layout_activity_photo.xml.flat",
+        "source": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-main-55:\\layout\\activity_photo.xml"
+    },
+    {
+        "merged": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-merged_res-53:\\drawable-xxhdpi_message_right_original.9.png.flat",
+        "source": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-main-55:\\drawable-xxhdpi\\message_right_original.9.png"
+    },
+    {
+        "merged": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-merged_res-53:\\layout_activity_detail.xml.flat",
+        "source": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-main-55:\\layout\\activity_detail.xml"
+    },
+    {
+        "merged": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-merged_res-53:\\drawable-xxhdpi_msg_cloud.9.png.flat",
+        "source": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-main-55:\\drawable-xxhdpi\\msg_cloud.9.png"
+    },
+    {
+        "merged": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-merged_res-53:\\layout_activity_register.xml.flat",
+        "source": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-main-55:\\layout\\activity_register.xml"
+    },
+    {
+        "merged": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-merged_res-53:\\layout_fragment_sold.xml.flat",
+        "source": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-main-55:\\layout\\fragment_sold.xml"
+    },
+    {
+        "merged": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-merged_res-53:\\drawable-xxhdpi_back2.png.flat",
+        "source": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-main-55:\\drawable-xxhdpi\\back2.png"
+    },
+    {
+        "merged": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-merged_res-53:\\layout_activity_purchased.xml.flat",
+        "source": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-main-55:\\layout\\activity_purchased.xml"
+    },
+    {
+        "merged": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-merged_res-53:\\mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-main-55:\\mipmap-xxxhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-merged_res-53:\\drawable-xxhdpi_collected.jpg.flat",
+        "source": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-main-55:\\drawable-xxhdpi\\collected.jpg"
+    },
+    {
+        "merged": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-merged_res-53:\\drawable-xxhdpi_cry.png.flat",
+        "source": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-main-55:\\drawable-xxhdpi\\cry.png"
+    },
+    {
+        "merged": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-merged_res-53:\\layout_fragment_notifications.xml.flat",
+        "source": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-main-55:\\layout\\fragment_notifications.xml"
+    },
+    {
+        "merged": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-merged_res-53:\\layout_sold_items.xml.flat",
+        "source": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-main-55:\\layout\\sold_items.xml"
+    },
+    {
+        "merged": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-merged_res-53:\\layout_management_child_items.xml.flat",
+        "source": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-main-55:\\layout\\management_child_items.xml"
+    },
+    {
+        "merged": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-merged_res-53:\\layout_activity_management.xml.flat",
+        "source": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-main-55:\\layout\\activity_management.xml"
+    },
+    {
+        "merged": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-merged_res-53:\\layout_fragment_my.xml.flat",
+        "source": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-main-55:\\layout\\fragment_my.xml"
+    },
+    {
+        "merged": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-merged_res-53:\\drawable_ic_home_black_24dp.xml.flat",
+        "source": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-main-55:\\drawable\\ic_home_black_24dp.xml"
+    },
+    {
+        "merged": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-merged_res-53:\\layout_msg_menu.xml.flat",
+        "source": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-main-55:\\layout\\msg_menu.xml"
+    },
+    {
+        "merged": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-merged_res-53:\\drawable_btn_circle.xml.flat",
+        "source": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-main-55:\\drawable\\btn_circle.xml"
+    },
+    {
+        "merged": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-merged_res-53:\\drawable-xxhdpi_voidx.png.flat",
+        "source": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-main-55:\\drawable-xxhdpi\\voidx.png"
+    },
+    {
+        "merged": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-merged_res-53:\\layout_msg_left.xml.flat",
+        "source": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-main-55:\\layout\\msg_left.xml"
+    },
+    {
+        "merged": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-merged_res-53:\\drawable-xxhdpi_message_left_original.9.png.flat",
+        "source": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-main-55:\\drawable-xxhdpi\\message_left_original.9.png"
+    },
+    {
+        "merged": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-merged_res-53:\\layout_fragment_search_user.xml.flat",
+        "source": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-main-55:\\layout\\fragment_search_user.xml"
+    },
+    {
+        "merged": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-merged_res-53:\\menu_bottom_nav_menu.xml.flat",
+        "source": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-main-55:\\menu\\bottom_nav_menu.xml"
+    },
+    {
+        "merged": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-merged_res-53:\\layout_fragment_published.xml.flat",
+        "source": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-main-55:\\layout\\fragment_published.xml"
+    },
+    {
+        "merged": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-merged_res-53:\\drawable-xxhdpi_like.png.flat",
+        "source": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-main-55:\\drawable-xxhdpi\\like.png"
+    },
+    {
+        "merged": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-merged_res-53:\\layout_fragment_collected.xml.flat",
+        "source": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-main-55:\\layout\\fragment_collected.xml"
+    },
+    {
+        "merged": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-merged_res-53:\\drawable-xxhdpi_expect.png.flat",
+        "source": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-main-55:\\drawable-xxhdpi\\expect.png"
+    },
+    {
+        "merged": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-merged_res-53:\\layout_search_user_items.xml.flat",
+        "source": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-main-55:\\layout\\search_user_items.xml"
+    },
+    {
+        "merged": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-merged_res-53:\\mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-main-55:\\mipmap-mdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-merged_res-53:\\drawable_ic_dashboard_black_24dp.xml.flat",
+        "source": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-main-55:\\drawable\\ic_dashboard_black_24dp.xml"
+    },
+    {
+        "merged": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-merged_res-53:\\drawable-v24_ic_launcher_foreground.xml.flat",
+        "source": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-main-55:\\drawable-v24\\ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-merged_res-53:\\layout_activity_space.xml.flat",
+        "source": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-main-55:\\layout\\activity_space.xml"
+    },
+    {
+        "merged": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-merged_res-53:\\drawable-xxhdpi_published.jpg.flat",
+        "source": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-main-55:\\drawable-xxhdpi\\published.jpg"
+    },
+    {
+        "merged": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-merged_res-53:\\layout_avatar_menu.xml.flat",
+        "source": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-main-55:\\layout\\avatar_menu.xml"
+    },
+    {
+        "merged": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-merged_res-53:\\drawable_ic_notifications_black_24dp.xml.flat",
+        "source": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-main-55:\\drawable\\ic_notifications_black_24dp.xml"
+    },
+    {
+        "merged": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-merged_res-53:\\layout_published_items.xml.flat",
+        "source": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-main-55:\\layout\\published_items.xml"
+    },
+    {
+        "merged": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-merged_res-53:\\layout_search_commodity_items.xml.flat",
+        "source": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-main-55:\\layout\\search_commodity_items.xml"
+    },
+    {
+        "merged": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-merged_res-53:\\drawable-xxhdpi_lovely.png.flat",
+        "source": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-main-55:\\drawable-xxhdpi\\lovely.png"
+    },
+    {
+        "merged": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-merged_res-53:\\drawable-xxhdpi_sell.jpg.flat",
+        "source": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-main-55:\\drawable-xxhdpi\\sell.jpg"
+    },
+    {
+        "merged": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-merged_res-53:\\drawable-xxhdpi_enter.png.flat",
+        "source": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-main-55:\\drawable-xxhdpi\\enter.png"
+    },
+    {
+        "merged": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-merged_res-53:\\layout_activity_my_given.xml.flat",
+        "source": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-main-55:\\layout\\activity_my_given.xml"
+    },
+    {
+        "merged": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-merged_res-53:\\layout_activity_search.xml.flat",
+        "source": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-main-55:\\layout\\activity_search.xml"
+    },
+    {
+        "merged": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-merged_res-53:\\layout_activity_change_password.xml.flat",
+        "source": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-main-55:\\layout\\activity_change_password.xml"
+    },
+    {
+        "merged": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-merged_res-53:\\drawable-xxhdpi_change_bkg.png.flat",
+        "source": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-main-55:\\drawable-xxhdpi\\change_bkg.png"
+    },
+    {
+        "merged": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-merged_res-53:\\drawable-xxhdpi_angry.png.flat",
+        "source": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-main-55:\\drawable-xxhdpi\\angry.png"
+    },
+    {
+        "merged": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-merged_res-53:\\drawable_avatar.xml.flat",
+        "source": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-main-55:\\drawable\\avatar.xml"
+    },
+    {
+        "merged": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-merged_res-53:\\drawable_border.xml.flat",
+        "source": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-main-55:\\drawable\\border.xml"
+    },
+    {
+        "merged": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-merged_res-53:\\anim_popup_enter.xml.flat",
+        "source": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-main-55:\\anim\\popup_enter.xml"
+    },
+    {
+        "merged": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-merged_res-53:\\layout_activity_top_up.xml.flat",
+        "source": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-main-55:\\layout\\activity_top_up.xml"
+    },
+    {
+        "merged": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-merged_res-53:\\layout_activity_main.xml.flat",
+        "source": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-main-55:\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-merged_res-53:\\drawable-xxhdpi_ruminate.png.flat",
+        "source": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-main-55:\\drawable-xxhdpi\\ruminate.png"
+    },
+    {
+        "merged": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-merged_res-53:\\mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-main-55:\\mipmap-xxhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-merged_res-53:\\drawable-xxhdpi_quiet.png.flat",
+        "source": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-main-55:\\drawable-xxhdpi\\quiet.png"
+    },
+    {
+        "merged": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-merged_res-53:\\layout_activity_setting.xml.flat",
+        "source": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-main-55:\\layout\\activity_setting.xml"
+    },
+    {
+        "merged": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-merged_res-53:\\mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\FA\\.gradle\\daemon\\7.5\\com.example.sweetfish.app-main-55:\\mipmap-mdpi\\ic_launcher_round.webp"
+    }
+]

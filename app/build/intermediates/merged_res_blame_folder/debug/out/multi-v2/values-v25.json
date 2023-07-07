@@ -1,0 +1,20 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.example.sweetfish.app-mergeDebugResources-51:/values-v25/values-v25.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\FA\\.gradle\\caches\\transforms-3\\cfa7a118b922981dfbde4c9ef3d9dce9\\transformed\\appcompat-1.4.1\\res\\values-v25\\values-v25.xml",
+                    "from": {
+                        "startLines": "2,3,4,6",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "55,126,209,308",
+                        "endLines": "2,3,5,7",
+                        "endColumns": "70,82,12,12",
+                        "endOffsets": "121,204,303,414"
+                    }
+                }
+            ]
+        }
+    ]
+}

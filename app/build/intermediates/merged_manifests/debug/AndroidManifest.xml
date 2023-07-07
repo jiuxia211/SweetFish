@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.sweetfish"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="24"
+        android:targetSdkVersion="33" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+    <uses-permission android:name="android.permission.READ_MEDIA_AUDIO" />
+    <uses-permission android:name="android.permission.READ_MEDIA_VIDEO" />
+
+    <permission
+        android:name="com.example.sweetfish.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="com.example.sweetfish.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+
+    <application
+        android:allowBackup="true"
+        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:debuggable="true"
+        android:extractNativeLibs="false"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:testOnly="true"
+        android:theme="@style/Theme.SweetFish"
+        android:usesCleartextTraffic="true" >
+        <activity
+            android:name="com.example.sweetfish.MyGivenActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.sweetfish.TopUpActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.sweetfish.PublishedActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.sweetfish.SoldActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.sweetfish.CollectActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.sweetfish.RealNameAuthenticationActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.sweetfish.ChangePasswordActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.sweetfish.SettingActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.sweetfish.ChatActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.sweetfish.PhotoActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.sweetfish.SearchActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.yalantis.ucrop.UCropActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name="com.example.sweetfish.DetailActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.sweetfish.SpaceActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.sweetfish.ManagementActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.sweetfish.PurchasedActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.sweetfish.UploadActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.sweetfish.RegisterActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.sweetfish.LoginActivity"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.sweetfish.MainActivity"
+            android:exported="true" />
+
+        <uses-library
+            android:name="androidx.window.extensions"
+            android:required="false" />
+        <uses-library
+            android:name="androidx.window.sidecar"
+            android:required="false" />
+
+        <provider
+            android:name="androidx.startup.InitializationProvider"
+            android:authorities="com.example.sweetfish.androidx-startup"
+            android:exported="false" >
+            <meta-data
+                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+                android:value="androidx.startup" />
+            <meta-data
+                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+                android:value="androidx.startup" />
+        </provider>
+    </application>
+
+</manifest>
