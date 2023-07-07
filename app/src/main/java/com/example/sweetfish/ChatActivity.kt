@@ -63,6 +63,7 @@ class ChatActivity : AppCompatActivity(), ChatAdapter.OnItemClickListener {
             val mUid = prefs.getInt("id", -1)
             EventBus.getDefault().post(Message(mUid, binding.inputText.text.toString(), uid))
             binding.inputText.setText("")
+            
             chatViewModel.getChatHistory(uid.toString(), token)
         }
     }
