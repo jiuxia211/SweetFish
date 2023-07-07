@@ -58,179 +58,178 @@
 32-->E:\Android Project\SweetFish\app\src\main\AndroidManifest.xml:17:9-41
 33        android:supportsRtl="true"
 33-->E:\Android Project\SweetFish\app\src\main\AndroidManifest.xml:18:9-35
-34        android:testOnly="true"
-35        android:theme="@style/Theme.SweetFish"
-35-->E:\Android Project\SweetFish\app\src\main\AndroidManifest.xml:19:9-47
-36        android:usesCleartextTraffic="true" >
-36-->E:\Android Project\SweetFish\app\src\main\AndroidManifest.xml:20:9-44
-37        <activity
-37-->E:\Android Project\SweetFish\app\src\main\AndroidManifest.xml:22:9-24:40
-38            android:name="com.example.sweetfish.MyGivenActivity"
-38-->E:\Android Project\SweetFish\app\src\main\AndroidManifest.xml:23:13-44
-39            android:exported="false" />
-39-->E:\Android Project\SweetFish\app\src\main\AndroidManifest.xml:24:13-37
-40        <activity
-40-->E:\Android Project\SweetFish\app\src\main\AndroidManifest.xml:25:9-27:40
-41            android:name="com.example.sweetfish.TopUpActivity"
-41-->E:\Android Project\SweetFish\app\src\main\AndroidManifest.xml:26:13-42
-42            android:exported="false" />
-42-->E:\Android Project\SweetFish\app\src\main\AndroidManifest.xml:27:13-37
-43        <activity
-43-->E:\Android Project\SweetFish\app\src\main\AndroidManifest.xml:28:9-30:40
-44            android:name="com.example.sweetfish.PublishedActivity"
-44-->E:\Android Project\SweetFish\app\src\main\AndroidManifest.xml:29:13-46
-45            android:exported="false" />
-45-->E:\Android Project\SweetFish\app\src\main\AndroidManifest.xml:30:13-37
-46        <activity
-46-->E:\Android Project\SweetFish\app\src\main\AndroidManifest.xml:31:9-33:40
-47            android:name="com.example.sweetfish.SoldActivity"
-47-->E:\Android Project\SweetFish\app\src\main\AndroidManifest.xml:32:13-41
-48            android:exported="false" />
-48-->E:\Android Project\SweetFish\app\src\main\AndroidManifest.xml:33:13-37
-49        <activity
-49-->E:\Android Project\SweetFish\app\src\main\AndroidManifest.xml:34:9-36:40
-50            android:name="com.example.sweetfish.CollectActivity"
-50-->E:\Android Project\SweetFish\app\src\main\AndroidManifest.xml:35:13-44
-51            android:exported="false" />
-51-->E:\Android Project\SweetFish\app\src\main\AndroidManifest.xml:36:13-37
-52        <activity
-52-->E:\Android Project\SweetFish\app\src\main\AndroidManifest.xml:37:9-39:40
-53            android:name="com.example.sweetfish.RealNameAuthenticationActivity"
-53-->E:\Android Project\SweetFish\app\src\main\AndroidManifest.xml:38:13-59
-54            android:exported="false" />
-54-->E:\Android Project\SweetFish\app\src\main\AndroidManifest.xml:39:13-37
-55        <activity
-55-->E:\Android Project\SweetFish\app\src\main\AndroidManifest.xml:40:9-42:40
-56            android:name="com.example.sweetfish.ChangePasswordActivity"
-56-->E:\Android Project\SweetFish\app\src\main\AndroidManifest.xml:41:13-51
-57            android:exported="false" />
-57-->E:\Android Project\SweetFish\app\src\main\AndroidManifest.xml:42:13-37
-58        <activity
-58-->E:\Android Project\SweetFish\app\src\main\AndroidManifest.xml:43:9-45:40
-59            android:name="com.example.sweetfish.SettingActivity"
-59-->E:\Android Project\SweetFish\app\src\main\AndroidManifest.xml:44:13-44
-60            android:exported="false" />
-60-->E:\Android Project\SweetFish\app\src\main\AndroidManifest.xml:45:13-37
-61        <activity
-61-->E:\Android Project\SweetFish\app\src\main\AndroidManifest.xml:46:9-48:40
-62            android:name="com.example.sweetfish.ChatActivity"
-62-->E:\Android Project\SweetFish\app\src\main\AndroidManifest.xml:47:13-41
-63            android:exported="false" />
-63-->E:\Android Project\SweetFish\app\src\main\AndroidManifest.xml:48:13-37
-64        <activity
-64-->E:\Android Project\SweetFish\app\src\main\AndroidManifest.xml:49:9-51:40
-65            android:name="com.example.sweetfish.PhotoActivity"
-65-->E:\Android Project\SweetFish\app\src\main\AndroidManifest.xml:50:13-42
-66            android:exported="false" />
-66-->E:\Android Project\SweetFish\app\src\main\AndroidManifest.xml:51:13-37
-67        <activity
-67-->E:\Android Project\SweetFish\app\src\main\AndroidManifest.xml:52:9-54:40
-68            android:name="com.example.sweetfish.SearchActivity"
-68-->E:\Android Project\SweetFish\app\src\main\AndroidManifest.xml:53:13-43
-69            android:exported="false" />
-69-->E:\Android Project\SweetFish\app\src\main\AndroidManifest.xml:54:13-37
-70        <activity
-70-->E:\Android Project\SweetFish\app\src\main\AndroidManifest.xml:55:9-58:72
-71            android:name="com.yalantis.ucrop.UCropActivity"
-71-->E:\Android Project\SweetFish\app\src\main\AndroidManifest.xml:56:13-60
-72            android:screenOrientation="portrait"
-72-->E:\Android Project\SweetFish\app\src\main\AndroidManifest.xml:57:13-49
-73            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
-73-->E:\Android Project\SweetFish\app\src\main\AndroidManifest.xml:58:13-69
-74        <activity
-74-->E:\Android Project\SweetFish\app\src\main\AndroidManifest.xml:59:9-61:40
-75            android:name="com.example.sweetfish.DetailActivity"
-75-->E:\Android Project\SweetFish\app\src\main\AndroidManifest.xml:60:13-43
-76            android:exported="false" />
-76-->E:\Android Project\SweetFish\app\src\main\AndroidManifest.xml:61:13-37
-77        <activity
-77-->E:\Android Project\SweetFish\app\src\main\AndroidManifest.xml:62:9-64:40
-78            android:name="com.example.sweetfish.SpaceActivity"
-78-->E:\Android Project\SweetFish\app\src\main\AndroidManifest.xml:63:13-42
-79            android:exported="false" />
-79-->E:\Android Project\SweetFish\app\src\main\AndroidManifest.xml:64:13-37
-80        <activity
-80-->E:\Android Project\SweetFish\app\src\main\AndroidManifest.xml:65:9-67:40
-81            android:name="com.example.sweetfish.ManagementActivity"
-81-->E:\Android Project\SweetFish\app\src\main\AndroidManifest.xml:66:13-47
-82            android:exported="false" />
-82-->E:\Android Project\SweetFish\app\src\main\AndroidManifest.xml:67:13-37
-83        <activity
-83-->E:\Android Project\SweetFish\app\src\main\AndroidManifest.xml:68:9-70:40
-84            android:name="com.example.sweetfish.PurchasedActivity"
-84-->E:\Android Project\SweetFish\app\src\main\AndroidManifest.xml:69:13-46
-85            android:exported="false" />
-85-->E:\Android Project\SweetFish\app\src\main\AndroidManifest.xml:70:13-37
-86        <activity
-86-->E:\Android Project\SweetFish\app\src\main\AndroidManifest.xml:71:9-73:40
-87            android:name="com.example.sweetfish.UploadActivity"
-87-->E:\Android Project\SweetFish\app\src\main\AndroidManifest.xml:72:13-43
-88            android:exported="false" />
-88-->E:\Android Project\SweetFish\app\src\main\AndroidManifest.xml:73:13-37
-89        <activity
-89-->E:\Android Project\SweetFish\app\src\main\AndroidManifest.xml:74:9-76:40
-90            android:name="com.example.sweetfish.RegisterActivity"
-90-->E:\Android Project\SweetFish\app\src\main\AndroidManifest.xml:75:13-45
-91            android:exported="false" />
-91-->E:\Android Project\SweetFish\app\src\main\AndroidManifest.xml:76:13-37
-92        <activity
-92-->E:\Android Project\SweetFish\app\src\main\AndroidManifest.xml:77:9-85:20
-93            android:name="com.example.sweetfish.LoginActivity"
-93-->E:\Android Project\SweetFish\app\src\main\AndroidManifest.xml:78:13-42
-94            android:exported="true" >
-94-->E:\Android Project\SweetFish\app\src\main\AndroidManifest.xml:79:13-36
-95            <intent-filter>
-95-->E:\Android Project\SweetFish\app\src\main\AndroidManifest.xml:80:13-84:29
-96                <action android:name="android.intent.action.MAIN" />
-96-->E:\Android Project\SweetFish\app\src\main\AndroidManifest.xml:81:17-69
-96-->E:\Android Project\SweetFish\app\src\main\AndroidManifest.xml:81:25-66
-97
-98                <category android:name="android.intent.category.LAUNCHER" />
-98-->E:\Android Project\SweetFish\app\src\main\AndroidManifest.xml:83:17-77
-98-->E:\Android Project\SweetFish\app\src\main\AndroidManifest.xml:83:27-74
-99            </intent-filter>
-100        </activity>
-101        <activity
-101-->E:\Android Project\SweetFish\app\src\main\AndroidManifest.xml:86:9-88:39
-102            android:name="com.example.sweetfish.MainActivity"
-102-->E:\Android Project\SweetFish\app\src\main\AndroidManifest.xml:87:13-41
-103            android:exported="true" />
-103-->E:\Android Project\SweetFish\app\src\main\AndroidManifest.xml:88:13-36
-104
-105        <uses-library
-105-->[androidx.window:window:1.0.0] C:\Users\FA\.gradle\caches\transforms-3\b0cdd1cb77dbecb2a8cf1158b9b29b0f\transformed\window-1.0.0\AndroidManifest.xml:25:9-27:40
-106            android:name="androidx.window.extensions"
-106-->[androidx.window:window:1.0.0] C:\Users\FA\.gradle\caches\transforms-3\b0cdd1cb77dbecb2a8cf1158b9b29b0f\transformed\window-1.0.0\AndroidManifest.xml:26:13-54
-107            android:required="false" />
-107-->[androidx.window:window:1.0.0] C:\Users\FA\.gradle\caches\transforms-3\b0cdd1cb77dbecb2a8cf1158b9b29b0f\transformed\window-1.0.0\AndroidManifest.xml:27:13-37
-108        <uses-library
-108-->[androidx.window:window:1.0.0] C:\Users\FA\.gradle\caches\transforms-3\b0cdd1cb77dbecb2a8cf1158b9b29b0f\transformed\window-1.0.0\AndroidManifest.xml:28:9-30:40
-109            android:name="androidx.window.sidecar"
-109-->[androidx.window:window:1.0.0] C:\Users\FA\.gradle\caches\transforms-3\b0cdd1cb77dbecb2a8cf1158b9b29b0f\transformed\window-1.0.0\AndroidManifest.xml:29:13-51
-110            android:required="false" />
-110-->[androidx.window:window:1.0.0] C:\Users\FA\.gradle\caches\transforms-3\b0cdd1cb77dbecb2a8cf1158b9b29b0f\transformed\window-1.0.0\AndroidManifest.xml:30:13-37
-111
-112        <provider
-112-->[androidx.emoji2:emoji2:1.0.0] C:\Users\FA\.gradle\caches\transforms-3\da2b9c598abdd06dbb3962aa784d13ae\transformed\emoji2-1.0.0\AndroidManifest.xml:26:9-34:20
-113            android:name="androidx.startup.InitializationProvider"
-113-->[androidx.emoji2:emoji2:1.0.0] C:\Users\FA\.gradle\caches\transforms-3\da2b9c598abdd06dbb3962aa784d13ae\transformed\emoji2-1.0.0\AndroidManifest.xml:27:13-67
-114            android:authorities="com.example.sweetfish.androidx-startup"
-114-->[androidx.emoji2:emoji2:1.0.0] C:\Users\FA\.gradle\caches\transforms-3\da2b9c598abdd06dbb3962aa784d13ae\transformed\emoji2-1.0.0\AndroidManifest.xml:28:13-68
-115            android:exported="false" >
-115-->[androidx.emoji2:emoji2:1.0.0] C:\Users\FA\.gradle\caches\transforms-3\da2b9c598abdd06dbb3962aa784d13ae\transformed\emoji2-1.0.0\AndroidManifest.xml:29:13-37
-116            <meta-data
-116-->[androidx.emoji2:emoji2:1.0.0] C:\Users\FA\.gradle\caches\transforms-3\da2b9c598abdd06dbb3962aa784d13ae\transformed\emoji2-1.0.0\AndroidManifest.xml:31:13-33:52
-117                android:name="androidx.emoji2.text.EmojiCompatInitializer"
-117-->[androidx.emoji2:emoji2:1.0.0] C:\Users\FA\.gradle\caches\transforms-3\da2b9c598abdd06dbb3962aa784d13ae\transformed\emoji2-1.0.0\AndroidManifest.xml:32:17-75
-118                android:value="androidx.startup" />
-118-->[androidx.emoji2:emoji2:1.0.0] C:\Users\FA\.gradle\caches\transforms-3\da2b9c598abdd06dbb3962aa784d13ae\transformed\emoji2-1.0.0\AndroidManifest.xml:33:17-49
-119            <meta-data
-119-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\FA\.gradle\caches\transforms-3\dc3a1575086861da29e1543e5dd9eb68\transformed\lifecycle-process-2.4.0\AndroidManifest.xml:31:13-33:52
-120                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
-120-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\FA\.gradle\caches\transforms-3\dc3a1575086861da29e1543e5dd9eb68\transformed\lifecycle-process-2.4.0\AndroidManifest.xml:32:17-78
-121                android:value="androidx.startup" />
-121-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\FA\.gradle\caches\transforms-3\dc3a1575086861da29e1543e5dd9eb68\transformed\lifecycle-process-2.4.0\AndroidManifest.xml:33:17-49
-122        </provider>
-123    </application>
-124
-125</manifest>
+34        android:theme="@style/Theme.SweetFish"
+34-->E:\Android Project\SweetFish\app\src\main\AndroidManifest.xml:19:9-47
+35        android:usesCleartextTraffic="true" >
+35-->E:\Android Project\SweetFish\app\src\main\AndroidManifest.xml:20:9-44
+36        <activity
+36-->E:\Android Project\SweetFish\app\src\main\AndroidManifest.xml:22:9-24:40
+37            android:name="com.example.sweetfish.MyGivenActivity"
+37-->E:\Android Project\SweetFish\app\src\main\AndroidManifest.xml:23:13-44
+38            android:exported="false" />
+38-->E:\Android Project\SweetFish\app\src\main\AndroidManifest.xml:24:13-37
+39        <activity
+39-->E:\Android Project\SweetFish\app\src\main\AndroidManifest.xml:25:9-27:40
+40            android:name="com.example.sweetfish.TopUpActivity"
+40-->E:\Android Project\SweetFish\app\src\main\AndroidManifest.xml:26:13-42
+41            android:exported="false" />
+41-->E:\Android Project\SweetFish\app\src\main\AndroidManifest.xml:27:13-37
+42        <activity
+42-->E:\Android Project\SweetFish\app\src\main\AndroidManifest.xml:28:9-30:40
+43            android:name="com.example.sweetfish.PublishedActivity"
+43-->E:\Android Project\SweetFish\app\src\main\AndroidManifest.xml:29:13-46
+44            android:exported="false" />
+44-->E:\Android Project\SweetFish\app\src\main\AndroidManifest.xml:30:13-37
+45        <activity
+45-->E:\Android Project\SweetFish\app\src\main\AndroidManifest.xml:31:9-33:40
+46            android:name="com.example.sweetfish.SoldActivity"
+46-->E:\Android Project\SweetFish\app\src\main\AndroidManifest.xml:32:13-41
+47            android:exported="false" />
+47-->E:\Android Project\SweetFish\app\src\main\AndroidManifest.xml:33:13-37
+48        <activity
+48-->E:\Android Project\SweetFish\app\src\main\AndroidManifest.xml:34:9-36:40
+49            android:name="com.example.sweetfish.CollectActivity"
+49-->E:\Android Project\SweetFish\app\src\main\AndroidManifest.xml:35:13-44
+50            android:exported="false" />
+50-->E:\Android Project\SweetFish\app\src\main\AndroidManifest.xml:36:13-37
+51        <activity
+51-->E:\Android Project\SweetFish\app\src\main\AndroidManifest.xml:37:9-39:40
+52            android:name="com.example.sweetfish.RealNameAuthenticationActivity"
+52-->E:\Android Project\SweetFish\app\src\main\AndroidManifest.xml:38:13-59
+53            android:exported="false" />
+53-->E:\Android Project\SweetFish\app\src\main\AndroidManifest.xml:39:13-37
+54        <activity
+54-->E:\Android Project\SweetFish\app\src\main\AndroidManifest.xml:40:9-42:40
+55            android:name="com.example.sweetfish.ChangePasswordActivity"
+55-->E:\Android Project\SweetFish\app\src\main\AndroidManifest.xml:41:13-51
+56            android:exported="false" />
+56-->E:\Android Project\SweetFish\app\src\main\AndroidManifest.xml:42:13-37
+57        <activity
+57-->E:\Android Project\SweetFish\app\src\main\AndroidManifest.xml:43:9-45:40
+58            android:name="com.example.sweetfish.SettingActivity"
+58-->E:\Android Project\SweetFish\app\src\main\AndroidManifest.xml:44:13-44
+59            android:exported="false" />
+59-->E:\Android Project\SweetFish\app\src\main\AndroidManifest.xml:45:13-37
+60        <activity
+60-->E:\Android Project\SweetFish\app\src\main\AndroidManifest.xml:46:9-48:40
+61            android:name="com.example.sweetfish.ChatActivity"
+61-->E:\Android Project\SweetFish\app\src\main\AndroidManifest.xml:47:13-41
+62            android:exported="false" />
+62-->E:\Android Project\SweetFish\app\src\main\AndroidManifest.xml:48:13-37
+63        <activity
+63-->E:\Android Project\SweetFish\app\src\main\AndroidManifest.xml:49:9-51:40
+64            android:name="com.example.sweetfish.PhotoActivity"
+64-->E:\Android Project\SweetFish\app\src\main\AndroidManifest.xml:50:13-42
+65            android:exported="false" />
+65-->E:\Android Project\SweetFish\app\src\main\AndroidManifest.xml:51:13-37
+66        <activity
+66-->E:\Android Project\SweetFish\app\src\main\AndroidManifest.xml:52:9-54:40
+67            android:name="com.example.sweetfish.SearchActivity"
+67-->E:\Android Project\SweetFish\app\src\main\AndroidManifest.xml:53:13-43
+68            android:exported="false" />
+68-->E:\Android Project\SweetFish\app\src\main\AndroidManifest.xml:54:13-37
+69        <activity
+69-->E:\Android Project\SweetFish\app\src\main\AndroidManifest.xml:55:9-58:72
+70            android:name="com.yalantis.ucrop.UCropActivity"
+70-->E:\Android Project\SweetFish\app\src\main\AndroidManifest.xml:56:13-60
+71            android:screenOrientation="portrait"
+71-->E:\Android Project\SweetFish\app\src\main\AndroidManifest.xml:57:13-49
+72            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+72-->E:\Android Project\SweetFish\app\src\main\AndroidManifest.xml:58:13-69
+73        <activity
+73-->E:\Android Project\SweetFish\app\src\main\AndroidManifest.xml:59:9-61:40
+74            android:name="com.example.sweetfish.DetailActivity"
+74-->E:\Android Project\SweetFish\app\src\main\AndroidManifest.xml:60:13-43
+75            android:exported="false" />
+75-->E:\Android Project\SweetFish\app\src\main\AndroidManifest.xml:61:13-37
+76        <activity
+76-->E:\Android Project\SweetFish\app\src\main\AndroidManifest.xml:62:9-64:40
+77            android:name="com.example.sweetfish.SpaceActivity"
+77-->E:\Android Project\SweetFish\app\src\main\AndroidManifest.xml:63:13-42
+78            android:exported="false" />
+78-->E:\Android Project\SweetFish\app\src\main\AndroidManifest.xml:64:13-37
+79        <activity
+79-->E:\Android Project\SweetFish\app\src\main\AndroidManifest.xml:65:9-67:40
+80            android:name="com.example.sweetfish.ManagementActivity"
+80-->E:\Android Project\SweetFish\app\src\main\AndroidManifest.xml:66:13-47
+81            android:exported="false" />
+81-->E:\Android Project\SweetFish\app\src\main\AndroidManifest.xml:67:13-37
+82        <activity
+82-->E:\Android Project\SweetFish\app\src\main\AndroidManifest.xml:68:9-70:40
+83            android:name="com.example.sweetfish.PurchasedActivity"
+83-->E:\Android Project\SweetFish\app\src\main\AndroidManifest.xml:69:13-46
+84            android:exported="false" />
+84-->E:\Android Project\SweetFish\app\src\main\AndroidManifest.xml:70:13-37
+85        <activity
+85-->E:\Android Project\SweetFish\app\src\main\AndroidManifest.xml:71:9-73:40
+86            android:name="com.example.sweetfish.UploadActivity"
+86-->E:\Android Project\SweetFish\app\src\main\AndroidManifest.xml:72:13-43
+87            android:exported="false" />
+87-->E:\Android Project\SweetFish\app\src\main\AndroidManifest.xml:73:13-37
+88        <activity
+88-->E:\Android Project\SweetFish\app\src\main\AndroidManifest.xml:74:9-76:40
+89            android:name="com.example.sweetfish.RegisterActivity"
+89-->E:\Android Project\SweetFish\app\src\main\AndroidManifest.xml:75:13-45
+90            android:exported="false" />
+90-->E:\Android Project\SweetFish\app\src\main\AndroidManifest.xml:76:13-37
+91        <activity
+91-->E:\Android Project\SweetFish\app\src\main\AndroidManifest.xml:77:9-85:20
+92            android:name="com.example.sweetfish.LoginActivity"
+92-->E:\Android Project\SweetFish\app\src\main\AndroidManifest.xml:78:13-42
+93            android:exported="true" >
+93-->E:\Android Project\SweetFish\app\src\main\AndroidManifest.xml:79:13-36
+94            <intent-filter>
+94-->E:\Android Project\SweetFish\app\src\main\AndroidManifest.xml:80:13-84:29
+95                <action android:name="android.intent.action.MAIN" />
+95-->E:\Android Project\SweetFish\app\src\main\AndroidManifest.xml:81:17-69
+95-->E:\Android Project\SweetFish\app\src\main\AndroidManifest.xml:81:25-66
+96
+97                <category android:name="android.intent.category.LAUNCHER" />
+97-->E:\Android Project\SweetFish\app\src\main\AndroidManifest.xml:83:17-77
+97-->E:\Android Project\SweetFish\app\src\main\AndroidManifest.xml:83:27-74
+98            </intent-filter>
+99        </activity>
+100        <activity
+100-->E:\Android Project\SweetFish\app\src\main\AndroidManifest.xml:86:9-88:39
+101            android:name="com.example.sweetfish.MainActivity"
+101-->E:\Android Project\SweetFish\app\src\main\AndroidManifest.xml:87:13-41
+102            android:exported="true" />
+102-->E:\Android Project\SweetFish\app\src\main\AndroidManifest.xml:88:13-36
+103
+104        <uses-library
+104-->[androidx.window:window:1.0.0] C:\Users\FA\.gradle\caches\transforms-3\b0cdd1cb77dbecb2a8cf1158b9b29b0f\transformed\window-1.0.0\AndroidManifest.xml:25:9-27:40
+105            android:name="androidx.window.extensions"
+105-->[androidx.window:window:1.0.0] C:\Users\FA\.gradle\caches\transforms-3\b0cdd1cb77dbecb2a8cf1158b9b29b0f\transformed\window-1.0.0\AndroidManifest.xml:26:13-54
+106            android:required="false" />
+106-->[androidx.window:window:1.0.0] C:\Users\FA\.gradle\caches\transforms-3\b0cdd1cb77dbecb2a8cf1158b9b29b0f\transformed\window-1.0.0\AndroidManifest.xml:27:13-37
+107        <uses-library
+107-->[androidx.window:window:1.0.0] C:\Users\FA\.gradle\caches\transforms-3\b0cdd1cb77dbecb2a8cf1158b9b29b0f\transformed\window-1.0.0\AndroidManifest.xml:28:9-30:40
+108            android:name="androidx.window.sidecar"
+108-->[androidx.window:window:1.0.0] C:\Users\FA\.gradle\caches\transforms-3\b0cdd1cb77dbecb2a8cf1158b9b29b0f\transformed\window-1.0.0\AndroidManifest.xml:29:13-51
+109            android:required="false" />
+109-->[androidx.window:window:1.0.0] C:\Users\FA\.gradle\caches\transforms-3\b0cdd1cb77dbecb2a8cf1158b9b29b0f\transformed\window-1.0.0\AndroidManifest.xml:30:13-37
+110
+111        <provider
+111-->[androidx.emoji2:emoji2:1.0.0] C:\Users\FA\.gradle\caches\transforms-3\da2b9c598abdd06dbb3962aa784d13ae\transformed\emoji2-1.0.0\AndroidManifest.xml:26:9-34:20
+112            android:name="androidx.startup.InitializationProvider"
+112-->[androidx.emoji2:emoji2:1.0.0] C:\Users\FA\.gradle\caches\transforms-3\da2b9c598abdd06dbb3962aa784d13ae\transformed\emoji2-1.0.0\AndroidManifest.xml:27:13-67
+113            android:authorities="com.example.sweetfish.androidx-startup"
+113-->[androidx.emoji2:emoji2:1.0.0] C:\Users\FA\.gradle\caches\transforms-3\da2b9c598abdd06dbb3962aa784d13ae\transformed\emoji2-1.0.0\AndroidManifest.xml:28:13-68
+114            android:exported="false" >
+114-->[androidx.emoji2:emoji2:1.0.0] C:\Users\FA\.gradle\caches\transforms-3\da2b9c598abdd06dbb3962aa784d13ae\transformed\emoji2-1.0.0\AndroidManifest.xml:29:13-37
+115            <meta-data
+115-->[androidx.emoji2:emoji2:1.0.0] C:\Users\FA\.gradle\caches\transforms-3\da2b9c598abdd06dbb3962aa784d13ae\transformed\emoji2-1.0.0\AndroidManifest.xml:31:13-33:52
+116                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+116-->[androidx.emoji2:emoji2:1.0.0] C:\Users\FA\.gradle\caches\transforms-3\da2b9c598abdd06dbb3962aa784d13ae\transformed\emoji2-1.0.0\AndroidManifest.xml:32:17-75
+117                android:value="androidx.startup" />
+117-->[androidx.emoji2:emoji2:1.0.0] C:\Users\FA\.gradle\caches\transforms-3\da2b9c598abdd06dbb3962aa784d13ae\transformed\emoji2-1.0.0\AndroidManifest.xml:33:17-49
+118            <meta-data
+118-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\FA\.gradle\caches\transforms-3\dc3a1575086861da29e1543e5dd9eb68\transformed\lifecycle-process-2.4.0\AndroidManifest.xml:31:13-33:52
+119                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+119-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\FA\.gradle\caches\transforms-3\dc3a1575086861da29e1543e5dd9eb68\transformed\lifecycle-process-2.4.0\AndroidManifest.xml:32:17-78
+120                android:value="androidx.startup" />
+120-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\FA\.gradle\caches\transforms-3\dc3a1575086861da29e1543e5dd9eb68\transformed\lifecycle-process-2.4.0\AndroidManifest.xml:33:17-49
+121        </provider>
+122    </application>
+123
+124</manifest>
