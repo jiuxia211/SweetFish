@@ -14,6 +14,7 @@ import com.example.sweetfish.utils.socketEvent.Message
 import com.example.sweetfish.utils.socketEvent.MessageReceipt
 import com.example.sweetfish.utils.socketEvent.Revocation
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import com.google.android.material.snackbar.Snackbar
 import com.google.gson.Gson
 import io.socket.client.IO
 import io.socket.client.Socket
@@ -99,8 +100,6 @@ class MainActivity : AppCompatActivity() {
             val message = gson.fromJson(jsonMsg, MessageReceipt::class.java)
             EventBus.getDefault().post(message)
         }
-
-        
         val prefs = getSharedPreferences("user", Context.MODE_PRIVATE)
         val mUid = prefs.getInt("id", 0)
         //先加入房间
@@ -111,6 +110,11 @@ class MainActivity : AppCompatActivity() {
     @Subscribe()
     fun onMessageReceipt(event: MessageReceipt) {
         Log.d("zz", event.message)
+        if (event.type == "receive") {
+            Snackbar.make(binding.root, "接收到来自${event.from}的消息", Snackbar.LENGTH_SHORT).show()
+        } else if (event.type == "confirm") {
+            Snackbar.make(binding.root, event.message, Snackbar.LENGTH_SHORT).show()
+        }
     }
 
     @Subscribe()

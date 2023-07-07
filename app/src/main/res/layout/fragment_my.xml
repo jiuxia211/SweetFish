@@ -17,7 +17,6 @@
         android:id="@+id/avatar"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:src="@drawable/default_avatar"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintRight_toLeftOf="@+id/username"
@@ -32,7 +31,6 @@
         android:gravity="start"
         app:layout_constraintLeft_toRightOf="@+id/avatar"
         app:layout_constraintTop_toTopOf="parent"
-        android:text="jiuxia211"
         android:layout_marginStart="20dp"
         android:layout_marginTop="50dp"
         android:textSize="20sp"
@@ -46,7 +44,6 @@
         android:gravity="center"
         app:layout_constraintLeft_toRightOf="@+id/avatar"
         app:layout_constraintTop_toBottomOf="@id/username"
-        android:text="正式会员"
         android:textSize="11sp"
         android:background="@drawable/border"
         android:textColor="@color/black" />
@@ -59,7 +56,6 @@
         android:gravity="start"
         app:layout_constraintLeft_toRightOf="@+id/avatar"
         app:layout_constraintTop_toBottomOf="@id/userType"
-        android:text="余额:0.0"
         android:textSize="11sp"
         android:textColor="@color/black" />
 
@@ -70,7 +66,6 @@
         app:layout_constraintStart_toEndOf="@+id/avatar"
         app:layout_constraintTop_toBottomOf="@+id/money"
         android:layout_marginStart="20dp"
-        android:text="2064166368@qq.com"
         android:textColor="@color/black" />
 
     <Button

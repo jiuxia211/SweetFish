@@ -22,6 +22,16 @@ class SettingActivity : AppCompatActivity() {
             intent.putExtra("token", token)
             startActivity(intent)
         }
+        binding.topUp.setOnClickListener {
+            val intent = Intent(this, TopUpActivity::class.java)
+            intent.putExtra("token", token)
+            startActivity(intent)
+        }
+        binding.myGiven.setOnClickListener {
+            val intent = Intent(this, MyGivenActivity::class.java)
+            intent.putExtra("token", token)
+            startActivity(intent)
+        }
         binding.back.setOnClickListener {
             finish()
         }

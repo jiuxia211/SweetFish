@@ -41,6 +41,8 @@ class ChatActivity : AppCompatActivity(), ChatAdapter.OnItemClickListener {
         supportActionBar?.hide()
         token = intent.getStringExtra("token").toString()
         uid = intent.getIntExtra("uid", 0)
+        val username = intent.getStringExtra("username").toString()
+        binding.username.text = username
         binding.back.setOnClickListener {
             finish()
         }

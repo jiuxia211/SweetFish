@@ -3,11 +3,12 @@ package com.example.sweetfish
 import android.content.Context
 import android.os.Bundle
 import android.os.CountDownTimer
-import android.widget.Toast
+import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import com.example.sweetfish.databinding.ActivityChangePasswordBinding
 import com.example.sweetfish.ui.changePassword.ChangePasswordViewModel
+import com.google.android.material.snackbar.Snackbar
 
 class ChangePasswordActivity : AppCompatActivity() {
     private var isButtonClickable = true
@@ -20,6 +21,7 @@ class ChangePasswordActivity : AppCompatActivity() {
         val token = intent.getStringExtra("token").toString()
         val prefs = getSharedPreferences("user", Context.MODE_PRIVATE)
         binding.sendCode.setOnClickListener {
+            Log.d("zz", prefs.getString("mail", "").toString())
             if (isButtonClickable) {
                 changePasswordViewModel.sendChangePasswordCode(
                     token,
@@ -38,10 +40,10 @@ class ChangePasswordActivity : AppCompatActivity() {
             )
         }
         changePasswordViewModel.sendChangePasswordCodeResponseData.observe(this) {
-            Toast.makeText(this, it.message, Toast.LENGTH_LONG).show()
+            Snackbar.make(binding.root, it.message, Snackbar.LENGTH_SHORT).show()
         }
         changePasswordViewModel.changePasswordResponseData.observe(this) {
-            Toast.makeText(this, it.message, Toast.LENGTH_LONG).show()
+            Snackbar.make(binding.root, it.message, Snackbar.LENGTH_SHORT).show()
             if (it.code == 200) {
                 finish()
             }

@@ -10,19 +10,23 @@ import com.example.sweetfish.utils.commodity.CommodityDetail
 import com.google.android.material.tabs.TabLayoutMediator
 
 class ManagementActivity : AppCompatActivity() {
+    private val commodityDetailList: MutableList<CommodityDetail> = mutableListOf()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         supportActionBar?.hide()
         val binding = ActivityManagementBinding.inflate(layoutInflater)
         setContentView(binding.root)
         val token = intent.getStringExtra("token").toString()
-        val commodityDetailList: MutableList<CommodityDetail> = mutableListOf()
         val managementViewModel = ViewModelProvider(this)[ManagementViewModel::class.java]
         managementViewModel.getAuditCommodity(token)
         managementViewModel.commodityList.observe(this) {
+            commodityDetailList.clear()
             for (i in it) {
                 managementViewModel.getDetail(token, i)
             }
+        }
+        managementViewModel.auditResponseData.observe(this) {
+            managementViewModel.getAuditCommodity(token)
         }
         val adapter = ManagementAdapter(commodityDetailList, this, managementViewModel, token)
         managementViewModel.detailJsonData.observe(this) {
@@ -38,10 +42,9 @@ class ManagementActivity : AppCompatActivity() {
                     it.data.detail.pic_urls,
                 )
             )
-            adapter.updateData(commodityDetailList)
+            adapter.notifyDataSetChanged()
         }
         binding.viewPager.adapter = adapter
-//        binding.viewPager.isUserInputEnabled = false
         TabLayoutMediator(binding.tabLayout, binding.viewPager) { tab, position ->
             tab.text = "Commodity ${position + 1}"
         }.attach()

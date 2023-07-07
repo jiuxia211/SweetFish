@@ -78,7 +78,11 @@ class MainFragment : Fragment() {
             intent.putExtra("token", token)
             startActivity(intent)
         }
+        binding.Refresh.setOnRefreshListener {
+            mainViewModel.initRecommendInfo(token)
+            binding.Refresh.isRefreshing = false
 
+        }
         return root
     }
 

@@ -5,6 +5,7 @@ import com.example.sweetfish.ui.changePassword.SendChangePasswordCodeJsonData
 import com.example.sweetfish.ui.chat.ChatHistoryJsonData
 import com.example.sweetfish.ui.login.LoginJsonData
 import com.example.sweetfish.ui.my.UserJsonData
+import com.example.sweetfish.ui.myGiven.MyGivenJsonData
 import com.example.sweetfish.ui.notifications.ChatListJsonData
 import com.example.sweetfish.ui.realNameAuthentication.RealNameAuthenticationJsonData
 import com.example.sweetfish.ui.register.RegisterJsonData
@@ -13,6 +14,7 @@ import com.example.sweetfish.ui.space.AddChatJsonData
 import com.example.sweetfish.ui.space.FollowJsonData
 import com.example.sweetfish.ui.space.SetAvatarJsonData
 import com.example.sweetfish.ui.space.SetBackgroundJsonData
+import com.example.sweetfish.ui.topUp.TopUpJsonData
 import okhttp3.MultipartBody
 import retrofit2.Call
 import retrofit2.http.*
@@ -106,4 +108,15 @@ interface UserService {
         @Header("Authorization") token: String,
         @Part file: MultipartBody.Part
     ): Call<SetBackgroundJsonData>
+
+    @FormUrlEncoded
+    @POST("admin/give_money")
+    fun topUp(
+        @Header("Authorization") token: String,
+        @Field("to") uid: String,
+        @Field("money") money: String
+    ): Call<TopUpJsonData>
+    
+    @GET("my_given")
+    fun getMyGiven(@Header("Authorization") token: String): Call<MyGivenJsonData>
 }

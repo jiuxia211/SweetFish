@@ -116,6 +116,7 @@ class SpaceActivity : AppCompatActivity() {
                 val intent = Intent(this, ChatActivity::class.java)
                 intent.putExtra("uid", uid)
                 intent.putExtra("token", token)
+                intent.putExtra("username", username)
                 startActivity(intent)
             }
         }

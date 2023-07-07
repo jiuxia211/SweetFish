@@ -3,6 +3,7 @@ package com.example.sweetfish
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
@@ -12,7 +13,9 @@ import com.example.sweetfish.databinding.ActivityDetailBinding
 import com.example.sweetfish.databinding.InputPriceBinding
 import com.example.sweetfish.ui.detail.DetailViewModel
 import com.example.sweetfish.ui.detail.ImageAdapter
+import com.example.sweetfish.utils.socketEvent.Message
 import com.smarteist.autoimageslider.IndicatorView.animation.type.IndicatorAnimationType
+import org.greenrobot.eventbus.EventBus
 
 class DetailActivity : AppCompatActivity() {
     private lateinit var priceInputDialog: AlertDialog
@@ -108,8 +111,12 @@ class DetailActivity : AppCompatActivity() {
                 val intent = Intent(this, ChatActivity::class.java)
                 intent.putExtra("uid", uid)
                 intent.putExtra("token", token)
+                intent.putExtra("username", binding.username.text)
                 startActivity(intent)
             }
+        }
+        detailViewModel.givePriceResponseData.observe(this) {
+            Toast.makeText(this, it.message, Toast.LENGTH_SHORT).show()
         }
     }
 
@@ -119,10 +126,20 @@ class DetailActivity : AppCompatActivity() {
             AlertDialog.Builder(this).setView(inputPriceBinding.root)
                 .setPositiveButton("确认") { dialog, _ ->
                     val inputPrice = inputPriceBinding.numberEditText.text.toString()
+                    val detailViewModel = ViewModelProvider(this)[DetailViewModel::class.java]
+                    val token = intent.getStringExtra("token").toString()
+                    val pid = intent.getStringExtra("pid").toString()
+                    Log.d("zz", pid)
+                    detailViewModel.givePrice(token, pid, inputPrice)
+                    detailViewModel.addChat(uid.toString(), token)
+                    val prefs = getSharedPreferences("user", Context.MODE_PRIVATE)
+                    val mUid = prefs.getInt("id", -1)
+                    EventBus.getDefault().post(Message(mUid, "系统消息:我已经对你的商品进行的出价，请确认", uid))
                     dialog.dismiss()
                 }.setNegativeButton("取消") { dialog, _ ->
                     dialog.dismiss()
                 }.create()
         priceInputDialog.show()
+
     }
 }

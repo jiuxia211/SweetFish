@@ -21,7 +21,7 @@ class SearchCommodityAdapter(
     inner class ViewHolder(binding: SearchCommodityItemsBinding) :
         RecyclerView.ViewHolder(binding.root) {
         val username: TextView = binding.username
-        val buyer: TextView = binding.buyer
+        val price: TextView = binding.price
         val avatar: ImageView = binding.avatar
         val cover: ImageView = binding.cover
         val title: TextView = binding.title
@@ -49,7 +49,7 @@ class SearchCommodityAdapter(
         Glide.with(activity).load(commodity.cover).circleCrop().into(holder.cover)
         holder.username.text = commodity.username
         holder.title.text = commodity.title
-        holder.buyer.text = "${commodity.now_buyer}人已出价"
+        holder.price.text = "${commodity.price}元"
     }
 
     override fun getItemCount(): Int {

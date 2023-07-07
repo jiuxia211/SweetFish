@@ -46,6 +46,11 @@ class SoldFragment : Fragment() {
                 DiffUtil.calculateDiff(CommodityDiffCallback(adapter.commodityList, it), true)
             adapter.commodityList = it
             result.dispatchUpdatesTo(adapter)
+            if (it.size == 0) {
+                binding.nullText.visibility = View.VISIBLE
+            } else {
+                binding.nullText.visibility = View.GONE
+            }
         }
         return root
     }

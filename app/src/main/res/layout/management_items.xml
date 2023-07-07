@@ -88,33 +88,36 @@
                 android:id="@+id/imageSlider"
                 app:sliderIndicatorSelectedColor="#5A5A5A"
                 app:sliderIndicatorUnselectedColor="#FFF" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent">
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="通过"
+                    android:background="@drawable/btn_circle"
+                    android:id="@+id/pass" />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="驳回"
+                    android:background="@drawable/btn_circle_red"
+                    android:id="@+id/reject" />
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="在此输入驳回理由"
+                    android:id="@+id/rejectInfo" />
+            </LinearLayout>
         </LinearLayout>
+
+
     </ScrollView>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent">
-
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="通过"
-            android:background="@drawable/btn_circle"
-            android:id="@+id/pass" />
-
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="驳回"
-            android:background="@drawable/btn_circle_red"
-            android:id="@+id/reject" />
-
-        <EditText
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:hint="在此输入驳回理由"
-            android:id="@+id/rejectInfo" />
-    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

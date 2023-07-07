@@ -71,7 +71,7 @@ class SearchViewModel() : ViewModel() {
                                 SearchCommodity(
                                     i.avatar,
                                     i.cover,
-                                    i.now_buyer,
+                                    i.price,
                                     i.post_id,
                                     i.title,
                                     i.user_id,

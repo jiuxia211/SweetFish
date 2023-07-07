@@ -86,6 +86,7 @@ class UploadActivity : AppCompatActivity() {
             pickMultipleMedia.launch(PickVisualMediaRequest(ActivityResultContracts.PickVisualMedia.ImageOnly))
         }
         binding.upload.setOnClickListener {
+            fileList.clear()
             for (i in pathList) {
                 val file = File(i)
                 fileList.add(file)
@@ -109,7 +110,9 @@ class UploadActivity : AppCompatActivity() {
             val account =
                 binding.editAccount.text.toString().toRequestBody("text/plain".toMediaTypeOrNull())
             val password =
+
                 binding.editPassword.text.toString().toRequestBody("text/plain".toMediaTypeOrNull())
+            Log.d("zz", "正在上传")
             uploadViewModel.upload(
                 token, title, content, price, account, password, parts
             )

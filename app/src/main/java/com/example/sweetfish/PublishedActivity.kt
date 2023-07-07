@@ -1,6 +1,7 @@
 package com.example.sweetfish
 
 import android.os.Bundle
+import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
@@ -36,6 +37,11 @@ class PublishedActivity : AppCompatActivity() {
                 DiffUtil.calculateDiff(CommodityDiffCallback(adapter.commodityList, it), true)
             adapter.commodityList = it
             result.dispatchUpdatesTo(adapter)
+            if (it.size == 0) {
+                binding.nullText.visibility = View.VISIBLE
+            } else {
+                binding.nullText.visibility = View.GONE
+            }
         }
     }
 }

@@ -131,4 +131,28 @@ class DetailViewModel : ViewModel() {
             }
         })
     }
+
+    private val _givePriceResponseData = MutableLiveData<GivePriceJsonData>()
+    val givePriceResponseData: LiveData<GivePriceJsonData> = _givePriceResponseData
+    fun givePrice(token: String, pid: String, price: String) {
+        val commodityService = ServiceCreator.create(CommodityService::class.java)
+        commodityService.givePrice(token, pid, price).enqueue(object : Callback<GivePriceJsonData> {
+            override fun onResponse(
+                call: Call<GivePriceJsonData>,
+                response: Response<GivePriceJsonData>
+            ) {
+                val responseData = response.body()
+                if (responseData != null) {
+                    Log.d("zz", response.body().toString())
+                    _givePriceResponseData.postValue(response.body())
+                } else {
+                    Log.e("zz", "返回了空的json数据")
+                }
+            }
+
+            override fun onFailure(call: Call<GivePriceJsonData>, t: Throwable) {
+                t.printStackTrace()
+            }
+        })
+    }
 }

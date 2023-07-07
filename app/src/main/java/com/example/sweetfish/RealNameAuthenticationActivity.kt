@@ -1,11 +1,11 @@
 package com.example.sweetfish
 
 import android.os.Bundle
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import com.example.sweetfish.databinding.ActivityRealNameAuthenticationBinding
 import com.example.sweetfish.ui.realNameAuthentication.RealNameAuthenticationViewModel
+import com.google.android.material.snackbar.Snackbar
 
 class RealNameAuthenticationActivity : AppCompatActivity() {
 
@@ -25,7 +25,7 @@ class RealNameAuthenticationActivity : AppCompatActivity() {
             )
         }
         realNameAuthenticationViewModel.realNameAuthenticationResponseData.observe(this) {
-            Toast.makeText(this, it.message, Toast.LENGTH_SHORT).show()
+            Snackbar.make(binding.root, it.message, 3).show()
             if (it.code == 200) {
                 finish()
             }

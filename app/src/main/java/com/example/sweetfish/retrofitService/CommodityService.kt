@@ -3,7 +3,9 @@ package com.example.sweetfish.retrofitService
 import com.example.sweetfish.ui.collect.CollectedJsonData
 import com.example.sweetfish.ui.detail.CollectJsonData
 import com.example.sweetfish.ui.detail.DetailJsonData
+import com.example.sweetfish.ui.detail.GivePriceJsonData
 import com.example.sweetfish.ui.main.RecommendJsonData
+import com.example.sweetfish.ui.myGiven.ConfirmJsonData
 import com.example.sweetfish.ui.published.PublishedJsonData
 import com.example.sweetfish.ui.purchased.PurchasedJsonData
 import com.example.sweetfish.ui.search.SearchJsonData
@@ -64,4 +66,20 @@ interface CommodityService {
         @Field("type") type: String,
         @Field("page") page: String
     ): Call<SearchJsonData>
+
+    @FormUrlEncoded
+    @POST("buyer/give_price")
+    fun givePrice(
+        @Header("Authorization") token: String,
+        @Field("post_id") pid: String,
+        @Field("price") price: String
+    ): Call<GivePriceJsonData>
+
+    @FormUrlEncoded
+    @POST("enter")
+    fun confirm(
+        @Header("Authorization") token: String,
+        @Field("post_id") pid: String,
+        @Field("type") type: String
+    ): Call<ConfirmJsonData>
 }

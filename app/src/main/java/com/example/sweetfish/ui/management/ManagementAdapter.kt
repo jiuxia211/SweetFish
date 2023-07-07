@@ -14,7 +14,7 @@ import com.smarteist.autoimageslider.SliderView
 
 
 class ManagementAdapter(
-    private var commodityList: List<CommodityDetail>,
+    private val commodityList: MutableList<CommodityDetail> = mutableListOf(),
     private val activity: AppCompatActivity,
     private val managementViewModel: ManagementViewModel,
     private val token: String
@@ -42,13 +42,13 @@ class ManagementAdapter(
             startAutoCycle()
         }
         holder.pass.setOnClickListener {
-            managementViewModel.Audit(token, commodity.id.toString(), "审核通过", "1")
+            managementViewModel.audit(token, commodity.id.toString(), "审核通过", "1")
         }
         holder.reject.setOnClickListener {
             if (holder.rejectInfo.text.toString() == "") {
                 Toast.makeText(activity, "请输入驳回的理由", Toast.LENGTH_SHORT).show()
             } else {
-                managementViewModel.Audit(
+                managementViewModel.audit(
                     token,
                     commodity.id.toString(),
                     holder.rejectInfo.text.toString(),
@@ -75,9 +75,5 @@ class ManagementAdapter(
         val reject: Button = binding.reject
         val rejectInfo: EditText = binding.rejectInfo
     }
-
-    fun updateData(newCommodityList: List<CommodityDetail>) {
-        commodityList = newCommodityList
-        notifyDataSetChanged()
-    }
+    
 }

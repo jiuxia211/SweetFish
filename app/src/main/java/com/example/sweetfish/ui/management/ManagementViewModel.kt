@@ -72,7 +72,7 @@ class ManagementViewModel : ViewModel() {
             })
     }
 
-    fun Audit(token: String, pid: String, msg: String, state: String) {
+    fun audit(token: String, pid: String, msg: String, state: String) {
         val managementService = ServiceCreator.create(ManagementService::class.java)
         managementService.audit(token, pid, msg, state)
             .enqueue(object : Callback<AuditJsonData> {
@@ -83,7 +83,7 @@ class ManagementViewModel : ViewModel() {
                     val responseData = response.body()
                     if (responseData != null) {
                         Log.d("zz", response.body().toString())
-
+                        _auditResponseData.postValue(response.body())
                     } else {
                         Log.e("im", "返回了空的json数据")
                     }
